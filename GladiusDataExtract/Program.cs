@@ -2,6 +2,7 @@
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Xml;
+using GladiusDataExtract.Units;
 using GladiusDataExtract.Weapons;
 
 namespace GladiusDataExtract
@@ -10,7 +11,7 @@ namespace GladiusDataExtract
     {
         static void Main(string[] args)
         {
-            ExtractUnitInfo(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
+            ExtractUnitInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
                 @"c:\work\UnitInfo.txt");
 
             ExtractWeaponInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons", 
@@ -19,6 +20,79 @@ namespace GladiusDataExtract
             List<Weapon> weapons = new();
             weapons = ExtractWeaponWeapons(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons");
 
+
+            Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Name);
+
+            List<Unit> units = ExtractUnitInfo(
+                @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
+                weaponLookup);
+
+
+        }
+
+        private static List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup)
+        {
+
+            List<Unit> units = new();
+
+            foreach (string file in Directory.EnumerateFiles(folderName, "*.xml"))
+            {
+
+
+                try
+                {
+                    string name = Path.GetFileName(file).Replace(".xml", "");
+
+                    Unit unit = new(name, new(), new());
+
+                    XmlDocument xmlDocument = new XmlDocument();
+                    xmlDocument.Load(file);
+
+                    //--Effects
+                    XmlNodeList effectNodes = xmlDocument.SelectNodes("unit/modifiers/modifier/effects/*")!;
+
+                    List<UnitAttribute> attributes = unit.Attributes;
+
+                    foreach (XmlNode xmlEffect in effectNodes)
+                    {
+                        XmlAttributeCollection effectXmlAttributes = xmlEffect.Attributes!;
+
+                        if(effectXmlAttributes.Count  > 1)
+                        {
+                            throw new InvalidDataException($"Attribute {xmlEffect.Name} has more than one attribute");
+                        }
+
+                        string? xmlAttributeValue;
+
+
+                        //Should only be base or max
+                        if ((xmlAttributeValue = effectXmlAttributes["base"]?.Value) is null)
+                        {
+                            //Will be max
+                            xmlAttributeValue = effectXmlAttributes["max"]?.Value;
+                        }
+
+                        attributes.Add(new UnitAttribute(xmlEffect.Name, Decimal.Parse(xmlAttributeValue!)));
+                    }
+
+
+                    //--Weapons
+                    XmlNodeList weaponNodes = xmlDocument.SelectNodes("unit/weapons/weapon")!;
+
+                    foreach (XmlNode weaponNode in weaponNodes)
+                    {
+                        unit.Weapons.Add(weaponLookup[weaponNode.Attributes!["name"]!.Value]);
+                    }
+
+                    units.Add(unit);
+                }
+                catch (Exception ex)
+                {
+                    throw new ApplicationException($"Error parsing {file}: {ex.Message}", ex);
+                }
+            }
+
+            return units;
 
         }
 
@@ -47,6 +121,7 @@ namespace GladiusDataExtract
                 foreach (XmlNode effectNode in effectNodes)
                 {
                     Effect effect = new(effectNode.Name, new());  //Ex: attacks
+
 
                     List<ModifierType> modifiers = effect.Modifiers;
 
@@ -187,7 +262,7 @@ namespace GladiusDataExtract
             File.WriteAllText(outputFile, sb.ToString());
         }
 
-        public static void ExtractUnitInfo(string folderName, string outputFile)
+        public static void ExtractUnitInfoText(string folderName, string outputFile)
         {
 
             StringBuilder sb = new StringBuilder();
