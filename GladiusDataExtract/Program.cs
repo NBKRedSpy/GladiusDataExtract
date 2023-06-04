@@ -2,6 +2,7 @@
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Xml;
+using GladiusDataExtract.Weapons;
 
 namespace GladiusDataExtract
 {
@@ -12,12 +13,116 @@ namespace GladiusDataExtract
             ExtractUnitInfo(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
                 @"c:\work\UnitInfo.txt");
 
-            ExtractWeaponInfo(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons", 
+            ExtractWeaponInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons", 
                 @"c:\work\WeaponInfo.txt");
+
+            List<Weapon> weapons = new();
+            weapons = ExtractWeaponWeapons(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons");
+
+
         }
 
+        private static List<Weapon> ExtractWeaponWeapons(string folderName) 
+        {
+            List<Weapon> weapons = new();
 
-        public static void ExtractWeaponInfo(string folderName, string outputFile)
+            StringBuilder sb = new StringBuilder();
+
+            IndentedTextWriter tabbedWriter = new IndentedTextWriter(new StringWriter(sb));
+
+            foreach (string file in Directory.EnumerateFiles(folderName, "*.xml"))
+            {
+                string name = Path.GetFileName(file).Replace(".xml", "");
+
+                Weapon weapon = new(name, new(), new(), new());
+
+                XmlDocument xmlDocument = new XmlDocument();
+                xmlDocument.Load(file);
+
+                XmlNodeList effectNodes = xmlDocument.SelectNodes("weapon/modifiers/modifier/effects/*")!;
+
+                //----Effects
+                List<Effect> effects = weapon.Effects;  //Ex: meleeArmorPenetration
+
+                foreach (XmlNode effectNode in effectNodes)
+                {
+                    Effect effect = new(effectNode.Name, new());  //Ex: attacks
+
+                    List<Modifier> modifiers = effect.Modifiers;
+
+                    foreach (XmlAttribute attribute in effectNode.Attributes!)
+                    {
+                        modifiers.Add(new(attribute.Name, ))
+                        tabbedWriter.Write(" " + attribute.Name + " ");
+                        tabbedWriter.WriteLine(attribute.Value);
+                    }
+
+                    tabbedWriter.Indent--;
+
+                }
+
+                tabbedWriter.Indent--;
+
+
+                //----Requirements
+                XmlNodeList requireNodes = xmlDocument.SelectNodes(@"/weapon/traits/trait[@requiredUpgrade]")!;
+
+                if (requireNodes.Count > 0)
+                {
+
+                    //----Requirements
+                    tabbedWriter.WriteLine("Requirements");
+
+                    tabbedWriter.Indent++;
+
+                    foreach (XmlNode requirementNode in requireNodes)
+                    {
+
+                        string requirementName = requirementNode.Attributes!["name"]!.Value;
+                        string requiredUpgrade = requirementNode.Attributes["requiredUpgrade"]!.Value;
+
+
+                        tabbedWriter.Write(requirementName);
+                        tabbedWriter.Write(" ");
+                        tabbedWriter.WriteLine(requiredUpgrade);
+
+                    }
+
+                    tabbedWriter.Indent--;
+                }
+
+
+                //----Traits
+                XmlNodeList traitNodes = xmlDocument.SelectNodes(@"/weapon/traits/trait[not(@requiredUpgrade)]")!;
+
+                if (traitNodes.Count > 0)
+                {
+
+                    //----Requirements
+                    tabbedWriter.WriteLine("Traits");
+
+                    tabbedWriter.Indent++;
+
+                    foreach (XmlNode traitNode in traitNodes)
+                    {
+
+                        string requirementName = traitNode.Attributes!["name"]!.Value;
+
+                        tabbedWriter.WriteLine(requirementName);
+                    }
+
+                    tabbedWriter.Indent--;
+                }
+
+                tabbedWriter.Indent--;
+
+            }
+
+            throw new NotImplementedException();
+
+        }
+
+        public static void ExtractWeaponInfoText(string folderName, string outputFile)
         {
 
             StringBuilder sb = new StringBuilder();
