@@ -18,7 +18,7 @@ namespace GladiusDataExtract
                 @"c:\work\WeaponInfo.txt");
 
             List<Weapon> weapons = new();
-            weapons = ExtractWeaponWeapons(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons");
+            weapons = ExtractWeaponInfo(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons");
 
 
             Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Name);
@@ -27,6 +27,91 @@ namespace GladiusDataExtract
                 @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
                 weaponLookup);
 
+            ExportUnitInfo(units, @"C:\work\UnitsJoined.txt");
+        }
+
+        private static void ExportUnitInfo(List<Unit> units, string outputFile)
+        {
+
+            StringBuilder sb = new StringBuilder();
+
+            IndentedTextWriter writer = new IndentedTextWriter(new StringWriter(sb));
+
+            foreach (Unit unit in units)
+            {
+                writer.WriteLine(unit.Name);
+
+                writer.Indent++;
+                writer.WriteLine("Attributes");
+
+                writer.Indent++;
+
+                foreach (UnitAttribute attribute in unit.Attributes)
+                {
+                    writer.WriteLine($"{attribute.Name}: {attribute.Value}");
+                }
+
+                writer.Indent--;
+
+                writer.WriteLine("Weapons");
+                
+                writer.Indent++;
+
+                foreach (var weapon in unit.Weapons)
+                {
+                    writer.WriteLine(weapon.Name);
+
+                    writer.Indent++;
+
+                    writer.WriteLine("Effects");
+
+                    writer.Indent++;
+
+                    foreach (Effect effect in weapon.Effects)
+                    {
+                        writer.WriteLine(effect.name);
+
+                        writer.Indent++;
+
+                        foreach (var modifier in effect.Modifiers)
+                        {
+                            writer.WriteLine($"{modifier.Type}: {modifier.Value}");
+                        }
+
+                        writer.Indent--;
+                    }
+
+                    writer.Indent--;
+
+                    //weapon.Requirements;
+                    writer.WriteLine("Requirements");
+                    writer.Indent++;
+
+                    foreach (Requirement requirement in weapon.Requirements)
+                    {
+                        writer.WriteLine($"{requirement.Name}: {requirement.Requires}");
+                    }
+                    writer.Indent--;
+
+                    //weapon.Traits;
+                    writer.WriteLine("Traits");
+
+                    writer.Indent++;
+
+                    foreach (string trait in weapon.Traits)
+                    {
+                        writer.WriteLine(trait);
+                    }
+
+                    writer.Indent--;
+                    writer.Indent--;
+                }
+
+                writer.Indent--;
+
+            }
+
+            File.WriteAllText(outputFile, sb.ToString());
 
         }
 
@@ -37,8 +122,6 @@ namespace GladiusDataExtract
 
             foreach (string file in Directory.EnumerateFiles(folderName, "*.xml"))
             {
-
-
                 try
                 {
                     string name = Path.GetFileName(file).Replace(".xml", "");
@@ -96,7 +179,7 @@ namespace GladiusDataExtract
 
         }
 
-        private static List<Weapon> ExtractWeaponWeapons(string folderName) 
+        private static List<Weapon> ExtractWeaponInfo(string folderName) 
         {
             List<Weapon> weapons = new();
 
