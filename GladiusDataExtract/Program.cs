@@ -48,49 +48,27 @@ namespace GladiusDataExtract
                 {
                     Effect effect = new(effectNode.Name, new());  //Ex: attacks
 
-                    List<Modifier> modifiers = effect.Modifiers;
+                    List<ModifierType> modifiers = effect.Modifiers;
 
                     foreach (XmlAttribute attribute in effectNode.Attributes!)
                     {
-                        modifiers.Add(new(attribute.Name, ))
-                        tabbedWriter.Write(" " + attribute.Name + " ");
-                        tabbedWriter.WriteLine(attribute.Value);
+                        modifiers.Add(new(attribute.Name, decimal.Parse(attribute.Value)));
                     }
-
-                    tabbedWriter.Indent--;
-
                 }
-
-                tabbedWriter.Indent--;
-
 
                 //----Requirements
                 XmlNodeList requireNodes = xmlDocument.SelectNodes(@"/weapon/traits/trait[@requiredUpgrade]")!;
 
-                if (requireNodes.Count > 0)
+                foreach (XmlNode requirementNode in requireNodes)
                 {
+                    List<Requirement> requirements = weapon.Requirements;
 
-                    //----Requirements
-                    tabbedWriter.WriteLine("Requirements");
+                    string requirementName = requirementNode.Attributes!["name"]!.Value;
+                    string requiredUpgrade = requirementNode.Attributes["requiredUpgrade"]!.Value;
 
-                    tabbedWriter.Indent++;
+                    requirements.Add(new(requirementName, requiredUpgrade));
 
-                    foreach (XmlNode requirementNode in requireNodes)
-                    {
-
-                        string requirementName = requirementNode.Attributes!["name"]!.Value;
-                        string requiredUpgrade = requirementNode.Attributes["requiredUpgrade"]!.Value;
-
-
-                        tabbedWriter.Write(requirementName);
-                        tabbedWriter.Write(" ");
-                        tabbedWriter.WriteLine(requiredUpgrade);
-
-                    }
-
-                    tabbedWriter.Indent--;
                 }
-
 
                 //----Traits
                 XmlNodeList traitNodes = xmlDocument.SelectNodes(@"/weapon/traits/trait[not(@requiredUpgrade)]")!;
@@ -98,28 +76,18 @@ namespace GladiusDataExtract
                 if (traitNodes.Count > 0)
                 {
 
-                    //----Requirements
-                    tabbedWriter.WriteLine("Traits");
-
-                    tabbedWriter.Indent++;
-
                     foreach (XmlNode traitNode in traitNodes)
                     {
-
-                        string requirementName = traitNode.Attributes!["name"]!.Value;
-
-                        tabbedWriter.WriteLine(requirementName);
+                        weapon.Traits.Add(traitNode.Attributes!["name"]!.Value);
                     }
 
-                    tabbedWriter.Indent--;
                 }
 
-                tabbedWriter.Indent--;
+                weapons.Add(weapon);
 
             }
 
-            throw new NotImplementedException();
-
+            return weapons;
         }
 
         public static void ExtractWeaponInfoText(string folderName, string outputFile)

@@ -19,7 +19,7 @@ namespace GladiusDataExtract.Weapons
     /// </summary>
     /// <param name="name"></param>
     /// <param name="Modifiers"></param>
-    public record Effect(string name, List<Modifier> Modifiers);
+    public record Effect(string name, List<ModifierType> Modifiers);
     
     
     /// <summary>
@@ -27,15 +27,17 @@ namespace GladiusDataExtract.Weapons
     /// </summary>
     /// <param name="Type"></param>
     /// <param name="Value"></param>
-    public record ModfierType(string Type, int Value);
+    public record ModifierType(string Type, decimal Value);
 
-    /// <summary>
-    /// A "modifier" for an effect.  Ex:  attacks: add 2 adds two more attacks to a weapon.
-    /// Usually requires an upgrade for extra effects.
-    /// </summary>
-    /// <param name="Name"></param>
-    /// <param name="ModifierInfos"></param>
-    public record Modifier(string Name, List<ModfierType> ModifierInfos);
+
+    //todo:  remove when done testing.
+    ///// <summary>
+    ///// A "modifier" for an effect.  Ex:  attacks: add 2 adds two more attacks to a weapon.
+    ///// Usually requires an upgrade for extra effects.
+    ///// </summary>
+    ///// <param name="Name"></param>
+    ///// <param name="ModifierInfos"></param>
+    //public record Modifier(string Name, List<ModfierType> ModifierInfos);
 
 
     /// <summary>
