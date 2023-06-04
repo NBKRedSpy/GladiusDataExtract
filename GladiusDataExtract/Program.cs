@@ -41,18 +41,19 @@ namespace GladiusDataExtract
             {
                 writer.WriteLine(unit.Name);
 
+
                 writer.Indent++;
+                writer.WriteLine($"Models: {unit.ModelCount}");
                 writer.WriteLine("Attributes");
 
                 writer.Indent++;
 
                 foreach (UnitAttribute attribute in unit.Attributes)
                 {
-                    writer.WriteLine($"{attribute.Name}: {attribute.Value}");
+                    writer.WriteLine($"{attribute.Name}: {attribute.Value:#.#}");
                 }
 
                 writer.Indent--;
-
                 writer.WriteLine("Traits");
                 writer.Indent++;
                 foreach (var trait in unit.Traits)
@@ -140,10 +141,17 @@ namespace GladiusDataExtract
                 {
                     string name = Path.GetFileName(file).Replace(".xml", "");
 
-                    Unit unit = new(name, new(), new(), new());
+
 
                     XmlDocument xmlDocument = new XmlDocument();
                     xmlDocument.Load(file);
+
+                    //Model count
+                    XmlAttribute? xmlSize = xmlDocument.SelectSingleNode("unit/group")?.Attributes!["size"];
+
+                    int modelCount = xmlSize is null ? 1 : int.Parse(xmlSize.Value);
+
+                    Unit unit = new(name, modelCount, new(), new(), new());
 
                     //--Effects
                     XmlNodeList effectNodes = xmlDocument.SelectNodes("unit/modifiers/modifier/effects/*")!;
