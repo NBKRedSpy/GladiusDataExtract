@@ -12,7 +12,14 @@ namespace GladiusDataExtract.Weapons
     /// </summary>
     /// <param name="Name"></param>
     /// <param name="Requires"></param>
-    public record Requirement(string Name, string Requires);
+    public record Requirement(string Name, string Requires)
+    {
+
+        public string FormatRequirements()
+        {
+            return Name == Requires ? Name : $"{Name} -> {Requires}";
+        }
+    }
 
     /// <summary>
     /// The effect of a weapon.  Ex:  attacks
@@ -28,17 +35,6 @@ namespace GladiusDataExtract.Weapons
     /// <param name="Type"></param>
     /// <param name="Value"></param>
     public record ModifierType(string Type, decimal Value);
-
-
-    //todo:  remove when done testing.
-    ///// <summary>
-    ///// A "modifier" for an effect.  Ex:  attacks: add 2 adds two more attacks to a weapon.
-    ///// Usually requires an upgrade for extra effects.
-    ///// </summary>
-    ///// <param name="Name"></param>
-    ///// <param name="ModifierInfos"></param>
-    //public record Modifier(string Name, List<ModfierType> ModifierInfos);
-
 
     /// <summary>
     /// 

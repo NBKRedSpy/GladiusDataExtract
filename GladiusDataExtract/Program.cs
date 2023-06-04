@@ -103,7 +103,7 @@ namespace GladiusDataExtract
 
                     foreach (Requirement requirement in weapon.Requirements)
                     {
-                        writer.WriteLine($"{requirement.Name}: {requirement.Requires}");
+                        writer.WriteLine(requirement.FormatRequirements());
                     }
                     writer.Indent--;
 
