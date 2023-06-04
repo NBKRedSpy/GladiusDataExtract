@@ -34,6 +34,9 @@ namespace GladiusDataExtract
 
                 XmlNodeList effectNodes = xmlDocument.SelectNodes("weapon/modifiers/modifier/effects/*")!;
 
+                //----Effects
+                tabbedWriter.Indent++;
+                tabbedWriter.WriteLine("Effects");
                 tabbedWriter.Indent++;
 
                 foreach (XmlNode effect in effectNodes)
@@ -49,7 +52,59 @@ namespace GladiusDataExtract
                     }
 
                     tabbedWriter.Indent--;
+ 
+                }
 
+                tabbedWriter.Indent--;
+
+
+                //----Requirements
+                XmlNodeList requireNodes = xmlDocument.SelectNodes(@"/weapon/traits/trait[@requiredUpgrade]")!;
+
+                if(requireNodes.Count > 0) {
+
+                    //----Requirements
+                    tabbedWriter.WriteLine("Requirements");
+
+                    tabbedWriter.Indent++;
+
+                    foreach (XmlNode requirementNode in requireNodes)
+                    {
+
+                        string requirementName =  requirementNode.Attributes!["name"]!.Value;
+                        string requiredUpgrade = requirementNode.Attributes["requiredUpgrade"]!.Value;
+
+
+                        tabbedWriter.Write(requirementName);
+                        tabbedWriter.Write(" ");
+                        tabbedWriter.WriteLine(requiredUpgrade);
+
+                    }
+
+                    tabbedWriter.Indent--;
+                }
+
+
+                //----Traits
+                XmlNodeList traitNodes= xmlDocument.SelectNodes(@"/weapon/traits/trait[not(@requiredUpgrade)]")!;
+
+                if (traitNodes.Count > 0)
+                {
+
+                    //----Requirements
+                    tabbedWriter.WriteLine("Traits");
+
+                    tabbedWriter.Indent++;
+
+                    foreach (XmlNode traitNode in traitNodes)
+                    {
+
+                        string requirementName = traitNode.Attributes!["name"]!.Value;
+
+                        tabbedWriter.WriteLine(requirementName);
+                    }
+
+                    tabbedWriter.Indent--;
                 }
 
                 tabbedWriter.Indent--;
