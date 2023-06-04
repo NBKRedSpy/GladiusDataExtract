@@ -53,6 +53,19 @@ namespace GladiusDataExtract
 
                 writer.Indent--;
 
+                writer.WriteLine("Traits");
+                writer.Indent++;
+                foreach (var trait in unit.Traits)
+                {
+                    //writer.WriteLine($"{trait.Name} {trait.RequiredUpgrade is null ? "xxx" : ""}{trait.RequiredUpgrade}");
+                    writer.WriteLine($"{trait.Name}{(trait.RequiredUpgrade is null ? "" : " -> ") }{trait.RequiredUpgrade}");
+                }
+
+                writer.Indent--;
+
+
+
+                //Weapons
                 writer.WriteLine("Weapons");
                 
                 writer.Indent++;
@@ -108,6 +121,7 @@ namespace GladiusDataExtract
                 }
 
                 writer.Indent--;
+                writer.Indent--;
 
             }
 
@@ -126,7 +140,7 @@ namespace GladiusDataExtract
                 {
                     string name = Path.GetFileName(file).Replace(".xml", "");
 
-                    Unit unit = new(name, new(), new());
+                    Unit unit = new(name, new(), new(), new());
 
                     XmlDocument xmlDocument = new XmlDocument();
                     xmlDocument.Load(file);
@@ -166,6 +180,24 @@ namespace GladiusDataExtract
                     {
                         unit.Weapons.Add(weaponLookup[weaponNode.Attributes!["name"]!.Value]);
                     }
+
+
+                    List<Trait> traits = new();
+
+                    //--Traits
+                    XmlNodeList traitNodes= xmlDocument.SelectNodes("unit/traits/trait")!;
+
+                    foreach (XmlNode traitNode in traitNodes)
+                    {
+                        string? requiredUpgrade = traitNode.Attributes?["requiredUpgrade"]?.Value;
+
+                        string trait = traitNode.Attributes!["name"]!.Value;
+
+                        traits.Add(new(trait, requiredUpgrade));
+                    }
+
+                    unit.Traits.AddRange(traits.OrderBy(x => x.RequiredUpgrade).ThenBy(x=> x.Name));
+
 
                     units.Add(unit);
                 }
@@ -212,6 +244,8 @@ namespace GladiusDataExtract
                     {
                         modifiers.Add(new(attribute.Name, decimal.Parse(attribute.Value)));
                     }
+
+                    weapon.Effects.Add(effect);
                 }
 
                 //----Requirements
