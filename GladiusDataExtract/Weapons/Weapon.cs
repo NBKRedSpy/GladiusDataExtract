@@ -86,7 +86,7 @@ namespace GladiusDataExtract.Weapons
                     //For now, returning the unit's value.
                     return attValue;
 				case "mul":
-                    return (attValue + 1) * sourceValue;
+                    return (sourceValue + 1) * attValue;
 				case "min":
 					//Not sure.  Is it the min between the two?
 					return Math.Min(attValue, sourceValue);    

@@ -16,35 +16,22 @@ namespace GladiusStatWeb.Pages
 
 		public List<Unit> Units { get; init; }
 
-		/// <summary>
-		/// The list of attributes that intersect the Unit's base values and weapon effects.
-		/// </summary>
-		public static List<string> WeaponIntersectAttributes { get; }
-
 
 		private static Dictionary<string, int> WeaponAttributeDisplayOrder = new() {
 			{"rangedDamage", 1},
 			{"meleeDamage", 2},
 			{"strengthDamage", 3},
 			{"attacks", 4},
+			{"meleeAttacks", 4},
 			{"rangedArmorPenetration", 5},
 			{"meleeArmorPenetration", 6},
 			{"Accuracy", 7},
-			{"Range", 8 },
+			{"meleeAccuracy",8},
+			{"Range", 9 },
 		};
 
 		static UnitsModel()
 		{
-			WeaponIntersectAttributes = new()
-			{
-				"attacks",
-				"meleeAccuracy",
-				"meleeAttacks",
-				"strengthDamage",
-				"rangedDamage",
-				"rangedArmorPenetration",
-				"meleeArmorPenetration",
-			};
 
 		}
 		
@@ -72,7 +59,7 @@ namespace GladiusStatWeb.Pages
 
 
 		/// <summary>
-		/// Computes the weapon status for a unit's weapon based on a unit.
+		/// Computes the stats for a weapon for a unit.
 		/// </summary>
 		/// <param name="weapon"></param>
 		/// <returns></returns>
