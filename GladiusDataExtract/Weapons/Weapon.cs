@@ -61,34 +61,40 @@ namespace GladiusDataExtract.Weapons
     public record ModifierType(string Type, decimal Value)
     {
         
+        public decimal ApplyModifier(decimal? attributeValue)
+        {
+            return ApplyModifier(Type, Value, attributeValue);
+        }
+
         /// <summary>
         /// Applies a modfier command to a value.  For example:  "Add 2" to the value.
         /// Ex: add 2 to value.
         /// </summary>
+        /// 
         /// <param name="attributeValue"></param>
         /// <returns></returns>
-        public decimal ApplyModifier(decimal? attributeValue)
+        public decimal ApplyModifier(string type, decimal sourceValue, decimal? attributeValue)
         {
             decimal attValue = attributeValue ?? 0;
 
-            switch (Type)
+            switch (type)
             {
                 case "add":
-                    return attValue += Value;
+                    return attValue += sourceValue;
                 case "base":
                     //Don't know what this is.  It seems to always be zero.
                     //For now, returning the unit's value.
                     return attValue;
 				case "mul":
-                    return (attValue + 1) * Value;
+                    return (attValue + 1) * sourceValue;
 				case "min":
 					//Not sure.  Is it the min between the two?
-					return Math.Min(attValue, Value);    
+					return Math.Min(attValue, sourceValue);    
 				case "max":
 					//Not sure.  Is it the max between the two?
-					return Math.Max(attValue, Value);
+					return Math.Max(attValue, sourceValue);
 				default:
-                    throw new ArgumentException($"Unexpected value for Type: '{Type}'", "Type");
+                    throw new ArgumentException($"Unexpected value for type: '{type}'", "type");
             }
         }
     }

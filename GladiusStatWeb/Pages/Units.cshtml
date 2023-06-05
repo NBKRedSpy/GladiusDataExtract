@@ -8,7 +8,7 @@
 @*Debugging*@
 @*@foreach (var unit in Model.Units.Where(x => x.Name == "HiveTyrant"))*@
 
-@foreach (var unit in Model.Units)
+@foreach (var unit in Model.Units.Where(x => x.Name == "Hormagaunt"))
 {
 	<div class="unit-name">@unit.Name</div>
 	<div>
@@ -23,40 +23,15 @@
 		<div class="weapons-container">
 			@foreach (Weapon weapon in unit.Weapons)
 			{
-				var stats = Model.GetWeaponStats(unit, weapon);	
 
 				<span class="weapon-name" >@weapon.Name</span>
 
-				{
-
-
-					//Todo:  Hive Tyrant numbers are wrong because the smash trait is not included by default.  Will have to load the traits up...
-					//Might be able to tell if something is melee by the trait?  Didn't see one for ranged though.
-					//  For example:  <trait name="Melee"/>
-
-					bool isRanged = weapon.targetRange != 0;
-
-					if(isRanged)
-					{
-						var accuracyAttribute = unit.Attributes.SingleOrDefault(x => x.Name == "rangedAccuracy");
-						decimal accuracy = accuracyAttribute is null ? 0m : accuracyAttribute.Value;
-
-
-						<div class="weapon-stats">Range: @weapon.targetRange</div>
-						<div class="weapon-stats">Accuracy: @accuracy </div>
-					}
-					else
-					{
-						//Assume Melee
-						var accuracyAttribute = unit.Attributes.SingleOrDefault(x => x.Name == "meleeAccuracy");
-						decimal accuracy = accuracyAttribute is null ? 0m : accuracyAttribute.Value;
-						<div class="weapon-stats">Accuracy: @accuracy </div>
-					}
-				}
+				var stats = Model.GetWeaponStats(unit, weapon);
 
 				foreach (var stat in stats)
 				{
-					bool showModelCount = stat.Item1 == "attacks" && stat.Item2 > 1;
+					//Attacks
+					bool showModelCount = stat.Item1.EndsWith("ttacks") && stat.Item2 > 1;
 
 					<div class="weapon-stats">@stat.Item1: @stat.Item2 @if (showModelCount)
 						{
