@@ -1,0 +1,47 @@
+﻿@page
+@using GladiusDataExtract.Units;
+@using GladiusDataExtract.Weapons;
+@model GladiusStatWeb.Pages.UnitsModel
+
+
+
+@*@foreach (var unit in Model.Units)*@
+
+@foreach (var unit in Model.Units.Where(x => x.Name == "Termagant"))
+{
+	<div class="unit-name">@unit.Name</div>
+	<div>
+		<div class="stats-container">
+		<div>Count: @unit.ModelCount </div>
+
+		@foreach (UnitAttribute unitAttribute in Model.GetDisplayAttributes(unit))
+		{
+			<span>@unitAttribute.Name @unitAttribute.Value</span>
+		}
+		</div>
+		<div class="weapons-container">
+			@foreach (Weapon weapon in unit.Weapons)
+			{
+				var stats = Model.GetWeaponStats(unit, weapon);	
+
+				<span class="weapon-name" >@weapon.Name</span>
+				foreach (var stat in stats)
+				{
+					bool isAttacks = stat.Item1 == "attacks";
+					
+					<div class="weapon-stats">@stat.Item1: @stat.Item2 @if (isAttacks)
+						{
+							@(" (x" + unit.ModelCount + ")")
+						}
+					</div>
+
+					@*<div class="weapon-stats">@stat.Item1: @stat.Item2</div>*@
+				}
+			}
+		</div>
+		
+	</div>
+
+
+
+}

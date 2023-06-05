@@ -1,0 +1,33 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.unit-name {
+    text-decoration: underline;
+    font-size: 1.5rem
+}
+.weapons-container {
+    padding-left: 40px
+}
+.weapon-name {
+    font-weight: bold;
+}
+
+.weapon-stats {
+    padding-left: 40px;
+}
