@@ -100,6 +100,11 @@ namespace GladiusStatWeb.Pages
 			return modifierAppliedWeaponAttributes;
 		}
 
+		public int GetAccuracyChance(int accuracy)
+		{
+			return (int)(Math.Min((accuracy / 12m), 1m) * 100);
+		}
+
 		/// <summary>
 		/// Adds the attribute from the unit if the source list doesn't already contain the entry.
 		/// </summary>
