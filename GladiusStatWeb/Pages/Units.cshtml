@@ -24,7 +24,7 @@
 
 				<span class="weapon-name" >@weapon.Name</span>
 
-				var stats = Model.GetWeaponStats(unit, weapon);
+				var stats = weapon.GetWeaponStats(unit);
 
 				foreach (var stat in stats)
 				{
