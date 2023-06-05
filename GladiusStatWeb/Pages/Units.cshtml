@@ -5,10 +5,8 @@
 
 
 
-@*Debugging*@
-@*@foreach (var unit in Model.Units.Where(x => x.Name == "HiveTyrant"))*@
-
-@foreach (var unit in Model.Units.Where(x => x.Name == "Hormagaunt"))
+@*@foreach (var unit in Model.Units.Where(x => x.Name == "Hormagaunt"))*@
+@foreach (var unit in Model.Units)
 {
 	<div class="unit-name">@unit.Name</div>
 	<div>
@@ -30,9 +28,9 @@
 
 				foreach (var stat in stats)
 				{
-					//Attacks
-					bool showModelCount = stat.Item1.EndsWith("ttacks") && stat.Item2 > 1;
-					bool isAccuracy = stat.Item1.EndsWith("ccuracy");
+
+					bool showModelCount = stat.Item1.EndsWith("ttacks") && stat.Item2 > 1; //Attacks
+					bool isAccuracy = stat.Item1.EndsWith("ccuracy");  //Accuracy
 
 					<div class="weapon-stats">@stat.Item1: @stat.Item2 
 						@if (showModelCount)
