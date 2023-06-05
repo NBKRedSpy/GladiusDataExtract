@@ -7,7 +7,7 @@
 
 @*@foreach (var unit in Model.Units)*@
 
-@foreach (var unit in Model.Units.Where(x => x.Name == "Termagant"))
+@foreach (var unit in Model.Units.Where(x => x.Name == "HiveTyrant"))
 {
 	<div class="unit-name">@unit.Name</div>
 	<div>
@@ -28,13 +28,10 @@
 
 				{
 
-					//Todo:  Have to handle the ranged and melee accuracy not showing up.
-					//targetRange != 0 seems to mean ranged.
-					//<meleeAccuracy base="6"/> <!-- %meleeAccuracy base weaponSkill=3 -->
-					//<meleeAttacks base="1" />
-					//
-					//<rangedAccuracy base="6"/> <!-- %rangedAccuracy base ballisticSkill=3 -->
 
+					//Todo:  Hive Tyrant numbers are wrong because the smash trait is not included by default.  Will have to load the traits up...
+					//Might be able to tell if something is melee by the trait?  Didn't see one for ranged though.
+					//  For example:  <trait name="Melee"/>
 
 					bool isRanged = weapon.targetRange != 0;
 
