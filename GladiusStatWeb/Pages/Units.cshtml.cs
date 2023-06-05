@@ -16,6 +16,17 @@ namespace GladiusStatWeb.Pages
 
 		public List<Unit> Units { get; init; }
 
+		private static List<string> UnitMainAttributeFilter = new ()
+				{
+					"armor",
+					"hitpointsMax",
+					"movementMax",
+					"biomassCost",
+					"productionCost",
+					"biomassUpkeep",
+					"influenceUpkeep",
+				};
+
 
 		private static Dictionary<string, int> WeaponAttributeDisplayOrder = new() {
 			{"rangedDamage", 1},
@@ -43,18 +54,7 @@ namespace GladiusStatWeb.Pages
 
         public List<UnitAttribute> GetDisplayAttributes(Unit unit)
         {
-			List<string> attributeNames = new()
-				{
-					"armor",
-					"hitpointsMax",
-					"movementMax",
-					"biomassCost",
-					"productionCost",
-					"biomassUpkeep",
-					"influenceUpkeep",
-				};
-
-			return attributeNames.Join(unit.Attributes, x => x, x => x.Name, (outer, inner) => inner).ToList();
+			return UnitsModel.UnitMainAttributeFilter.Join(unit.Attributes, x => x, x => x.Name, (outer, inner) => inner).ToList();
 		}
 
 
