@@ -34,4 +34,5 @@ namespace GladiusDataExtract.Units
     /// <param name="Weapons">List of possible weapons for this unit</param>
     public record Unit(string Name, int ModelCount, List<UnitAttribute> Attributes, List<Weapon> Weapons, List<Trait> Traits);
 
+
 }
