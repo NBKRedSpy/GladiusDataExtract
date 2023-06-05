@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GladiusDataExtract", "GladiusDataExtract\GladiusDataExtract.csproj", "{DB421EF7-32FB-4811-9E38-4BF5445A500F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GladiusStatWeb", "GladiusStatWeb\GladiusStatWeb.csproj", "{5872D1CB-CC83-4CF9-97EF-F8175D975BD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DB421EF7-32FB-4811-9E38-4BF5445A500F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB421EF7-32FB-4811-9E38-4BF5445A500F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB421EF7-32FB-4811-9E38-4BF5445A500F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5872D1CB-CC83-4CF9-97EF-F8175D975BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5872D1CB-CC83-4CF9-97EF-F8175D975BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5872D1CB-CC83-4CF9-97EF-F8175D975BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5872D1CB-CC83-4CF9-97EF-F8175D975BD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

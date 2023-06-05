@@ -7,7 +7,7 @@ using GladiusDataExtract.Weapons;
 
 namespace GladiusDataExtract
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -83,7 +83,7 @@ namespace GladiusDataExtract
 
                     foreach (Effect effect in weapon.Effects)
                     {
-                        writer.WriteLine(effect.name);
+                        writer.WriteLine(effect.Name);
 
                         writer.Indent++;
 
@@ -130,7 +130,7 @@ namespace GladiusDataExtract
 
         }
 
-        private static List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup)
+        public static List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup)
         {
 
             List<Unit> units = new();
@@ -219,7 +219,7 @@ namespace GladiusDataExtract
 
         }
 
-        private static List<Weapon> ExtractWeaponInfo(string folderName) 
+        public static List<Weapon> ExtractWeaponInfo(string folderName) 
         {
             List<Weapon> weapons = new();
 
