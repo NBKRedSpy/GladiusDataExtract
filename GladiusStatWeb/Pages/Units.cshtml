@@ -56,15 +56,21 @@
 
 				foreach (var stat in stats)
 				{
-					bool isAttacks = stat.Item1 == "attacks";
-					
-					<div class="weapon-stats">@stat.Item1: @stat.Item2 @if (isAttacks)
+					bool showModelCount = stat.Item1 == "attacks" && stat.Item2 > 1;
+
+					<div class="weapon-stats">@stat.Item1: @stat.Item2 @if (showModelCount)
 						{
 							@(" (x" + unit.ModelCount + ")")
 						}
 					</div>
 
 					@*<div class="weapon-stats">@stat.Item1: @stat.Item2</div>*@
+				}
+
+				<div>Weapon Traits</div>
+				@foreach (var trait in weapon.Traits)
+				{
+					<div>@trait</div>
 				}
 			}
 		</div>

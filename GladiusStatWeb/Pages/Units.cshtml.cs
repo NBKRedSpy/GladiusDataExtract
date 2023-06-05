@@ -64,9 +64,6 @@ namespace GladiusStatWeb.Pages
 		/// <returns></returns>
 		public List<Tuple<string, decimal>> GetWeaponStats(Unit unit, Weapon weapon)
 		{
-
-
-
 			List<Tuple<string, decimal>> weaponValues = new();
 
 
