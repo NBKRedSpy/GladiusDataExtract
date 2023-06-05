@@ -25,6 +25,37 @@
 				var stats = Model.GetWeaponStats(unit, weapon);	
 
 				<span class="weapon-name" >@weapon.Name</span>
+
+				{
+
+					//Todo:  Have to handle the ranged and melee accuracy not showing up.
+					//targetRange != 0 seems to mean ranged.
+					//<meleeAccuracy base="6"/> <!-- %meleeAccuracy base weaponSkill=3 -->
+					//<meleeAttacks base="1" />
+					//
+					//<rangedAccuracy base="6"/> <!-- %rangedAccuracy base ballisticSkill=3 -->
+
+
+					bool isRanged = weapon.targetRange != 0;
+
+					if(isRanged)
+					{
+						var accuracyAttribute = unit.Attributes.SingleOrDefault(x => x.Name == "rangedAccuracy");
+						decimal accuracy = accuracyAttribute is null ? 0m : accuracyAttribute.Value;
+
+
+						<div class="weapon-stats">Range: @weapon.targetRange</div>
+						<div class="weapon-stats">Accuracy: @accuracy </div>
+					}
+					else
+					{
+						//Assume Melee
+						var accuracyAttribute = unit.Attributes.SingleOrDefault(x => x.Name == "meleeAccuracy");
+						decimal accuracy = accuracyAttribute is null ? 0m : accuracyAttribute.Value;
+						<div class="weapon-stats">Accuracy: @accuracy </div>
+					}
+				}
+
 				foreach (var stat in stats)
 				{
 					bool isAttacks = stat.Item1 == "attacks";

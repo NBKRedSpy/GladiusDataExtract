@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using GladiusDataExtract.Units;
@@ -99,7 +100,7 @@ namespace GladiusDataExtract.Weapons
     /// <param name="Effects"></param>
     /// <param name="Requirements"></param>
     /// <param name="Traits">The traits for the weapon.  For example, Melee or IgnoresCover</param>
-    public record Weapon(string Name, List<Effect> Effects, List<Requirement> Requirements,
+    public record Weapon(string Name, int targetRange, List<Effect> Effects, List<Requirement> Requirements,
         List<string> Traits);
 
 

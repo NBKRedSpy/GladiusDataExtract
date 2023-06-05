@@ -231,14 +231,24 @@ namespace GladiusDataExtract
             {
                 string name = Path.GetFileName(file).Replace(".xml", "");
 
-                Weapon weapon = new(name, new(), new(), new());
+                Weapon weapon = new(name, 0, new(), new(), new());
 
                 XmlDocument xmlDocument = new XmlDocument();
                 xmlDocument.Load(file);
 
-                XmlNodeList effectNodes = xmlDocument.SelectNodes("weapon/modifiers/modifier/effects/*")!;
 
-                //----Effects
+                //Range
+                int targetRange = 0;
+                var targetNode = xmlDocument.SelectSingleNode("weapon/target[@rangeMax]");
+
+                if(targetNode != null )
+                {
+                    targetRange = int.Parse(targetNode.Attributes!["rangeMax"]!.Value);
+					weapon = weapon with { targetRange = targetRange };
+				}
+
+				//----Effects
+				XmlNodeList effectNodes = xmlDocument.SelectNodes("weapon/modifiers/modifier/effects/*")!;
                 List<Effect> effects = weapon.Effects;  //Ex: meleeArmorPenetration
 
                 foreach (XmlNode effectNode in effectNodes)
@@ -425,7 +435,7 @@ namespace GladiusDataExtract
 
                 foreach  (XmlNode weaponNode in weaponNodes)
                 {
-                    tabbedWriter.WriteLine(weaponNode.Attributes!["name"].Value);
+                    tabbedWriter.WriteLine(weaponNode.Attributes!["name"]!.Value);
                 }
 
                 tabbedWriter.Indent--;
