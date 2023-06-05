@@ -5,9 +5,10 @@
 
 
 
-@*@foreach (var unit in Model.Units)*@
+@*Debugging*@
+@*@foreach (var unit in Model.Units.Where(x => x.Name == "HiveTyrant"))*@
 
-@foreach (var unit in Model.Units.Where(x => x.Name == "HiveTyrant"))
+@foreach (var unit in Model.Units)
 {
 	<div class="unit-name">@unit.Name</div>
 	<div>
@@ -67,6 +68,23 @@
 				}
 			}
 		</div>
+
+		@if(unit.Traits.Count != 0)
+		{
+			<div class="traits-container">
+				Traits
+
+				@foreach (var trait in unit.Traits)
+				{
+					<div>@trait.Name
+						@if(trait.RequiredUpgrade is not null)
+						{
+							@(" -> " + trait.RequiredUpgrade)
+						}
+					</div>	
+				}
+			</div>
+		}
 		
 	</div>
 
