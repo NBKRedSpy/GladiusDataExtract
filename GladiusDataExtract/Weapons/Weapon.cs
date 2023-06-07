@@ -62,6 +62,10 @@ namespace GladiusDataExtract.Weapons
 
 				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedArmorPenetration");
 				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedDamage");
+				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedAccuracy");
+				
+
+
 			}
 
 			//Sort to match the UI's order.

@@ -1,0 +1,1 @@
+sudo.bat dotnet publish "GladiusStatWeb\GladiusStatWeb.csproj" -o "C:\inetpub\wwwroot\Gladius"

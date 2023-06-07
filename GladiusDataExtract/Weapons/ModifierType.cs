@@ -23,31 +23,34 @@ namespace GladiusDataExtract.Weapons
 		/// Applies a modfier command to a value.  For example:  "Add 2" to the value.
 		/// Ex: add 2 to value.
 		/// </summary>
-		/// 
-		/// <param name="attributeValue"></param>
+		/// <param name="operation">The operation to use.  Ex:  Add or multiply</param>
+		/// <param name="actionOperand">The the data for the operation.  Ex:  2.  Add, 2 means add +2 to the value.</param>
+		/// <param name="unitsValue">The unit's value for this attribute.  Used as the starting point for the starting point for the 
+		/// operation. Ex:  the unit's strengthDamage. If it was 5, a "mul .5" would result in 2.5.
+		/// Ex:  "strengthDamage add 2" on the weapon means "The weapon's strengthDamage is the unit's strengthDamage + 2</param>
 		/// <returns></returns>
-		public decimal ApplyModifier(string type, decimal sourceValue, decimal? attributeValue)
+		public decimal ApplyModifier(string operation, decimal actionOperand, decimal? unitsValue)
 		{
-			decimal attValue = attributeValue ?? 0;
+			decimal attValue = unitsValue ?? 0;
 
-			switch (type)
+			switch (operation)
 			{
 				case "add":
-					return attValue += sourceValue;
+					return attValue += actionOperand;
 				case "base":
-					//Don't know what this is.  It seems to always be zero.
-					//For now, returning the unit's value.
+					//I think base means "set".  Oddly in the xml comments there are "set" commands, but maybe this just changed
+					//	over time.
 					return attValue;
 				case "mul":
-					return (sourceValue + 1) * attValue;
+					return (actionOperand + 1) * attValue;
 				case "min":
 					//Not sure.  Is it the min between the two?
-					return Math.Min(attValue, sourceValue);
+					return Math.Min(attValue, actionOperand);
 				case "max":
 					//Not sure.  Is it the max between the two?
-					return Math.Max(attValue, sourceValue);
+					return Math.Max(attValue, actionOperand);
 				default:
-					throw new ArgumentException($"Unexpected value for type: '{type}'", "type");
+					throw new ArgumentException($"Unexpected value for type: '{operation}'", "type");
 			}
 		}
 	}

@@ -1,3 +1,9 @@
+# Issues
+## Termagant
+Attacks are not showing x10
+Accuracy is not shown.
+
+
 # Todo
 
 * Move the calculation logic to the entities from the UI.

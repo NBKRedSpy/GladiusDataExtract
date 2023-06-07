@@ -16,7 +16,8 @@ namespace GladiusDataExtract.Weapons
 		/// <summary>
 		/// Runs all the modifiers for this effect.
 		/// </summary>
-		/// <param name="unitAttributeValue"></param>
+		/// <param name="unitAttributeValue">The unit's base value to apply this effect to.  
+		/// Ex:  "strengthDamage add 2" on the weapon means "The weapon's strengthDamage is the unit's strengthDamage + 2</param>
 		/// <returns></returns>
 		public decimal ApplyModifiers(decimal unitAttributeValue)
 		{
