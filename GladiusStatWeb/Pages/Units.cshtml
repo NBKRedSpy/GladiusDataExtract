@@ -8,7 +8,11 @@
 @*@foreach (var unit in Model.Units.Where(x => x.Name == "Hormagaunt"))*@
 @foreach (var unit in Model.Units)
 {
-	<div class="unit-name">@unit.Name</div>
+	string htmlId = unit.Name.Replace(" ", "-");
+
+
+
+	<div id="@htmlId" class="unit-name"><a href="#@htmlId">@unit.Name</a></div>
 	<div>
 		<div class="stats-container">
 		<div>Count: @unit.ModelCount </div>
