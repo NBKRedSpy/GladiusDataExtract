@@ -40,7 +40,7 @@ namespace GladiusDataExtract.Weapons
 				case "base":
 					//I think base means "set".  Oddly in the xml comments there are "set" commands, but maybe this just changed
 					//	over time.
-					return attValue;
+					return actionOperand;
 				case "mul":
 					return (actionOperand + 1) * attValue;
 				case "min":
