@@ -14,7 +14,7 @@ namespace GladiusDataExtract
             ExtractUnitInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
                 @"c:\work\UnitInfo.txt");
 
-            ExtractWeaponInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons", 
+            ExtractWeaponInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons",
                 @"c:\work\WeaponInfo.txt");
 
             List<Weapon> weapons = new();
@@ -24,7 +24,7 @@ namespace GladiusDataExtract
             Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Name);
 
             List<Unit> units = ExtractUnitInfo(
-                @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
+                @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units",
                 weaponLookup);
 
             ExportUnitInfo(units, @"C:\work\UnitsJoined.txt");
@@ -135,13 +135,23 @@ namespace GladiusDataExtract
 
             List<Unit> units = new();
 
-            foreach (string file in Directory.EnumerateFiles(folderName, "*.xml"))
+            //Get the folder name with a trailing slash
+
+
+
+            //Used to trim the start of the path to get the item's key.
+            string basePath = Path.TrimEndingDirectorySeparator(Path.GetFullPath(folderName)) + "\\";
+
+
+			foreach (string file in Directory.EnumerateFiles(folderName, "*.xml", SearchOption.AllDirectories))
             {
                 try
                 {
                     string name = Path.GetFileName(file).Replace(".xml", "");
 
 
+                    //Get the key, which is the relative path with forward slash separators 
+                    string unitKey = GetKey(folderName, file);
 
                     XmlDocument xmlDocument = new XmlDocument();
                     xmlDocument.Load(file);
@@ -150,8 +160,7 @@ namespace GladiusDataExtract
                     XmlAttribute? xmlSize = xmlDocument.SelectSingleNode("unit/group")?.Attributes!["size"];
 
                     int modelCount = xmlSize is null ? 1 : int.Parse(xmlSize.Value);
-
-                    Unit unit = new(name, modelCount, new(), new(), new());
+                    Unit unit = new(name, unitKey, modelCount, new(), new(), new());
 
                     //--Effects
                     XmlNodeList effectNodes = xmlDocument.SelectNodes("unit/modifiers/modifier/effects/*")!;
@@ -446,6 +455,11 @@ namespace GladiusDataExtract
 
             File.WriteAllText(outputFile, sb.ToString());
         }
+
+        private static string GetKey(string rootPath, string filePath)
+        {
+			return Path.GetRelativePath(rootPath, filePath).Replace("\\", "/");
+		}
 
     }
 }

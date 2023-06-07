@@ -28,11 +28,12 @@ namespace GladiusDataExtract.Units
     /// <summary>
     /// A unit
     /// </summary>
+    /// <param name="Key">The key for this object.  For example "Tyranid/Hormagaunt"</param>
     /// <param name="Name"></param>
     /// <param name="ModelCount">The number of members in the unit</param>
     /// <param name="Attributes">Armor, hitpoints, etc.</param>
     /// <param name="Weapons">List of possible weapons for this unit</param>
-    public record Unit(string Name, int ModelCount, List<UnitAttribute> Attributes, List<Weapon> Weapons, List<Trait> Traits);
+    public record Unit(string Name, string Key, int ModelCount, List<UnitAttribute> Attributes, List<Weapon> Weapons, List<Trait> Traits);
 
 
 }

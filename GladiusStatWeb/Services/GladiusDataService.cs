@@ -20,7 +20,7 @@ namespace GladiusStatWeb.Services
             Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Name);
 
             GladiusUnits = gde.Program.ExtractUnitInfo(
-                @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
+                @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units",
                 weaponLookup);
         }
     }
