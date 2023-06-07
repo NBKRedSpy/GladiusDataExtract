@@ -11,23 +11,23 @@ namespace GladiusDataExtract
     {
         static void Main(string[] args)
         {
-            ExtractUnitInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
-                @"c:\work\UnitInfo.txt");
+            //ExtractUnitInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
+            //    @"c:\work\UnitInfo.txt");
 
-            ExtractWeaponInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons",
-                @"c:\work\WeaponInfo.txt");
+            //ExtractWeaponInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons",
+            //    @"c:\work\WeaponInfo.txt");
 
-            List<Weapon> weapons = new();
-            weapons = ExtractWeaponInfo(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons");
+            //List<Weapon> weapons = new();
+            //weapons = ExtractWeaponInfo(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons");
 
 
-            Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Name);
+            //Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Name);
 
-            List<Unit> units = ExtractUnitInfo(
-                @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units",
-                weaponLookup);
+            //List<Unit> units = ExtractUnitInfo(
+            //    @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units",
+            //    weaponLookup);
 
-            ExportUnitInfo(units, @"C:\work\UnitsJoined.txt");
+            //ExportUnitInfo(units, @"C:\work\UnitsJoined.txt");
         }
 
         private static void ExportUnitInfo(List<Unit> units, string outputFile)
@@ -130,7 +130,7 @@ namespace GladiusDataExtract
 
         }
 
-        public static List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup)
+        public static List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup, Dictionary<string, string> weaponNameLookup)
         {
 
             List<Unit> units = new();
@@ -147,7 +147,11 @@ namespace GladiusDataExtract
             {
                 try
                 {
-                    string name = Path.GetFileName(file).Replace(".xml", "");
+                    string keyName = GetKey(folderName, file);
+
+
+                    //Weapons don't have sub folders.
+                    string name = weaponNameLookup[keyName];
 
 
                     //Get the key, which is the relative path with forward slash separators 
@@ -240,7 +244,7 @@ namespace GladiusDataExtract
             {
 
                 string keyName = GetKey(folderName, file);
-            	Weapon weapon = new(weaponLocalizationText[keyName],0, new(), new(), new());
+            	Weapon weapon = new(weaponLocalizationText[keyName], keyName,new(), new(), new());
 
                 XmlDocument xmlDocument = new XmlDocument();
                 xmlDocument.Load(file);
@@ -253,7 +257,6 @@ namespace GladiusDataExtract
                 if(targetNode != null )
                 {
                     targetRange = int.Parse(targetNode.Attributes!["rangeMax"]!.Value);
-					weapon = weapon with { targetRange = targetRange };
 				}
 
 				//----Effects
@@ -458,7 +461,12 @@ namespace GladiusDataExtract
 
         private static string GetKey(string rootPath, string filePath)
         {
-			return Path.GetRelativePath(rootPath, filePath).Replace("\\", "/");
+            string key = Path.GetRelativePath(rootPath, filePath)
+                .Replace("\\", "/")
+                .Replace(".xml", "", StringComparison.OrdinalIgnoreCase);
+
+            return key;
+
 		}
 
     }
