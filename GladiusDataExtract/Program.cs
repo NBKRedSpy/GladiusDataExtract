@@ -228,7 +228,7 @@ namespace GladiusDataExtract
 
         }
 
-        public static List<Weapon> ExtractWeaponInfo(string folderName) 
+        public static List<Weapon> ExtractWeaponInfo(string folderName, Dictionary<string, string> weaponLocalizationText) 
         {
             List<Weapon> weapons = new();
 
@@ -238,9 +238,9 @@ namespace GladiusDataExtract
 
             foreach (string file in Directory.EnumerateFiles(folderName, "*.xml"))
             {
-                string name = Path.GetFileName(file).Replace(".xml", "");
 
-                Weapon weapon = new(name, 0, new(), new(), new());
+                string keyName = GetKey(folderName, file);
+            	Weapon weapon = new(weaponLocalizationText[keyName],0, new(), new(), new());
 
                 XmlDocument xmlDocument = new XmlDocument();
                 xmlDocument.Load(file);
