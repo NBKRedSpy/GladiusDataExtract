@@ -8,8 +8,7 @@
 @*@foreach (var unit in Model.Units.Where(x => x.Name == "Hormagaunt"))*@
 @foreach (var unit in Model.Units)
 {
-	string htmlId = unit.Name.Replace(" ", "-");
-
+	string htmlId = unit.Key.Replace("/", "-");
 
 
 	<div id="@htmlId" class="unit-name"><a href="#@htmlId">@unit.Name</a></div>
@@ -19,7 +18,7 @@
 
 		@foreach (UnitAttribute unitAttribute in Model.GetDisplayAttributes(unit))
 		{
-			<span>@unitAttribute.Name @unitAttribute.Value</span>
+			<span>@unitAttribute.Name @unitAttribute.Value.ToString("#.##")</span>
 		}
 		</div>
 		<div class="weapons-container">
@@ -33,7 +32,7 @@
 				foreach (var stat in stats)
 				{
 
-					bool showModelCount = stat.Item1.EndsWith("ttacks") && stat.Item2 > 1; //Attacks
+					bool showModelCount = stat.Item1.EndsWith("ttacks") && unit.ModelCount > 1; //Attacks
 					bool isAccuracy = stat.Item1.EndsWith("ccuracy");  //Accuracy
 
 					<div class="weapon-stats">@stat.Item1: @stat.Item2 

@@ -1,12 +1,12 @@
 # Issues
 ## Termagant
 Attacks are not showing x10
+
 Accuracy is not shown.
 
 
 # Todo
 
-- [x] Move the calculation logic to the entities from the UI.
 - [ ] Consolidate strengthDamage, meleeDamage, rangeDamage to one item.
 - [ ] Add the remaining unit base values to the display
 - [ ] Add the icons for the values to the display (gear for production, bio icon, etc.)
@@ -40,4 +40,7 @@ Ultimately a javascript filter would be best.
 
 # Features
 * Add item compare
+
+# Done
+- [x] Move the calculation logic to the entities from the UI.
 
