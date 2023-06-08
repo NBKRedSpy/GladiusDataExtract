@@ -32,39 +32,41 @@ namespace GladiusDataExtract.Extract
 			{
 
 				Unit unit = new();
+
 				unit.Name = dtoUnit.Name;
 				unit.Key = dtoUnit.Key;
 				unit.ModelCount = dtoUnit.ModelCount;
 
-				var attributes = dtoUnit.Attributes.ToDictionary(x => x.Name);
+				var attributes = new Dictionary<string, decimal>(
+					dtoUnit.Attributes
+						.Select(x => new KeyValuePair<string,decimal>(x.Name, x.Value)));
 
-				unit.Armor = (int)attributes["armor"].Value;
-				unit.Morale = (int)attributes["morale"].Value;
-				unit.ProductionCost = (int)attributes["productionCost"].Value;
+				unit.Armor = (int)attributes["armor"];
+				unit.Morale = (int)attributes["morale"];
+				unit.ProductionCost = (int)attributes["productionCost"];
 
 				unit.ProductionResources = ConvertResources(attributes, "Cost");
 
-				unit.Hitpoints = (int)attributes["hitpointsMax"].Value;
-				unit.Movement = (int)attributes["movementMax"].Value;
+				unit.Hitpoints = (int)attributes["hitpointsMax"];
+				unit.Movement = (int)attributes["movementMax"];
+
+				unit.Traits = dtoUnit.Traits.Select(x => new Trait(x.Name, x.RequiredUpgrade)).ToList();
 			}
 
 			return units;
 		}
 
-		private Resources ConvertResources(Dictionary<string, du.UnitAttribute> attributes, string suffix)
+		private Resources ConvertResources(Dictionary<string, decimal> attributes, string suffix)
 		{
 			Resources resources = new Resources();
-			//resources.Influence = attributes[""]
 
 			resources.BioMass = attributes.GetValueOrDefault("biomass" + suffix);
+			resources.Energy = attributes.GetValueOrDefault("energy" + suffix);
+			resources.Food = attributes.GetValueOrDefault("food" + suffix);
+			resources.Influence = attributes.GetValueOrDefault("influence" + suffix);
+			resources.Ore = attributes.GetValueOrDefault("ore" + suffix);
 
-			/*
-			 * 	food
-	ore
-	energy
-	influence
-	biomass
-
+			return resources;
 		}
 	}
 }

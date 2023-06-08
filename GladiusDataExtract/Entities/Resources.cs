@@ -13,9 +13,9 @@ namespace GladiusDataExtract.Entities
 	{
 		public decimal BioMass { get; set; } = 0;
 		public decimal Energy { get; set; } = 0;
-		public decimal Ore { get; set; } = 0;
 		public decimal Food { get; set; } = 0;
 		public decimal Influence { get; set; } = 0;
+		public decimal Ore { get; set; } = 0;
 
 	}
 }
