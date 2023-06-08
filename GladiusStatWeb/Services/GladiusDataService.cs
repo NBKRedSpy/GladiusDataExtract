@@ -1,6 +1,5 @@
 ﻿using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
-using GladiusDataExtract;
 using GladiusDataExtract.Extract;
 using GladiusDataExtract.Extract.Units;
 using GladiusDataExtract.Extract.Weapons;
@@ -21,7 +20,6 @@ namespace GladiusStatWeb.Services
 
 
             var extractor = new Extractor();
-
 
             LanguageExtract languageExtract = new LanguageExtract();
 

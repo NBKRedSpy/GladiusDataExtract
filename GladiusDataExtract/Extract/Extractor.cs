@@ -17,7 +17,43 @@ namespace GladiusDataExtract.Extract
     public class Extractor
     {
 
-        public List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup, Dictionary<string, string> weaponNameLookup)
+		/// <summary>
+		/// Returns the DTO units from the data.
+		/// </summary>
+		/// <param name="localizationFolder">The folder to use for the localization text.  Ex:  "./Warhammer 40000 Gladius - Relics of War/Data/Core/Languages/English/"</param>
+		/// <param name="dataFolder">The data folder for the game.
+		/// Ex:  ./Warhammer 40000 Gladius - Relics of War/Data</param>
+		/// <exception cref="NotImplementedException"></exception>
+		public List<Unit> ExtractData(string localizationFolder, string dataFolder)
+		{
+			//todo:  change to configure in settings or env.
+
+
+			var extractor = new Extractor();
+
+			LanguageExtract languageExtract = new LanguageExtract();
+
+            Dictionary<string, string> weaponLocalizationText = languageExtract.GetTextStrings(
+                Path.Combine(localizationFolder, "Weapons.xml"));
+
+			List<Weapon> weapons = new();
+
+			weapons = extractor.ExtractWeaponInfo(Path.Combine(dataFolder, @"\World\Weapons"), weaponLocalizationText);
+
+
+			Dictionary<string, string> unitLocalizationText = languageExtract.GetTextStrings(
+                Path.Combine(dataFolder, "\\Core\\Languages\\English\\Units.xml"));
+
+			Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Key);
+
+			List<Unit> gladiusUnits = extractor.ExtractUnitInfo(Path.Combine(dataFolder, @"World\Units"),
+				weaponLookup, unitLocalizationText);
+
+            return gladiusUnits;
+
+		}
+
+		public List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup, Dictionary<string, string> weaponNameLookup)
         {
 
             List<Unit> units = new();
