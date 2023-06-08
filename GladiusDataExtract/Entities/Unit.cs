@@ -29,10 +29,12 @@ namespace GladiusDataExtract.Entities
 		public int Hitpoints { get; set; } = 0;
 		public int Movement { get; set; } = 0;
 
-		/// <summary>
-		/// The number of models in a unit.  Ex:  A unit may have 8 soldiers.
-		/// </summary>
-		public int ModelCount { get; set; } = 0;
+        public int Morale { get; set; }
+
+        /// <summary>
+        /// The number of models in a unit.  Ex:  A unit may have 8 soldiers.
+        /// </summary>
+        public int ModelCount { get; set; } = 0;
 
 		public int ProductionCost { get; set; } = 0;
 
