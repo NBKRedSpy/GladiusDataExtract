@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GladiusDataExtract.Weapons;
+using GladiusDataExtract.Extract.Weapons;
 
-namespace GladiusDataExtract.Units
+namespace GladiusDataExtract.Extract.Units
 {
 
     /// <summary>

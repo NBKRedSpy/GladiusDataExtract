@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.ExceptionServices;
-using GladiusDataExtract.Units;
-using GladiusDataExtract.Weapons;
+using GladiusDataExtract.Extract.Units;
+using GladiusDataExtract.Extract.Weapons;
 using GladiusStatWeb.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -11,7 +11,7 @@ using MoreLinq;
 
 namespace GladiusStatWeb.Pages
 {
-	public class UnitsModel : PageModel
+    public class UnitsModel : PageModel
 	{
 
 		public List<Unit> Units { get; init; }

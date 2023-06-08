@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using GladiusDataExtract;
-using GladiusDataExtract.Units;
-using GladiusDataExtract.Weapons;
+using GladiusDataExtract.Extract.Units;
+using GladiusDataExtract.Extract.Weapons;
 using gde = GladiusDataExtract;
 
 namespace GladiusStatWeb.Services

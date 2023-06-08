@@ -2,8 +2,8 @@
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Xml;
-using GladiusDataExtract.Units;
-using GladiusDataExtract.Weapons;
+using GladiusDataExtract.Extract.Units;
+using GladiusDataExtract.Extract.Weapons;
 
 namespace GladiusDataExtract
 {
