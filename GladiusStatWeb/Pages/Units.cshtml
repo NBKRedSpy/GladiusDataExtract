@@ -21,8 +21,9 @@
 			@{ShowIfNotZero("Influence", unit.ProductionResources.Influence);}
 			@{ShowIfNotZero("Ore", unit.ProductionResources.Ore);}
 
+		</div>
 
-		<div class="weapons-container">
+		<div class="unit__item-content">
 			<div class="unit__header">Weapons</div>
 			<div class="unit__item-content">
 				@foreach (Weapon weapon in unit.Weapons)
@@ -34,30 +35,31 @@
 						<span>AttackCount @weapon.AttackCount</span>
 						<span>ArmorPenetration @weapon.ArmorPenetration</span>
 						<span>Accuracy @weapon.Accuracy</span>
-					</div>
 
-					<div class="unit__header">Weapon Traits</div>
-					<div class="unit__item-content">
-					@foreach (var trait in weapon.Traits)
-					{
-						<div>@trait</div>
-					}
-					</div>
-					@if (weapon.Requirements.Count > 0)
-					{
-						<div class="unit__header">Requirements</div>
+						<div class="unit__header">Traits</div>
 						<div class="unit__item-content">
-
-						@foreach(var requirement in weapon.Requirements)
-							{
-								<div><span>@requirement.Name</span>
-									@if(requirement.RequiredUpgrade != requirement.Name){
-										<span> -> @requirement.RequiredUpgrade</span> 
-									}
-								</div>
-							}
+						@foreach (var trait in weapon.Traits)
+						{
+							<div>@trait</div>
+						}
 						</div>
-					}
+						@if (weapon.Requirements.Count > 0)
+						{
+							<div class="unit__header">Requirements</div>
+							<div class="unit__item-content">
+
+							@foreach(var requirement in weapon.Requirements)
+								{
+									<div><span>@requirement.Name</span>
+										@if(requirement.RequiredUpgrade != requirement.Name){
+											<span> -> @requirement.RequiredUpgrade</span> 
+										}
+									</div>
+								}
+							</div>
+						}
+				</div>
+
 				}
 			</div>
 		</div>
