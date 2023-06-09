@@ -1,68 +1,72 @@
 ﻿@page
-@using GladiusDataExtract.Extract.Units;
-@using GladiusDataExtract.Extract.Weapons;
+@using GladiusDataExtract.Entities;
 @model GladiusStatWeb.Pages.UnitsModel
 
 
 
-@*@foreach (var unit in Model.Units.Where(x => x.Name == "Hormagaunt"))*@
-@*
 @foreach (var unit in Model.Units)
 {
 	string htmlId = unit.Key.Replace("/", "-");
 
+	<div class="unit-name" id="@htmlId"><a class="unit__name-link" href="#@htmlId">@unit.Name</a></div>
+		<div class="unit__item-content">
+			<div>Model Count: @unit.ModelCount </div>
+			<span>Armor @unit.Armor</span>
+			<span>Hitpoints @unit.Hitpoints</span>
+			<span>Movement @unit.Movement</span>
 
-	<div id="@htmlId" class="unit-name"><a href="#@htmlId">@unit.Name</a></div>
-	<div>
-		<div class="stats-container">
-		<div>Count: @unit.ModelCount </div>
+			@{ShowIfNotZero("BioMass", unit.ProductionResources.BioMass);}
+			@{ShowIfNotZero("Energy", unit.ProductionResources.Energy);}
+			@{ShowIfNotZero("Food", unit.ProductionResources.Food);}
+			@{ShowIfNotZero("Influence", unit.ProductionResources.Influence);}
+			@{ShowIfNotZero("Ore", unit.ProductionResources.Ore);}
 
-		@foreach (UnitAttribute unitAttribute in Model.GetDisplayAttributes(unit))
-		{
-			<span>@unitAttribute.Name @unitAttribute.Value.ToString("#.##")</span>
-		}
-		</div>
+
 		<div class="weapons-container">
-			@foreach (Weapon weapon in unit.Weapons)
-			{
-
-				<span class="weapon-name" >@weapon.Name</span>
-
-				var stats = weapon.GetWeaponStats(unit);
-
-				foreach (var stat in stats)
+			<div class="unit__header">Weapons</div>
+			<div class="unit__item-content">
+				@foreach (Weapon weapon in unit.Weapons)
 				{
+					<span class="unit__header" >@weapon.Name</span>
 
-					bool showModelCount = stat.Item1.EndsWith("ttacks") && unit.ModelCount > 1; //Attacks
-					bool isAccuracy = stat.Item1.EndsWith("ccuracy");  //Accuracy
-
-					<div class="weapon-stats">@stat.Item1: @stat.Item2 
-						@if (showModelCount)
-						{
-							@(" (x" + unit.ModelCount + ")")
-						}
-						else if(isAccuracy)
-						{
-							@(" (" + Model.GetAccuracyChance((int)stat.Item2) + "%)")
-						}
+					<div class="unit__item-content">
+						<span>Damage @weapon.Damage</span>
+						<span>AttackCount @weapon.AttackCount</span>
+						<span>ArmorPenetration @weapon.ArmorPenetration</span>
+						<span>Accuracy @weapon.Accuracy</span>
 					</div>
 
-					
+					<div class="unit__header">Weapon Traits</div>
+					<div class="unit__item-content">
+					@foreach (var trait in weapon.Traits)
+					{
+						<div>@trait</div>
+					}
+					</div>
+					@if (weapon.Requirements.Count > 0)
+					{
+						<div class="unit__header">Requirements</div>
+						<div class="unit__item-content">
 
+						@foreach(var requirement in weapon.Requirements)
+							{
+								<div><span>@requirement.Name</span>
+									@if(requirement.RequiredUpgrade != requirement.Name){
+										<span> -> @requirement.RequiredUpgrade</span> 
+									}
+								</div>
+							}
+						</div>
+					}
 				}
-
-				<div>Weapon Traits</div>
-				@foreach (var trait in weapon.Traits)
-				{
-					<div>@trait</div>
-				}
-			}
+			</div>
 		</div>
 
 		@if(unit.Traits.Count != 0)
 		{
-			<div class="traits-container">
-				Traits
+			<div class="unit__header">Traits</div>
+
+			<div class="unit__item-content">
 
 				@foreach (var trait in unit.Traits)
 				{
@@ -75,13 +79,15 @@
 				}
 			</div>
 		}
+		</div>
 
-
-		
 	</div>
 
-
+	void ShowIfNotZero(string name, decimal value)
+	{
+		if (value != 0)
+		{
+			<span>@name @value.ToString("#.##")</span>
+		}
+	}
 }
-	*@
-
-Debugging

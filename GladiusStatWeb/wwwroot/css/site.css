@@ -17,17 +17,24 @@ body {
   margin-bottom: 60px;
 }
 
-.unit-name {
-    text-decoration: underline;
-    font-size: 1.5rem
+
+.unit__name-link {
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
 }
-.weapons-container {
-    padding-left: 40px
+.unit__name {
+    padding-bottom: 1rem;
 }
-.weapon-name {
+
+.unit__header {
     font-weight: bold;
 }
 
-.weapon-stats {
-    padding-left: 40px;
+.unit__item-content {
+    padding-left: 1.5rem;
 }
+
+    .unit__item-content:not(:last-child) {
+        padding-bottom: .5rem;
+    }
