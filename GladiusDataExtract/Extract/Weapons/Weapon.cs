@@ -36,7 +36,7 @@ namespace GladiusDataExtract.Extract.Weapons
         /// </summary>
         /// <param name="weapon"></param>
         /// <returns></returns>
-        public List<Tuple<string, decimal>> GetWeaponStats(Unit unit)
+        public void GetWeaponStats(Unit unit, out List<Tuple<string, decimal>> stats, out bool isRanged)
         {
 
             IEnumerable<(Effect Effect, decimal UnitValue)> weaponUnitAttributes = Effects.LeftJoin(
@@ -50,31 +50,34 @@ namespace GladiusDataExtract.Extract.Weapons
                 .Select(x => new Tuple<string, decimal>(x.Effect.Name, x.Effect.ApplyModifiers(x.UnitValue)))
                 .ToList();
 
-            if (Traits.Contains("Melee"))
-            {
-                AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "meleeAccuracy");
-                AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "meleeAttacks");
-                AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "strengthDamage");
-            }
-            else
-            {
-                //Assume range - the weapon doesn't seem to have a range specific trait.
-
-                AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedArmorPenetration");
-                AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedDamage");
-                AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedAccuracy");
 
 
+            //try to detect range.
+            isRanged = Effects.Any(x => x.Name.StartsWith("ranged"));
 
-            }
+            if (isRanged) 
+			{
+				//Assume range - the weapon doesn't seem to have a range specific trait.
 
-            //Sort to match the UI's order.
-            modifierAppliedWeaponAttributes = modifierAppliedWeaponAttributes
-                .OrderBy(x =>
-                    WeaponAttributeDisplayOrder.TryGetValue(x.Item1, out int order) ? order : int.MaxValue)
-                .ToList();
+				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedArmorPenetration");
+				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedDamage");
+				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedAccuracy");
+			}
+			else
+			{
+				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "meleeAccuracy");
+				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "meleeAttacks");
+			}
 
-            return modifierAppliedWeaponAttributes;
+			AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "strengthDamage");
+
+			//Sort to match the UI's order.
+			modifierAppliedWeaponAttributes = modifierAppliedWeaponAttributes
+            .OrderBy(x =>
+                WeaponAttributeDisplayOrder.TryGetValue(x.Item1, out int order) ? order : int.MaxValue)
+            .ToList();
+
+            stats = modifierAppliedWeaponAttributes; 
         }
 
         /// <summary>

@@ -58,12 +58,19 @@ namespace GladiusDataExtract.Extract
 						.Select(x => new KeyValuePair<string,decimal>(x.Name, x.Value)));
 
 				unit.Armor = (int)attributes["armor"];
+
 				unit.Morale = (int)attributes["moraleMax"];
-				unit.ProductionCost = (int)attributes["productionCost"];
 
-				unit.ProductionResources = ConvertResources(attributes, "Cost");
+				unit.IsFortification = dtoUnit.Traits.Any(x=> x.Name =="Fortification");
 
-				unit.Hitpoints = (int)attributes["hitpointsMax"];
+				if(!unit.IsFortification)
+				{
+					unit.ProductionCost = (int)attributes["productionCost"];
+					unit.ProductionResources = ConvertResources(attributes, "Cost");
+					unit.UpkeepResources = ConvertResources(attributes, "Upkeep");
+					unit.Hitpoints = (int)attributes["hitpointsMax"];
+				}
+
 				unit.Movement = (int)attributes["movementMax"];
 
 				unit.Traits = dtoUnit.Traits.Select(x => new Requirement(x.Name, x.RequiredUpgrade!)).ToList();
@@ -89,17 +96,22 @@ namespace GladiusDataExtract.Extract
 					continue;
 				}
 
-				Dictionary<string, decimal> unitWeaponStats = dtoWeapon.GetWeaponStats(dtoUnit)
-					.ToDictionary(x => x.Item1, x => x.Item2);
 
 				Weapon weapon = new();
 				weapon.Name = dtoWeapon.Name;
 				weapon.Key = dtoWeapon.Key;
 				weapon.Range = dtoWeapon.weaponRange;
-				weapon.AttackCount = unitWeaponStats["attacks"];
+
+				dtoWeapon.GetWeaponStats(dtoUnit, out List<Tuple<string, decimal>> unitWeaponStatsList , out bool isRanged);
+
+				Dictionary<string, decimal> unitWeaponStats = unitWeaponStatsList.ToDictionary(x => x.Item1, x => x.Item2);
+
+				weapon.AttackCount = unitWeaponStats.GetValueOrDefault("attacks", 1);
 
 
-				if(weapon.IsRangedWeapon)
+				//There are range 1 ranged weapons. Only way to tell is that 
+				//there should be a ranged stat of some sort.
+				if (isRanged)
 				{
 					weapon.Accuracy = unitWeaponStats["rangedAccuracy"];
 					weapon.ArmorPenetration = unitWeaponStats["rangedArmorPenetration"];
@@ -107,12 +119,6 @@ namespace GladiusDataExtract.Extract
 				}
 				else
 				{
-					//Debug
-					//if (!unitWeaponStats.ContainsKey("meleeDamage") && !unitWeaponStats.ContainsKey("rangedDamage")
-					//{
-						
-					//}
-
 					decimal strengthDamage = unitWeaponStats.GetValueOrDefault("strengthDamage");
 
 					//Damage - for melee strengthDamage is supposed to be the preferred stat,
@@ -127,7 +133,7 @@ namespace GladiusDataExtract.Extract
 					}
 
 					weapon.Accuracy = unitWeaponStats["meleeAccuracy"];
-					weapon.ArmorPenetration = unitWeaponStats["meleeArmorPenetration"];
+					weapon.ArmorPenetration = unitWeaponStats.GetValueOrDefault("meleeArmorPenetration");
 				}
 
 				weapon.Traits = dtoWeapon.Traits;

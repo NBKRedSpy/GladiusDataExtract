@@ -94,7 +94,9 @@ namespace GladiusDataExtract.Extract
 
                     List<UnitAttribute> attributes = unit.Attributes;
 
-                    foreach (XmlNode xmlEffect in effectNodes)
+					//todo:  Add cargo info. // <cargoSlots base="6"/> <!-- %cargoSlots base capacity=20 -->
+
+					foreach (XmlNode xmlEffect in effectNodes)
                     {
                         XmlAttributeCollection effectXmlAttributes = xmlEffect.Attributes!;
 

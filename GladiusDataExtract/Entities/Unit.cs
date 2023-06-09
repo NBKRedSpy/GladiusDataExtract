@@ -16,10 +16,13 @@ namespace GladiusDataExtract.Entities
 		/// </summary>
 		public string Name { get; set; } = "";
 
-		/// <summary>
-		/// The internal key of the unit.  Ex:  Tyranids/Hormagaunt
-		/// </summary>
-		public string Key { get; set; } = "";
+
+        public bool IsFortification { get; set; }
+
+        /// <summary>
+        /// The internal key of the unit.  Ex:  Tyranids/Hormagaunt
+        /// </summary>
+        public string Key { get; set; } = "";
 
 		public int Armor { get; set; } = 0;
 
@@ -39,6 +42,8 @@ namespace GladiusDataExtract.Entities
 		public int ProductionCost { get; set; } = 0;
 
 		public Resources ProductionResources { get; set; } = new Resources();
+
+		public Resources UpkeepResources { get; set; } = new Resources();
 
 		public List<Requirement> Traits { get; set; } = new List<Requirement>();
 
