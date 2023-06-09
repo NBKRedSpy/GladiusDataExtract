@@ -16,27 +16,19 @@ namespace GladiusStatWeb.Services
 
         public GladiusDataService()
         {
-            //todo:  change to configure in settings or env.
-
 
             var extractor = new Extractor();
+			GladiusUnits = extractor.ExtractData(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\Core\Languages\English\",
+				@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data"
+				);
 
-            LanguageExtract languageExtract = new LanguageExtract();
-
-            Dictionary<string,string> weaponLocalizationText = languageExtract.GetTextStrings("D:\\Games\\Steam\\steamapps\\common\\Warhammer 40000 Gladius - Relics of War\\Data\\Core\\Languages\\English\\Weapons.xml");
-
-            List<Weapon> weapons = new();
-            
-            weapons = extractor.ExtractWeaponInfo(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons", weaponLocalizationText);
+            //Debug
+            Converter converter= new Converter();  
+            converter.ConvertData(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\Core\Languages\English\",
+				@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data"
+				);
 
 
-			Dictionary<string, string> unitLocalizationText = languageExtract.GetTextStrings("D:\\Games\\Steam\\steamapps\\common\\Warhammer 40000 Gladius - Relics of War\\Data\\Core\\Languages\\English\\Units.xml");
-
-			Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Key );
-
-            GladiusUnits = extractor.ExtractUnitInfo(
-                @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units",
-                weaponLookup, unitLocalizationText);
         }
     }
 }

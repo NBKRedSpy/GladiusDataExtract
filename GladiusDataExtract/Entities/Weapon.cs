@@ -27,7 +27,7 @@ namespace GladiusDataExtract.Entities
 		/// </summary>
 		public int Range { get; set; } = 0;
 
-        public bool IsRangedWeapon { get => Range != 0; }
+        public bool IsRangedWeapon { get => Range > 1; }
 
 		public List<string> Traits { get; set; } = new();
 		public List<Requirement> Requirements { get; set; } = new();

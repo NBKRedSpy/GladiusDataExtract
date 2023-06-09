@@ -38,11 +38,11 @@ namespace GladiusDataExtract.Extract
 
 			List<Weapon> weapons = new();
 
-			weapons = extractor.ExtractWeaponInfo(Path.Combine(dataFolder, @"\World\Weapons"), weaponLocalizationText);
+			weapons = extractor.ExtractWeaponInfo(Path.Combine(dataFolder, @"World\Weapons"), weaponLocalizationText);
 
 
 			Dictionary<string, string> unitLocalizationText = languageExtract.GetTextStrings(
-                Path.Combine(dataFolder, "\\Core\\Languages\\English\\Units.xml"));
+                Path.Combine(dataFolder, @"Core\Languages\English\Units.xml"));
 
 			Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Key);
 

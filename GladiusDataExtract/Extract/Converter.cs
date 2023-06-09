@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using GladiusDataExtract.Entities;
@@ -16,17 +17,30 @@ namespace GladiusDataExtract.Extract
 	public class Converter
 	{
 
-		
+		/// <summary>
+		/// Returns the Units from the game's data.
+		/// </summary>
+		/// <param name="localizationFolder">The folder to use for the localization text.  Ex:  "[steam dir]/Warhammer 40000 Gladius - Relics of War/Data/Core/Languages/English/"</param>
+		/// <param name="dataFolder">The data folder for the game.
+		/// Ex:  [steam dir]/Warhammer 40000 Gladius - Relics of War/Data</param>
+		/// <exception cref="NotImplementedException"></exception>
+		public List<Unit> ConvertData(string localizationFolder, string dataFolder)
+		{
+			Extractor extractor = new Extractor();	
+			List<du.Unit> units = extractor.ExtractData(localizationFolder, dataFolder);
+
+			return ConvertUnits(units);
+		}
+
+
 		/// <summary>
 		/// Converts the DTO's data to Entity data.
 		/// </summary>
 		/// <param name="dtoUnits"></param>
 		/// <returns></returns>
 		/// <exception cref="NotImplementedException"></exception>
-		public List<Unit> ConvertUnits(List<du.Unit> dtoUnits, List<dw.Weapon> weapons)
+		private List<Unit> ConvertUnits(List<du.Unit> dtoUnits)
 		{
-
-			Dictionary<string, dw.Weapon> weaponLookup = weapons.ToDictionary(x => x.Name);
 
 			List<Unit> units = new List<Unit>();
 			
@@ -44,7 +58,7 @@ namespace GladiusDataExtract.Extract
 						.Select(x => new KeyValuePair<string,decimal>(x.Name, x.Value)));
 
 				unit.Armor = (int)attributes["armor"];
-				unit.Morale = (int)attributes["morale"];
+				unit.Morale = (int)attributes["moraleMax"];
 				unit.ProductionCost = (int)attributes["productionCost"];
 
 				unit.ProductionResources = ConvertResources(attributes, "Cost");
@@ -68,6 +82,13 @@ namespace GladiusDataExtract.Extract
 
 			foreach (dw.Weapon dtoWeapon in dtoUnit.Weapons)
 			{
+
+				//Ignore the "None" weapon.  Might just be to put a default weapon on the 3d model.
+				if (dtoWeapon.Name == "None")
+				{
+					continue;
+				}
+
 				Dictionary<string, decimal> unitWeaponStats = dtoWeapon.GetWeaponStats(dtoUnit)
 					.ToDictionary(x => x.Item1, x => x.Item2);
 
@@ -78,7 +99,6 @@ namespace GladiusDataExtract.Extract
 				weapon.AttackCount = unitWeaponStats["attacks"];
 
 
-				//melee or range stats.
 				if(weapon.IsRangedWeapon)
 				{
 					weapon.Accuracy = unitWeaponStats["rangedAccuracy"];
@@ -87,6 +107,12 @@ namespace GladiusDataExtract.Extract
 				}
 				else
 				{
+					//Debug
+					//if (!unitWeaponStats.ContainsKey("meleeDamage") && !unitWeaponStats.ContainsKey("rangedDamage")
+					//{
+						
+					//}
+
 					decimal strengthDamage = unitWeaponStats.GetValueOrDefault("strengthDamage");
 
 					//Damage - for melee strengthDamage is supposed to be the preferred stat,
