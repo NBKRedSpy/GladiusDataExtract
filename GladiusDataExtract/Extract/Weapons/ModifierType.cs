@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace GladiusDataExtract.Extract.Weapons
 {
-    /// <summary>
-    /// A modifier for an effect.  For example, add 2 more attacks or add 12 range damage.
-    /// </summary>
-    /// <param name="Type"></param>
-    /// <param name="Value"></param>
-    public record ModifierType(string Type, decimal Value)
+	/// <summary>
+	/// A modifier for an effect.  For example, add 2 more attacks or add 12 range damage.
+	/// </summary>
+	/// <param name="Type"></param>
+	/// <param name="Value"></param>
+	internal record ModifierType(string Type, decimal Value)
     {
 
         public decimal ApplyModifier(decimal? attributeValue)
@@ -42,7 +42,9 @@ namespace GladiusDataExtract.Extract.Weapons
                     //	over time.
                     return actionOperand;
                 case "mul":
-                    return (actionOperand + 1) * attValue;
+                    //todo:  There is a condition of -.05, so assuming adding.  Not sure if unit base value or adjusted
+                    //  for multiple operations.  Ex:  add, then multiply for accuracy.
+                    return (actionOperand * attValue) + attValue;
                 case "min":
                     //Not sure.  Is it the min between the two?
                     return Math.Min(attValue, actionOperand);

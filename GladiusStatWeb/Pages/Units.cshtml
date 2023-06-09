@@ -35,6 +35,10 @@
 					<span>AttackCount @weapon.AttackCount</span>
 					<span>ArmorPenetration @weapon.ArmorPenetration</span>
 					<span>Accuracy @weapon.Accuracy</span>
+					@if (weapon.RequiredUpgrade != "")
+					{
+						<div><span class="property-name">Unit Upgrade Requirement: </span>@weapon.RequiredUpgrade</div>
+					}
 
 					<div class="unit__header">Traits</div>
 					<div class="unit__item-content">
@@ -45,7 +49,7 @@
 					</div>
 					@if (weapon.Requirements.Count > 0)
 					{
-						<div class="unit__header">Requirements</div>
+						<div class="unit__header">Weapon Requirements</div>
 						<div class="unit__item-content">
 
 						@foreach(var requirement in weapon.Requirements)

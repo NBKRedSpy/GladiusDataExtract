@@ -8,14 +8,14 @@ using MoreLinq;
 
 namespace GladiusDataExtract.Extract.Weapons
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="Name"></param>
-    /// <param name="Effects"></param>
-    /// <param name="Requirements"></param>
-    /// <param name="Traits">The traits for the weapon.  For example, Melee or IgnoresCover</param>
-    public record Weapon(string Name, string Key, int weaponRange, List<Effect> Effects, List<Requirement> Requirements,
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="Name"></param>
+	/// <param name="Effects"></param>
+	/// <param name="Requirements"></param>
+	/// <param name="Traits">The traits for the weapon.  For example, Melee or IgnoresCover</param>
+	internal record Weapon(string Name, string Key, int weaponRange, List<Effect> Effects, List<Requirement> Requirements,
         List<string> Traits)
     {
         private static Dictionary<string, int> WeaponAttributeDisplayOrder = new() {

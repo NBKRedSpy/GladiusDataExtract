@@ -98,8 +98,10 @@ namespace GladiusDataExtract.Extract
 
 			List<Weapon> weapons = new();
 
-			foreach (dw.Weapon dtoWeapon in dtoUnit.Weapons)
+			foreach (du.UnitWeapon dtoUnitWeapon in dtoUnit.Weapons)
 			{
+
+				dw.Weapon dtoWeapon = dtoUnitWeapon.Weapon;
 
 				//Ignore the "None" weapon.  Might just be to put a default weapon on the 3d model.
 				if (dtoWeapon.Name == "None")
@@ -112,6 +114,7 @@ namespace GladiusDataExtract.Extract
 				weapon.Name = dtoWeapon.Name;
 				weapon.Key = dtoWeapon.Key;
 				weapon.Range = dtoWeapon.weaponRange;
+				weapon.RequiredUpgrade = dtoUnitWeapon.RequiredUpgrade;
 
 				dtoWeapon.GetWeaponStats(dtoUnit, out List<Tuple<string, decimal>> unitWeaponStatsList , out bool isRanged);
 

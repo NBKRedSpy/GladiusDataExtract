@@ -71,12 +71,18 @@ namespace GladiusDataExtract
                 
                 writer.Indent++;
 
-                foreach (var weapon in unit.Weapons)
+                foreach (var unitWeapon in unit.Weapons)
                 {
+                    var weapon = unitWeapon.Weapon;
+
                     writer.WriteLine(weapon.Name);
 
                     writer.Indent++;
-
+                    
+                    if(unitWeapon.RequiredUpgrade != "")
+                    {
+                        writer.WriteLine($"Requires {unitWeapon.RequiredUpgrade}");
+                    }
                     writer.WriteLine("Effects");
 
                     writer.Indent++;

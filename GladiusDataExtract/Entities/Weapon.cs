@@ -22,11 +22,15 @@ namespace GladiusDataExtract.Entities
 
 		public decimal Accuracy { get; set; } = 0;
 
-
 		/// <summary>
 		/// The range of the weapon.  Will be zero for melee
 		/// </summary>
 		public int Range { get; set; } = 0;
+
+		/// <summary>
+		/// Only used for a unit's weapon, not base weapon data.
+		/// </summary>
+		public string RequiredUpgrade { get; set;  } = "";
 
 		public int GetAccuracyChance(int accuracy)
 		{

@@ -24,7 +24,7 @@ namespace GladiusDataExtract.Extract
 		/// <param name="dataFolder">The data folder for the game.
 		/// Ex:  ./Warhammer 40000 Gladius - Relics of War/Data</param>
 		/// <exception cref="NotImplementedException"></exception>
-		public List<Unit> ExtractData(string localizationFolder, string dataFolder)
+		internal List<Unit> ExtractData(string localizationFolder, string dataFolder)
 		{
 			//todo:  change to configure in settings or env.
 
@@ -53,7 +53,7 @@ namespace GladiusDataExtract.Extract
 
 		}
 
-		public List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup, Dictionary<string, string> weaponNameLookup)
+		internal List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup, Dictionary<string, string> weaponNameLookup)
         {
 
             List<Unit> units = new();
@@ -133,7 +133,10 @@ namespace GladiusDataExtract.Extract
 
                     foreach (XmlNode weaponNode in weaponNodes)
                     {
-                        unit.Weapons.Add(weaponLookup[weaponNode.Attributes!["name"]!.Value]);
+                        string requiredUpgrade = weaponNode.Attributes!["requiredUpgrade"]?.Value ?? "";
+
+                        unit.Weapons.Add(new UnitWeapon(weaponLookup[weaponNode.Attributes!["name"]!.Value],
+                            requiredUpgrade));
                     }
 
 
@@ -166,7 +169,7 @@ namespace GladiusDataExtract.Extract
 
         }
 
-        public List<Weapon> ExtractWeaponInfo(string folderName, Dictionary<string, string> weaponLocalizationText)
+		internal List<Weapon> ExtractWeaponInfo(string folderName, Dictionary<string, string> weaponLocalizationText)
         {
             List<Weapon> weapons = new();
 

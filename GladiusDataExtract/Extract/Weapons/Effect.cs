@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace GladiusDataExtract.Extract.Weapons
 {
-    /// <summary>
-    /// The effect of a weapon.  Ex:  attacks
-    /// </summary>
-    /// <param name="Name"></param>
-    /// <param name="Modifiers"></param>
-    public record Effect(string Name, List<ModifierType> Modifiers)
+	/// <summary>
+	/// The effect of a weapon.  Ex:  attacks
+	/// </summary>
+	/// <param name="Name"></param>
+	/// <param name="Modifiers"></param>
+	internal record Effect(string Name, List<ModifierType> Modifiers)
     {
         /// <summary>
         /// Runs all the modifiers for this effect.
