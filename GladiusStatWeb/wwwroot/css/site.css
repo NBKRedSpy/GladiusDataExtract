@@ -55,3 +55,16 @@ body {
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
 }
+
+.icon {
+    background-color: black;
+    height: 1em;
+    width: 1em;
+    filter: invert(100%);
+}
+
+.icon-container{
+    display: inline-flex;
+    justify-content: center;
+
+}

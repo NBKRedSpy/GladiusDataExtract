@@ -32,10 +32,10 @@
 					<span class="unit__header" >@weapon.Name</span>
 
 					<div class="unit__item-content-separate">
-						<span>Damage @weapon.Damage</span>
-						<span>AttackCount @weapon.AttackCount</span>
-						<span>ArmorPenetration @weapon.ArmorPenetration</span>
-						<span>Accuracy @weapon.Accuracy</span>
+						<span>@{await DisplayIcon("Damage");} @weapon.Damage</span>
+						<span>@{await DisplayIcon("Attacks");} @weapon.AttackCount</span>
+						<span>@{await DisplayIcon("ArmorPenetration");} @weapon.ArmorPenetration</span>
+						<span>@{await DisplayIcon("Accuracy");}@weapon.Accuracy</span>
 						@if (weapon.RequiredUpgrade != "")
 						{
 							<div><span class="property-name">Unit Upgrade Requirement: </span>@weapon.RequiredUpgrade</div>
@@ -103,5 +103,14 @@
 		{
 			<span>@name @value.ToString("#.##")</span>
 		}
+	}
+
+	async Task DisplayIcon(string iconName)
+	{
+		//<span>@iconName</span>
+		//<img class="icon" src=@"/img/@iconName.png" alt="@iconName"></img>
+		<span class="icon-container">
+			<img class="icon" src="~/img/@(iconName).png")" ></img>
+		</span>
 	}
 }
