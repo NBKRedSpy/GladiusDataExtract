@@ -63,6 +63,9 @@ namespace GladiusDataExtract.Extract
 
 		private List<Weapon> GetWeapons(Unit unit, du.Unit dtoUnit)
 		{
+
+			List<Weapon> weapons = new();
+
 			foreach (dw.Weapon dtoWeapon in dtoUnit.Weapons)
 			{
 				Dictionary<string, decimal> unitWeaponStats = dtoWeapon.GetWeaponStats(dtoUnit)
@@ -105,10 +108,10 @@ namespace GladiusDataExtract.Extract
 				weapon.Requirements = dtoWeapon.Requirements.Select(x => new Requirement(x.Name, x.Requires))
 					.ToList();
 
-				//if((var attribute = unitWeaponStats.SingleOrDefault(x=> x.Item1)
+				weapons.Add(weapon);
 			}
 
-			throw new NotImplementedException();
+			return weapons;
 		}
 
 
