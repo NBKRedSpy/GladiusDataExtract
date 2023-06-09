@@ -15,7 +15,7 @@ namespace GladiusDataExtract.Extract.Weapons
     /// <param name="Effects"></param>
     /// <param name="Requirements"></param>
     /// <param name="Traits">The traits for the weapon.  For example, Melee or IgnoresCover</param>
-    public record Weapon(string Name, string Key, List<Effect> Effects, List<Requirement> Requirements,
+    public record Weapon(string Name, string Key, int weaponRange, List<Effect> Effects, List<Requirement> Requirements,
         List<string> Traits)
     {
         private static Dictionary<string, int> WeaponAttributeDisplayOrder = new() {

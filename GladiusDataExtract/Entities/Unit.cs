@@ -40,7 +40,9 @@ namespace GladiusDataExtract.Entities
 
 		public Resources ProductionResources { get; set; } = new Resources();
 
-		public List<Trait> Traits { get; set; } = new List<Trait>();
+		public List<Requirement> Traits { get; set; } = new List<Requirement>();
+
+		public List<Weapon> Weapons { get; set; } = new List<Weapon>();
 
     }
 

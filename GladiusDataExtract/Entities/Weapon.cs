@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GladiusDataExtract.Extract.Weapons;
 
 namespace GladiusDataExtract.Entities
 {
@@ -21,6 +22,14 @@ namespace GladiusDataExtract.Entities
 
 		public decimal Accuracy { get; set; } = 0;
 
-		public List<Trait> Traits { get; set; } = new();
+		/// <summary>
+		/// The range of the weapon.  Will be zero for melee
+		/// </summary>
+		public int Range { get; set; } = 0;
+
+        public bool IsRangedWeapon { get => Range != 0; }
+
+		public List<string> Traits { get; set; } = new();
+		public List<Requirement> Requirements { get; set; } = new();
 	}
 }

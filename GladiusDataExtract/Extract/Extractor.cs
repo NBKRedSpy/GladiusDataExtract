@@ -161,13 +161,9 @@ namespace GladiusDataExtract.Extract
 
             StringBuilder sb = new StringBuilder();
 
-            IndentedTextWriter tabbedWriter = new IndentedTextWriter(new StringWriter(sb));
-
             foreach (string file in Directory.EnumerateFiles(folderName, "*.xml"))
             {
 
-                string keyName = GetKey(folderName, file);
-                Weapon weapon = new(weaponLocalizationText[keyName], keyName, new(), new(), new());
 
                 XmlDocument xmlDocument = new XmlDocument();
                 xmlDocument.Load(file);
@@ -182,8 +178,12 @@ namespace GladiusDataExtract.Extract
                     targetRange = int.Parse(targetNode.Attributes!["rangeMax"]!.Value);
                 }
 
-                //----Effects
-                XmlNodeList effectNodes = xmlDocument.SelectNodes("weapon/modifiers/modifier/effects/*")!;
+				string keyName = GetKey(folderName, file);
+				Weapon weapon = new(weaponLocalizationText[keyName], keyName, targetRange, new(), new(), new());
+
+
+				//----Effects
+				XmlNodeList effectNodes = xmlDocument.SelectNodes("weapon/modifiers/modifier/effects/*")!;
                 List<Effect> effects = weapon.Effects;  //Ex: meleeArmorPenetration
 
                 foreach (XmlNode effectNode in effectNodes)

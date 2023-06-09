@@ -23,8 +23,10 @@ namespace GladiusDataExtract.Extract
 		/// <param name="dtoUnits"></param>
 		/// <returns></returns>
 		/// <exception cref="NotImplementedException"></exception>
-		public List<Unit> ConvertUnits(List<du.Unit> dtoUnits)
+		public List<Unit> ConvertUnits(List<du.Unit> dtoUnits, List<dw.Weapon> weapons)
 		{
+
+			Dictionary<string, dw.Weapon> weaponLookup = weapons.ToDictionary(x => x.Name);
 
 			List<Unit> units = new List<Unit>();
 			
@@ -50,11 +52,66 @@ namespace GladiusDataExtract.Extract
 				unit.Hitpoints = (int)attributes["hitpointsMax"];
 				unit.Movement = (int)attributes["movementMax"];
 
-				unit.Traits = dtoUnit.Traits.Select(x => new Trait(x.Name, x.RequiredUpgrade)).ToList();
+				unit.Traits = dtoUnit.Traits.Select(x => new Requirement(x.Name, x.RequiredUpgrade!)).ToList();
+
+				unit.Weapons = GetWeapons(unit, dtoUnit);
+				
 			}
 
 			return units;
 		}
+
+		private List<Weapon> GetWeapons(Unit unit, du.Unit dtoUnit)
+		{
+			foreach (dw.Weapon dtoWeapon in dtoUnit.Weapons)
+			{
+				Dictionary<string, decimal> unitWeaponStats = dtoWeapon.GetWeaponStats(dtoUnit)
+					.ToDictionary(x => x.Item1, x => x.Item2);
+
+				Weapon weapon = new();
+				weapon.Name = dtoWeapon.Name;
+				weapon.Key = dtoWeapon.Key;
+				weapon.Range = dtoWeapon.weaponRange;
+				weapon.AttackCount = unitWeaponStats["attacks"];
+
+
+				//melee or range stats.
+				if(weapon.IsRangedWeapon)
+				{
+					weapon.Accuracy = unitWeaponStats["rangedAccuracy"];
+					weapon.ArmorPenetration = unitWeaponStats["rangedArmorPenetration"];
+					weapon.Damage = unitWeaponStats["rangedDamage"];
+				}
+				else
+				{
+					decimal strengthDamage = unitWeaponStats.GetValueOrDefault("strengthDamage");
+
+					//Damage - for melee strengthDamage is supposed to be the preferred stat,
+					//	but some legacy entries still use meleeDamage and set the strenghDamage to zero.
+					if(strengthDamage == 0)
+					{
+						weapon.Damage = unitWeaponStats["meleeDamage"];
+					}
+					else
+					{
+						weapon.Damage = strengthDamage;
+					}
+
+					weapon.Accuracy = unitWeaponStats["meleeAccuracy"];
+					weapon.ArmorPenetration = unitWeaponStats["meleeArmorPenetration"];
+				}
+
+				weapon.Traits = dtoWeapon.Traits;
+				weapon.Requirements = dtoWeapon.Requirements.Select(x => new Requirement(x.Name, x.Requires))
+					.ToList();
+
+				//if((var attribute = unitWeaponStats.SingleOrDefault(x=> x.Item1)
+			}
+
+			throw new NotImplementedException();
+		}
+
+
 
 		private Resources ConvertResources(Dictionary<string, decimal> attributes, string suffix)
 		{
