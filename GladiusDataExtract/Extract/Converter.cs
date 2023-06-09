@@ -78,7 +78,11 @@ namespace GladiusDataExtract.Extract
 
 				unit.Movement = (int)attributes["movementMax"];
 
-				unit.Traits = dtoUnit.Traits.Select(x => new Requirement(x.Name, x.RequiredUpgrade!)).ToList();
+				unit.Traits = dtoUnit.Traits.Where(x => x.RequiredUpgrade is null)
+					.Select(x => x.Name).ToList();
+
+				unit.Upgrades = dtoUnit.Traits.Where(x => x.RequiredUpgrade is not null)
+					.Select(x => new Requirement(x.Name, x.RequiredUpgrade!)).ToList();
 
 				unit.Weapons = GetWeapons(dtoUnit);
 

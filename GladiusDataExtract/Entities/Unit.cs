@@ -45,7 +45,9 @@ namespace GladiusDataExtract.Entities
 
 		public Resources UpkeepResources { get; set; } = new Resources();
 
-		public List<Requirement> Traits { get; set; } = new List<Requirement>();
+		public List<string> Traits { get; set; } = new List<string>();
+
+		public List<Requirement> Upgrades { get; set; } = new List<Requirement>();
 
 		public List<Weapon> Weapons { get; set; } = new List<Weapon>();
 

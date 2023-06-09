@@ -9,78 +9,85 @@
 	string htmlId = unit.Key.Replace("/", "-");
 
 	<div class="unit-name" id="@htmlId"><a class="unit__name-link" href="#@htmlId">@unit.Name</a></div>
+	<div class="unit__item-content">
+		<div>Model Count: @unit.ModelCount </div>
+		<span>Armor @unit.Armor</span>
+		<span>Hitpoints @unit.Hitpoints</span>
+		<span>Movement @unit.Movement</span>
+
+		@{ShowIfNotZero("BioMass", unit.ProductionResources.BioMass);}
+		@{ShowIfNotZero("Energy", unit.ProductionResources.Energy);}
+		@{ShowIfNotZero("Food", unit.ProductionResources.Food);}
+		@{ShowIfNotZero("Influence", unit.ProductionResources.Influence);}
+		@{ShowIfNotZero("Ore", unit.ProductionResources.Ore);}
+
+	</div>
+
+	<div class="unit__item-content">
+		<div class="unit__header">Weapons</div>
 		<div class="unit__item-content">
-			<div>Model Count: @unit.ModelCount </div>
-			<span>Armor @unit.Armor</span>
-			<span>Hitpoints @unit.Hitpoints</span>
-			<span>Movement @unit.Movement</span>
+			@foreach (Weapon weapon in unit.Weapons)
+			{
+				<span class="unit__header" >@weapon.Name</span>
 
-			@{ShowIfNotZero("BioMass", unit.ProductionResources.BioMass);}
-			@{ShowIfNotZero("Energy", unit.ProductionResources.Energy);}
-			@{ShowIfNotZero("Food", unit.ProductionResources.Food);}
-			@{ShowIfNotZero("Influence", unit.ProductionResources.Influence);}
-			@{ShowIfNotZero("Ore", unit.ProductionResources.Ore);}
+				<div class="unit__item-content">
+					<span>Damage @weapon.Damage</span>
+					<span>AttackCount @weapon.AttackCount</span>
+					<span>ArmorPenetration @weapon.ArmorPenetration</span>
+					<span>Accuracy @weapon.Accuracy</span>
 
-		</div>
-
-		<div class="unit__item-content">
-			<div class="unit__header">Weapons</div>
-			<div class="unit__item-content">
-				@foreach (Weapon weapon in unit.Weapons)
-				{
-					<span class="unit__header" >@weapon.Name</span>
-
+					<div class="unit__header">Traits</div>
 					<div class="unit__item-content">
-						<span>Damage @weapon.Damage</span>
-						<span>AttackCount @weapon.AttackCount</span>
-						<span>ArmorPenetration @weapon.ArmorPenetration</span>
-						<span>Accuracy @weapon.Accuracy</span>
-
-						<div class="unit__header">Traits</div>
+					@foreach (var trait in weapon.Traits)
+					{
+						<div>@trait</div>
+					}
+					</div>
+					@if (weapon.Requirements.Count > 0)
+					{
+						<div class="unit__header">Requirements</div>
 						<div class="unit__item-content">
-						@foreach (var trait in weapon.Traits)
-						{
-							<div>@trait</div>
-						}
+
+						@foreach(var requirement in weapon.Requirements)
+							{
+								<div><span>@requirement.Name</span>
+									@if(requirement.RequiredUpgrade != requirement.Name){
+										<span> -> @requirement.RequiredUpgrade</span> 
+									}
+								</div>
+							}
 						</div>
-						@if (weapon.Requirements.Count > 0)
-						{
-							<div class="unit__header">Requirements</div>
-							<div class="unit__item-content">
-
-							@foreach(var requirement in weapon.Requirements)
-								{
-									<div><span>@requirement.Name</span>
-										@if(requirement.RequiredUpgrade != requirement.Name){
-											<span> -> @requirement.RequiredUpgrade</span> 
-										}
-									</div>
-								}
-							</div>
-						}
+					}
 				</div>
+			}
 
-				}
-			</div>
-		</div>
+			@if(unit.Traits.Count != 0)
+			{
+				<div class="unit__header">Traits</div>
 
-		@if(unit.Traits.Count != 0)
-		{
-			<div class="unit__header">Traits</div>
+				<div class="unit__item-content">
 
-			<div class="unit__item-content">
+					@foreach (var trait in unit.Traits)
+					{
+						<div>@trait</div>	
+					}
+				</div>
+			}
 
-				@foreach (var trait in unit.Traits)
-				{
-					<div>@trait.Name
-						@if(trait.RequiredUpgrade is not null)
-						{
-							@(" -> " + trait.RequiredUpgrade)
-						}
-					</div>	
-				}
-			</div>
-		}
+			@if (unit.Upgrades.Count != 0)
+			{
+				<div class="unit__header">Upgrades</div>
+
+				<div class="unit__item-content">
+
+					@foreach (var upgrade in unit.Upgrades)
+					{
+						<div>
+							@upgrade.Name @(" -> " + upgrade.RequiredUpgrade)
+						</div>
+					}
+				</div>
+			}
 		</div>
 
 	</div>
