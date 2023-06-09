@@ -68,9 +68,19 @@ namespace GladiusDataExtract.Extract
 
             foreach (string file in Directory.EnumerateFiles(folderName, "*.xml", SearchOption.AllDirectories))
             {
+
                 try
                 {
-                    string keyName = GetKey(folderName, file);
+					//D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Neutral\Artefacts\VaulSentry.xml
+					if (file.Contains(@"\Artefacts\"))
+                    {
+                        //not units
+                        continue;
+                    }
+					XmlDocument xmlDocument = new XmlDocument();
+					xmlDocument.Load(file);
+
+					string keyName = GetKey(folderName, file);
 
 
                     //Weapons don't have sub folders.
@@ -80,8 +90,7 @@ namespace GladiusDataExtract.Extract
                     //Get the key, which is the relative path with forward slash separators 
                     string unitKey = GetKey(folderName, file);
 
-                    XmlDocument xmlDocument = new XmlDocument();
-                    xmlDocument.Load(file);
+                    
 
                     //Model count
                     XmlAttribute? xmlSize = xmlDocument.SelectSingleNode("unit/group")?.Attributes!["size"];

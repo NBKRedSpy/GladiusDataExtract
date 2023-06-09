@@ -47,6 +47,11 @@ namespace GladiusDataExtract.Extract
 			foreach (du.Unit dtoUnit in dtoUnits)
 			{
 
+				if(dtoUnit.Traits.Any(x=> x.Name == "Artefact"))
+				{
+					continue;
+				}
+
 				Unit unit = new();
 
 				unit.Name = dtoUnit.Name;
@@ -75,14 +80,16 @@ namespace GladiusDataExtract.Extract
 
 				unit.Traits = dtoUnit.Traits.Select(x => new Requirement(x.Name, x.RequiredUpgrade!)).ToList();
 
-				unit.Weapons = GetWeapons(unit, dtoUnit);
+				unit.Weapons = GetWeapons(dtoUnit);
+
+				units.Add(unit);
 				
 			}
 
 			return units;
 		}
 
-		private List<Weapon> GetWeapons(Unit unit, du.Unit dtoUnit)
+		private List<Weapon> GetWeapons(du.Unit dtoUnit)
 		{
 
 			List<Weapon> weapons = new();
@@ -113,8 +120,17 @@ namespace GladiusDataExtract.Extract
 				//there should be a ranged stat of some sort.
 				if (isRanged)
 				{
-					weapon.Accuracy = unitWeaponStats["rangedAccuracy"];
-					weapon.ArmorPenetration = unitWeaponStats["rangedArmorPenetration"];
+					weapon.Accuracy = unitWeaponStats.GetValueOrDefault("rangedAccuracy");
+
+					//For some reason, some have no accuracy.  Seems to use melee Accuracy
+					if(weapon.Accuracy == 0)
+					{
+						//Get from the unit's attributes since there were no operators.
+						weapon.Accuracy = dtoUnit.Attributes.First(x => x.Name == "meleeAccuracy").Value;
+					}
+					weapon.ArmorPenetration = unitWeaponStats.GetValueOrDefault("rangedArmorPenetration", -1);
+					if (weapon.ArmorPenetration == 0) weapon.ArmorPenetration = 1;	//Seems to default to 1.
+
 					weapon.Damage = unitWeaponStats["rangedDamage"];
 				}
 				else

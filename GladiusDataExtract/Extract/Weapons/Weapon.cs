@@ -39,18 +39,33 @@ namespace GladiusDataExtract.Extract.Weapons
         public void GetWeaponStats(Unit unit, out List<Tuple<string, decimal>> stats, out bool isRanged)
         {
 
-            IEnumerable<(Effect Effect, decimal UnitValue)> weaponUnitAttributes = Effects.LeftJoin(
-                unit.Attributes,
-                x => x.Name,
-                x => x.Name,
-                (left) => (Effect: left, UnitValue: 0m),
-                (left, right) => (Effect: left, UnitValue: right.Value));
-
-            List<Tuple<string, decimal>> modifierAppliedWeaponAttributes = weaponUnitAttributes
-                .Select(x => new Tuple<string, decimal>(x.Effect.Name, x.Effect.ApplyModifiers(x.UnitValue)))
+            //Get the list of operations and link them with the unit's attribute that matches that name.
+            //  Group by the attribute name as there may be multiple operations.
+            var weaponUnitAttributes = Effects
+                .LeftJoin(
+                    unit.Attributes,
+                    x => x.Name,
+                    x => x.Name,
+                    (left) => (Effect: left, UnitValue: 0m),
+                    (left, right) => (Effect: left, UnitValue: right.Value))
+                .GroupBy(x => x.Effect.Name)
                 .ToList();
 
 
+            //--Run the operations, creating the aggregate results.
+            var modifierAppliedWeaponAttributes = new List<Tuple<string, decimal>>();
+
+			foreach (var attributeGroup in weaponUnitAttributes)
+            {
+                var attributeSum = new Tuple<string, decimal>(attributeGroup.Key, attributeGroup.First().UnitValue);
+
+                foreach (var operation in attributeGroup)
+                {
+                    attributeSum = new Tuple<string, decimal>(attributeSum.Item1, operation.Effect.ApplyModifiers(attributeSum.Item2));
+                }
+
+                modifierAppliedWeaponAttributes.Add(attributeSum);  
+            }
 
             //try to detect range.
             isRanged = Effects.Any(x => x.Name.StartsWith("ranged"));
@@ -58,7 +73,6 @@ namespace GladiusDataExtract.Extract.Weapons
             if (isRanged) 
 			{
 				//Assume range - the weapon doesn't seem to have a range specific trait.
-
 				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedArmorPenetration");
 				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedDamage");
 				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedAccuracy");
@@ -70,12 +84,6 @@ namespace GladiusDataExtract.Extract.Weapons
 			}
 
 			AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "strengthDamage");
-
-			//Sort to match the UI's order.
-			modifierAppliedWeaponAttributes = modifierAppliedWeaponAttributes
-            .OrderBy(x =>
-                WeaponAttributeDisplayOrder.TryGetValue(x.Item1, out int order) ? order : int.MaxValue)
-            .ToList();
 
             stats = modifierAppliedWeaponAttributes; 
         }
