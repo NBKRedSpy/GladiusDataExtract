@@ -4,8 +4,6 @@
 
 
 
-@* Debug*@
-<p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" data-bs-title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" data-bs-title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" data-bs-title="The last tip!">your own</a> site or project.</p>
 @foreach (var unit in Model.Units)
 {
 	string htmlId = unit.Key.Replace("/", "-");
@@ -13,16 +11,23 @@
 	<div class="unit-name" id="@htmlId"><a class="unit__name-link" href="#@htmlId">@unit.Name</a></div>
 	<div class="unit__content">
 		<div class="unit__item-content">
-			<div>Model Count: @unit.ModelCount </div>
-			<span>Armor @unit.Armor</span>
-			<span>Hitpoints @unit.Hitpoints</span>
-			<span>Movement @unit.Movement</span>
+			<span>@{await DisplayIcon("PopulationLimit", "Model Count");} @unit.ModelCount </span>
+			<span>@{await DisplayIcon("Armor");} @unit.Armor</span>
+			<span>@{await DisplayIcon("HitPoints");} @unit.Hitpoints 
+				@{
+					if(unit.ModelCount > 1)
+					{
+						@("(" + (unit.ModelCount * unit.Hitpoints).ToString() + ")")
+					}
+				}
+			</span>
+			<span>@{await DisplayIcon("Movement");}@unit.Movement</span>
 
-			@{ShowIfNotZero("BioMass", unit.ProductionResources.BioMass);}
-			@{ShowIfNotZero("Energy", unit.ProductionResources.Energy);}
-			@{ShowIfNotZero("Food", unit.ProductionResources.Food);}
-			@{ShowIfNotZero("Influence", unit.ProductionResources.Influence);}
-			@{ShowIfNotZero("Ore", unit.ProductionResources.Ore);}
+			@{await ShowResourceIfNotZero("BioMass", unit.ProductionResources.BioMass);}
+			@{await ShowResourceIfNotZero("Energy", unit.ProductionResources.Energy);}
+			@{await ShowResourceIfNotZero("Food", unit.ProductionResources.Food);}
+			@{await ShowResourceIfNotZero("Influence", unit.ProductionResources.Influence);}
+			@{await ShowResourceIfNotZero("Ore", unit.ProductionResources.Ore);}
 
 		</div>
 
@@ -100,19 +105,24 @@
 		</div>
 	</div>
 
- 
-	void ShowIfNotZero(string name, decimal value)
+
+	async Task ShowResourceIfNotZero(string iconName, decimal value, string text = "")
 	{
 		if (value != 0)
 		{
-			<span>@name @value.ToString("#.##")</span>
+			<span>@{
+					await DisplayIcon(iconName);
+				} @value.ToString("#.##")</span>
 		}
 	}
 
-	async Task DisplayIcon(string iconName)
+	async Task DisplayIcon(string iconName, string text = "")
 	{
+		string displayText = text == "" ? iconName : text;
+
 		<span class="icon-container">
-			<img class="icon" data-bs-toggle="tooltip" data-bs-title="@iconName" src="~/img/@(iconName).png" )"></img>
+			<img class="icon" data-bs-toggle="tooltip" data-bs-title="@displayText" src="~/img/@(iconName).png" 
+				)"></img>
 		</span>
 	}
 }
