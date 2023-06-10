@@ -11,9 +11,9 @@
 	<div class="unit-name" id="@htmlId"><a class="unit__name-link" href="#@htmlId">@unit.Name</a></div>
 	<div class="unit__content">
 		<div class="unit__item-content">
-			<span>@{await DisplayIcon("PopulationLimit", "Model Count");} @unit.ModelCount </span>
-			<span>@{await DisplayIcon("Armor");} @unit.Armor</span>
-			<span>@{await DisplayIcon("HitPoints");} @unit.Hitpoints 
+			<span>@{await DisplayIcon("Attributes","PopulationLimit", "Model Count");} @unit.ModelCount </span>
+			<span>@{await DisplayIcon("Attributes","Armor");} @unit.Armor</span>
+			<span>@{await DisplayIcon("Attributes","HitPoints");} @unit.Hitpoints 
 				@{
 					if(unit.ModelCount > 1)
 					{
@@ -21,13 +21,13 @@
 					}
 				}
 			</span>
-			<span>@{await DisplayIcon("Movement");}@unit.Movement</span>
+			<span>@{await DisplayIcon("Attributes","Movement");}@unit.Movement</span>
 
-			@{await ShowResourceIfNotZero("BioMass", unit.ProductionResources.BioMass);}
-			@{await ShowResourceIfNotZero("Energy", unit.ProductionResources.Energy);}
-			@{await ShowResourceIfNotZero("Food", unit.ProductionResources.Food);}
-			@{await ShowResourceIfNotZero("Influence", unit.ProductionResources.Influence);}
-			@{await ShowResourceIfNotZero("Ore", unit.ProductionResources.Ore);}
+			@{await ShowResourceIfNotZero("Attributes","BioMass", unit.ProductionResources.BioMass);}
+			@{await ShowResourceIfNotZero("Attributes","Energy", unit.ProductionResources.Energy);}
+			@{await ShowResourceIfNotZero("Attributes","Food", unit.ProductionResources.Food);}
+			@{await ShowResourceIfNotZero("Attributes","Influence", unit.ProductionResources.Influence);}
+			@{await ShowResourceIfNotZero("Attributes","Ore", unit.ProductionResources.Ore);}
 
 		</div>
 
@@ -39,10 +39,10 @@
 					<span class="unit__header" >@weapon.Name</span>
 
 					<div class="unit__item-content-separate">
-						<span>@{await DisplayIcon("Damage");} @weapon.Damage</span>
-						<span>@{await DisplayIcon("Attacks");} @weapon.AttackCount</span>
-						<span>@{await DisplayIcon("ArmorPenetration");} @weapon.ArmorPenetration</span>
-						<span>@{await DisplayIcon("Accuracy");}@weapon.Accuracy</span>
+						<span>@{await DisplayIcon("Attributes","Damage");} @weapon.Damage</span>
+						<span>@{await DisplayIcon("Attributes","Attacks");} @weapon.AttackCount</span>
+						<span>@{await DisplayIcon("Attributes","ArmorPenetration");} @weapon.ArmorPenetration</span>
+						<span>@{await DisplayIcon("Attributes","Accuracy");}@weapon.Accuracy</span>
 						@if (weapon.RequiredUpgrade != "")
 						{
 							<div><span class="property-name">Unit Upgrade Requirement: </span>@weapon.RequiredUpgrade</div>
@@ -106,22 +106,30 @@
 	</div>
 
 
-	async Task ShowResourceIfNotZero(string iconName, decimal value, string text = "")
+	async Task ShowResourceIfNotZero(string imgSubFolder,string iconName, decimal value, string text = "")
 	{
 		if (value != 0)
 		{
 			<span>@{
-					await DisplayIcon(iconName);
+					await DisplayIcon(imgSubFolder,iconName);
 				} @value.ToString("#.##")</span>
 		}
 	}
 
-	async Task DisplayIcon(string iconName, string text = "")
+	/// <summary>
+	/// Creates an img tag for an icon in the img folder
+	/// </summary>
+	/// <param name="imgSubFolder">The subfolder the icon will be in.  Eg: Attributes</param>
+	/// <param name="iconName">The name of the icon.  Will be the key.
+	/// ex:  Orks/WarpFrenzy  </param>
+	/// <param name="text">The tool tip text to show when hovered.  Defaults to the icon name</param>
+	/// <returns></returns>
+	async Task DisplayIcon(string imgSubFolder, string iconName, string text = "")
 	{
 		string displayText = text == "" ? iconName : text;
 
 		<span class="icon-container">
-			<img class="icon" data-bs-toggle="tooltip" data-bs-title="@displayText" src="~/img/@(iconName).png" 
+			<img class="icon" data-bs-toggle="tooltip" data-bs-title="@displayText" src="~/img/@imgSubFolder/@(iconName).png" 
 				)"></img>
 		</span>
 	}

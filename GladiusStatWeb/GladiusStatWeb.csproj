@@ -10,4 +10,10 @@
     <ProjectReference Include="..\GladiusDataExtract\GladiusDataExtract.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Data\GladiusUnits.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
