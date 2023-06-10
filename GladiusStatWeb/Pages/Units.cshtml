@@ -4,6 +4,14 @@
 
 
 
+<script>
+	function imageFallback()
+	{
+		this.onerror=null;
+		this.src='@Url.Content("~/img/Missing.png")';
+
+	}
+</script>
 @foreach (var unit in Model.Units)
 {
 	string htmlId = unit.Key.Replace("/", "-");
@@ -13,7 +21,7 @@
 		<div class="unit__item-content unit__icon-line">
 			<span>@{await DisplayIcon("Attributes","PopulationLimit", "Model Count");} @unit.ModelCount </span>
 			<span>@{await DisplayIcon("Attributes","Armor");} @unit.Armor</span>
-			<span>@{await DisplayIcon("Attributes","HitPoints");} @unit.Hitpoints 
+			<span>@{await DisplayIcon("Attributes","HitPoints", "Hit Points");} @unit.Hitpoints 
 				@{
 					if(unit.ModelCount > 1)
 					{
@@ -31,7 +39,45 @@
 
 		</div>
 
+
+		@if (unit.Traits.Count != 0)
+		{
+			<div class="unit__item-content">
+				<div class="unit__header">Traits</div>
+
+				<div class=" unit__icon-line">
+					@foreach (var trait in unit.Traits)
+					{
+						<span>
+							@{
+								await DisplayIcon("Traits", @trait);
+							}
+						</span>
+					}
+				</div>
+			</div>
+		}
+
 		<div class="unit__item-content">
+
+			@if (unit.Upgrades.Count != 0)
+			{
+				<div class="unit__header">Upgrades</div>
+
+				<div class="unit__item-content unit__icon-line">
+
+					@foreach (var upgrade in unit.Upgrades)
+					{
+						<span>
+							@{
+								await DisplayIcon("Traits", @upgrade.Name);
+							}
+						</span>
+
+					}
+				</div>
+			}
+
 			<div class="unit__header">Weapons</div>
 			<div class="unit__item-content">
 				@foreach (Weapon weapon in unit.Weapons)
@@ -40,25 +86,11 @@
 
 					<div class="unit__item-content-separate">
 						<div class="unit__icon-line">
-							<span>@{await DisplayIcon("Attributes","Damage");} @weapon.Damage</span>
-							<span>@{await DisplayIcon("Attributes","Attacks");} @weapon.AttackCount</span>
+							<span>@{await DisplayIcon("Attributes","Damage");} @Model.WeaponDamageFormat(weapon, unit)</span>
+							<span>@{await DisplayIcon("Attributes","Attacks");} @Model.AttackFormat(weapon, unit)</span>
 							<span>@{await DisplayIcon("Attributes","ArmorPenetration");} @weapon.ArmorPenetration</span>
 							<span>@{await DisplayIcon("Attributes","Accuracy");}@weapon.Accuracy</span>
 						</div>
-
-						@if (unit.Traits.Count != 0)
-						{
-							<div class="unit__header">Traits</div>
-
-							<div>
-								@foreach (var trait in unit.Traits)
-								{
-									<span>@{
-											await DisplayIcon("Traits", @trait);
-										}</span>
-								}
-							</div>
-						}
 
 						@if (weapon.RequiredUpgrade != "")
 						{
@@ -74,33 +106,24 @@
 						</div>
 						@if (weapon.Requirements.Count > 0)
 						{
-							<div class="unit__header">Weapon Requirements</div>
-							<div class="unit__item-content">
 
-							@foreach(var requirement in weapon.Requirements)
+							@*todo: The trait upgrades requires parsing the traits.  There is sometimes an icon attrbiute with the name of the icon to show.
+				For ex:  "Traits\AdeptusMechanicus\MeleeWeaponBonus.xml" has <trait icon="Traits/WeaponBonus">
+
+				Traits descriptions:
+					Data\Core\Languages\English\Traits.xml
+				
+				<entry name="AdeptusMechanicus/AssaultWeaponBonus" value="Dogma Metalica"/>
+				<entry name="AdeptusMechanicus/AssaultWeaponBonusDescription" value="Increases the armour penetration."/>
+
+							*@
+
+							<div class="unit__header">Trait Upgrades</div>
+							<div class="unit__icon-line">
+								@foreach(var requirement in weapon.Requirements)
 								{
-									<div><span>@requirement.Name</span>
-										@if(requirement.RequiredUpgrade != requirement.Name){
-											<span> -> @requirement.RequiredUpgrade</span> 
-										}
-									</div>
+									<span>@{await DisplayIcon("Traits",@requirement.Name, $"{requirement.Name} -> {requirement.RequiredUpgrade}");}</span>
 								}
-							</div>
-						}
-					</div>
-				}
-
-
-				@if (unit.Upgrades.Count != 0)
-				{
-					<div class="unit__header">Upgrades</div>
-
-					<div class="unit__item-content">
-
-						@foreach (var upgrade in unit.Upgrades)
-						{
-							<div>
-								@upgrade.Name @(" -> " + upgrade.RequiredUpgrade)
 							</div>
 						}
 					</div>
@@ -133,8 +156,8 @@
 	{
 		string displayText = text == "" ? iconName : text;
 
-		<span class="icon-container">
-			<img class="icon" data-bs-toggle="tooltip" data-bs-title="@displayText" src="~/img/@imgSubFolder/@(iconName).png" 
+		<span>
+			<img onerror="imageFallback.call(this);" class="icon" data-bs-toggle="tooltip" data-bs-title="@displayText" src="~/img/@imgSubFolder/@(iconName).png" 
 				)"></img>
 		</span>
 	}
@@ -142,8 +165,8 @@
 
 @section Scripts {
 <script type="text/javascript">
+	//Init the bootstrap tooltips
 	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
 </script>
 }
