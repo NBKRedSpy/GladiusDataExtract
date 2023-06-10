@@ -37,9 +37,11 @@ namespace GladiusStatWeb.Pages
 			StringBuilder sb = new StringBuilder();
 			sb.Append(weapon.Damage.ToString("#.##"));
 
-			if(unit.ModelCount > 0)
+			decimal multiplier = unit.ModelCount * weapon.AttackCount;
+
+			if (multiplier != 1)
 			{
-				sb.Append($" (~ {(weapon.Damage * unit.ModelCount * weapon.AttackCount):#.##})");
+				sb.Append($" (~ {(weapon.Damage * multiplier):#.##})");
 			}
 
 			return sb.ToString();
@@ -51,7 +53,7 @@ namespace GladiusStatWeb.Pages
 			StringBuilder sb = new StringBuilder();
 			sb.AppendFormat(weapon.AttackCount.ToString("#.##"));
 
-			if (unit.ModelCount > 0)
+			if (unit.ModelCount > 1)
 			{
 				sb.Append($" ( x{unit.ModelCount:#.##})");
 			}

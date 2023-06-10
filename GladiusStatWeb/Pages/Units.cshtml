@@ -66,7 +66,15 @@
 			<div class="unit__item-content">
 				@foreach (Weapon weapon in unit.Weapons)
 				{
-					<span class="unit__header" >@weapon.Name</span>
+					<span class="unit__header" >@weapon.Name
+					
+					@if (weapon.RequiredUpgrade != "")
+					{
+						<span class="unit__icon-line unit__trait_upgrades">
+							<span>@{await DisplayIcon("Traits", weapon.RequiredUpgrade);}</span>
+						</span>
+					}
+					</span>
 
 					<div class="unit__item-content-separate">
 						<div class="unit__icon-line">
@@ -76,40 +84,41 @@
 							<span>@{await DisplayIcon("Attributes","Accuracy");}@weapon.Accuracy</span>
 						</div>
 
-						@if (weapon.RequiredUpgrade != "")
-						{
-							<div><span class="property-name">Unit Upgrade Requirement: </span>@weapon.RequiredUpgrade</div>
-						}
 
 						<div class="unit__header">Traits</div>
 						<div class="unit__item-content ">
-							@foreach (var trait in weapon.Traits)
+							<span class="unit__icon-line">
+								@foreach (var trait in weapon.Traits)
+								{
+									<span>@{await DisplayIcon("Traits",@trait);}</span>
+								}
+							</span>
+
+							@if (weapon.Requirements.Count > 0)
 							{
-								<span>@{await DisplayIcon("Traits",@trait);}</span>
+
+								@*todo: The trait upgrades requires parsing the traits.  There is sometimes an icon attrbiute with the name of the icon to show.
+					For ex:  "Traits\AdeptusMechanicus\MeleeWeaponBonus.xml" has <trait icon="Traits/WeaponBonus">
+
+					Traits descriptions:
+					Data\Core\Languages\English\Traits.xml
+
+					<entry name="AdeptusMechanicus/AssaultWeaponBonus" value="Dogma Metalica"/>
+					<entry name="AdeptusMechanicus/AssaultWeaponBonusDescription" value="Increases the armour penetration."/>
+
+					*@
+
+								<span class="unit__icon-line unit__trait_upgrades">
+									@foreach (var requirement in weapon.Requirements)
+									{
+										<span>@{
+												await DisplayIcon("Traits", @requirement.Name, $"{requirement.Name} -> {requirement.RequiredUpgrade}");
+											}</span>
+									}
+								</span>
 							}
 						</div>
-						@if (weapon.Requirements.Count > 0)
-						{
 
-							@*todo: The trait upgrades requires parsing the traits.  There is sometimes an icon attrbiute with the name of the icon to show.
-				For ex:  "Traits\AdeptusMechanicus\MeleeWeaponBonus.xml" has <trait icon="Traits/WeaponBonus">
-
-				Traits descriptions:
-					Data\Core\Languages\English\Traits.xml
-				
-				<entry name="AdeptusMechanicus/AssaultWeaponBonus" value="Dogma Metalica"/>
-				<entry name="AdeptusMechanicus/AssaultWeaponBonusDescription" value="Increases the armour penetration."/>
-
-							*@
-
-							<div class="unit__header">Trait Upgrades</div>
-							<div class="unit__icon-line unit__item-content ">
-								@foreach(var requirement in weapon.Requirements)
-								{
-									<span>@{await DisplayIcon("Traits",@requirement.Name, $"{requirement.Name} -> {requirement.RequiredUpgrade}");}</span>
-								}
-							</div>
-						}
 					</div>
 				}
 			</div>
