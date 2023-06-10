@@ -43,16 +43,31 @@
 						<span>@{await DisplayIcon("Attributes","Attacks");} @weapon.AttackCount</span>
 						<span>@{await DisplayIcon("Attributes","ArmorPenetration");} @weapon.ArmorPenetration</span>
 						<span>@{await DisplayIcon("Attributes","Accuracy");}@weapon.Accuracy</span>
+
+						@if (unit.Traits.Count != 0)
+						{
+							<div class="unit__header">Traits</div>
+
+							<div>
+								@foreach (var trait in unit.Traits)
+								{
+									<span>@{
+											await DisplayIcon("Traits", @trait);
+										}</span>
+								}
+							</div>
+						}
+
 						@if (weapon.RequiredUpgrade != "")
 						{
 							<div><span class="property-name">Unit Upgrade Requirement: </span>@weapon.RequiredUpgrade</div>
 						}
 
 						<div class="unit__header">Traits</div>
-						<div class="unit__item-content">
+						<div >
 						@foreach (var trait in weapon.Traits)
 						{
-							<div>@trait</div>
+							<span>@{await DisplayIcon("Traits",@trait);}</span>
 						}
 						</div>
 						@if (weapon.Requirements.Count > 0)
@@ -73,18 +88,6 @@
 					</div>
 				}
 
-				@if(unit.Traits.Count != 0)
-				{
-					<div class="unit__header">Traits</div>
-
-					<div class="unit__item-content">
-
-						@foreach (var trait in unit.Traits)
-						{
-							<div>@trait</div>	
-						}
-					</div>
-				}
 
 				@if (unit.Upgrades.Count != 0)
 				{

@@ -58,8 +58,8 @@ body {
 
 .icon {
     background-color: black;
-    height: 1em;
-    width: 1em;
+    height: 1.5em;
+    width: 1.5em;
     filter: invert(100%);
 }
 
