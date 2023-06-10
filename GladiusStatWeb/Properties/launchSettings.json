@@ -2,6 +2,7 @@
   "profiles": {
     "GladiusStatWeb": {
       "commandName": "Project",
+      "commandLineArgs": "$(SolutionDir)GladiusStatWeb\\Data\\GladiusUnits.xml\r\n",
       "launchBrowser": true,
       "launchUrl": "Units",
       "environmentVariables": {

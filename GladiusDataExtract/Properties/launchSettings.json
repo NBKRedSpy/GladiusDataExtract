@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GladiusDataExtract": {
+      "commandName": "Project",
+      "commandLineArgs": "$(SolutionDir)GladiusStatWeb/Data/GladiusUnits.xml\r\n"
+    }
+  }
+}

@@ -3,6 +3,7 @@
   <Unit>
     <Name>Archaeopter Stratoraptor</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/ArchaeopterStratoraptor</Key>
     <Armor>8</Armor>
     <Hitpoints>24</Hitpoints>
@@ -102,6 +103,7 @@
   <Unit>
     <Name>Archaeopter Transvector</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/ArchaeopterTransvector</Key>
     <Armor>8</Armor>
     <Hitpoints>24</Hitpoints>
@@ -182,6 +184,7 @@
   <Unit>
     <Name>Cybernetica Datasmith</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/CyberneticaDatasmith</Key>
     <Armor>8</Armor>
     <Hitpoints>6</Hitpoints>
@@ -296,6 +299,7 @@
   <Unit>
     <Name>Fulgurite Electro-Priests</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/FulguriteElectroPriest</Key>
     <Armor>0</Armor>
     <Hitpoints>2</Hitpoints>
@@ -356,6 +360,7 @@
   <Unit>
     <Name>Buildings/AdeptusMechanicus/Headquarters</Name>
     <IsFortification>true</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/Headquarters</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -430,6 +435,7 @@
   <Unit>
     <Name>Ironstrider Ballistarius</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/IronstriderBallistarius</Key>
     <Armor>7</Armor>
     <Hitpoints>16</Hitpoints>
@@ -493,6 +499,7 @@
   <Unit>
     <Name>Kataphron Breachers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/KataphronBreacher</Key>
     <Armor>8</Armor>
     <Hitpoints>8</Hitpoints>
@@ -573,6 +580,7 @@
   <Unit>
     <Name>Kataphron Destroyers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/KataphronDestroyer</Key>
     <Armor>6</Armor>
     <Hitpoints>8</Hitpoints>
@@ -656,6 +664,7 @@
   <Unit>
     <Name>Knight Crusader</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/KnightCrusader</Key>
     <Armor>8</Armor>
     <Hitpoints>72</Hitpoints>
@@ -869,6 +878,7 @@
   <Unit>
     <Name>Onager Dunecrawler</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/OnagerDunecrawler</Key>
     <Armor>8</Armor>
     <Hitpoints>24</Hitpoints>
@@ -991,6 +1001,7 @@
   <Unit>
     <Name>Pteraxii Sterylizors</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/PteraxiiSterylizor</Key>
     <Armor>6</Armor>
     <Hitpoints>4</Hitpoints>
@@ -1072,6 +1083,7 @@
   <Unit>
     <Name>Serberys Sulphurhounds</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/SerberysSulphurhound</Key>
     <Armor>6</Armor>
     <Hitpoints>6</Hitpoints>
@@ -1171,6 +1183,7 @@
   <Unit>
     <Name>Sicarian Infiltrators</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/SicarianInfiltrator</Key>
     <Armor>6</Armor>
     <Hitpoints>4</Hitpoints>
@@ -1267,6 +1280,7 @@
   <Unit>
     <Name>Skitarii Marshal</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/SkitariiMarshal</Key>
     <Armor>6</Armor>
     <Hitpoints>6</Hitpoints>
@@ -1344,6 +1358,7 @@
   <Unit>
     <Name>Skitarii Rangers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/SkitariiRanger</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -1412,6 +1427,7 @@
   <Unit>
     <Name>Skitarii Vanguards</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/SkitariiVanguard</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -1477,6 +1493,7 @@
   <Unit>
     <Name>Skorpius Disintegrator</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/SkorpiusDisintegrator</Key>
     <Armor>8</Armor>
     <Hitpoints>48</Hitpoints>
@@ -1575,6 +1592,7 @@
   <Unit>
     <Name>Skorpius Dunerider</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/SkorpiusDunerider</Key>
     <Armor>8</Armor>
     <Hitpoints>18</Hitpoints>
@@ -1657,6 +1675,7 @@
   <Unit>
     <Name>Tech-Priest Dominus</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/TechPriestDominus</Key>
     <Armor>8</Armor>
     <Hitpoints>6</Hitpoints>
@@ -1792,6 +1811,7 @@
   <Unit>
     <Name>Tech-Priest Manipulus</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/TechPriestManipulus</Key>
     <Armor>8</Armor>
     <Hitpoints>6</Hitpoints>
@@ -1889,6 +1909,7 @@
   <Unit>
     <Name>Baneblade</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Baneblade</Key>
     <Armor>9</Armor>
     <Hitpoints>144</Hitpoints>
@@ -2137,6 +2158,7 @@
   <Unit>
     <Name>Basilisk</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Basilisk</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -2272,6 +2294,7 @@
   <Unit>
     <Name>Bullgryns</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Bullgryn</Key>
     <Armor>6</Armor>
     <Hitpoints>12</Hitpoints>
@@ -2370,6 +2393,7 @@
   <Unit>
     <Name>Chimera</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Chimera</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -2537,6 +2561,7 @@
   <Unit>
     <Name>Devil Dog</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/DevilDog</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -2667,6 +2692,7 @@
   <Unit>
     <Name>Guardsmen</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Guardsman</Key>
     <Armor>4</Armor>
     <Hitpoints>2</Hitpoints>
@@ -2789,6 +2815,7 @@
   <Unit>
     <Name>Buildings/AstraMilitarum/Headquarters</Name>
     <IsFortification>true</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Headquarters</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -2896,6 +2923,7 @@
   <Unit>
     <Name>Heavy Weapons Squad</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/HeavyWeaponsSquad</Key>
     <Armor>4</Armor>
     <Hitpoints>4</Hitpoints>
@@ -3036,6 +3064,7 @@
   <Unit>
     <Name>Hydra</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Hydra</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -3172,6 +3201,7 @@
   <Unit>
     <Name>Imperial Bastion</Name>
     <IsFortification>true</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/ImperialStrongpoint</Key>
     <Armor>10</Armor>
     <Hitpoints>0</Hitpoints>
@@ -3232,6 +3262,7 @@
   <Unit>
     <Name>Leman Russ Battle Tank</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/LemanRussBattleTank</Key>
     <Armor>9</Armor>
     <Hitpoints>48</Hitpoints>
@@ -3400,6 +3431,7 @@
   <Unit>
     <Name>Lord Commissar</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/LordCommissar</Key>
     <Armor>6</Armor>
     <Hitpoints>6</Hitpoints>
@@ -3561,6 +3593,7 @@
   <Unit>
     <Name>Marauder Bomber</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/MarauderBomber</Key>
     <Armor>7</Armor>
     <Hitpoints>72</Hitpoints>
@@ -3709,6 +3742,7 @@
   <Unit>
     <Name>Primaris Psyker</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/PrimarisPsyker</Key>
     <Armor>4</Armor>
     <Hitpoints>6</Hitpoints>
@@ -3883,6 +3917,7 @@
   <Unit>
     <Name>Ratlings</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Ratling</Key>
     <Armor>4</Armor>
     <Hitpoints>1</Hitpoints>
@@ -3945,6 +3980,7 @@
   <Unit>
     <Name>Rogal Dorn Battle Tank</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/RogalDornBattleTank</Key>
     <Armor>9</Armor>
     <Hitpoints>72</Hitpoints>
@@ -4150,6 +4186,7 @@
   <Unit>
     <Name>Scout Sentinels</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/ScoutSentinel</Key>
     <Armor>6</Armor>
     <Hitpoints>16</Hitpoints>
@@ -4260,6 +4297,7 @@
   <Unit>
     <Name>Tank Commander</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/TankCommander</Key>
     <Armor>9</Armor>
     <Hitpoints>48</Hitpoints>
@@ -4457,6 +4495,7 @@
   <Unit>
     <Name>Tech-Priest Enginseers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/TechpriestEnginseer</Key>
     <Armor>8</Armor>
     <Hitpoints>2</Hitpoints>
@@ -4612,6 +4651,7 @@
   <Unit>
     <Name>Tempestus Scions</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/TempestusScion</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -4736,6 +4776,7 @@
   <Unit>
     <Name>Thunderbolt</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Thunderbolt</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -4859,6 +4900,7 @@
   <Unit>
     <Name>Valkyrie</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Valkyrie</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -4980,6 +5022,7 @@
   <Unit>
     <Name>Void Shield Generator</Name>
     <IsFortification>true</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/VoidShieldGenerator</Key>
     <Armor>9</Armor>
     <Hitpoints>0</Hitpoints>
@@ -5010,6 +5053,7 @@
   <Unit>
     <Name>Wyrdvane Psykers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/WyrdvanePsyker</Key>
     <Armor>4</Armor>
     <Hitpoints>2</Hitpoints>
@@ -5091,6 +5135,7 @@
   <Unit>
     <Name>Chaos Cultists</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/ChaosCultist</Key>
     <Armor>2</Armor>
     <Hitpoints>2</Hitpoints>
@@ -5193,6 +5238,7 @@
   <Unit>
     <Name>Chaos Land Raider</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/ChaosLandRaider</Key>
     <Armor>10</Armor>
     <Hitpoints>64</Hitpoints>
@@ -5345,6 +5391,7 @@
   <Unit>
     <Name>Chaos Lord</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/ChaosLord</Key>
     <Armor>8</Armor>
     <Hitpoints>9</Hitpoints>
@@ -5517,6 +5564,7 @@
   <Unit>
     <Name>Chaos Rhino</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/ChaosRhino</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -5640,6 +5688,7 @@
   <Unit>
     <Name>Chaos Space Marines</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/ChaosSpaceMarine</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -5799,6 +5848,7 @@
   <Unit>
     <Name>Chaos Spawns</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/ChaosSpawn</Key>
     <Armor>0</Armor>
     <Hitpoints>12</Hitpoints>
@@ -5879,6 +5929,7 @@
   <Unit>
     <Name>Daemon Prince</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/DaemonPrince</Key>
     <Armor>8</Armor>
     <Hitpoints>20</Hitpoints>
@@ -6003,6 +6054,7 @@
   <Unit>
     <Name>Dark Disciples</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/DarkDisciple</Key>
     <Armor>4</Armor>
     <Hitpoints>2</Hitpoints>
@@ -6078,6 +6130,7 @@
   <Unit>
     <Name>Defiler</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Defiler</Key>
     <Armor>8</Armor>
     <Hitpoints>48</Hitpoints>
@@ -6247,6 +6300,7 @@
   <Unit>
     <Name>Forgefiend</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Forgefiend</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -6307,6 +6361,7 @@
   <Unit>
     <Name>Greater Brass Scorpion</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/GreaterBrassScorpionOfKhorne</Key>
     <Armor>9</Armor>
     <Hitpoints>144</Hitpoints>
@@ -6464,6 +6519,7 @@
   <Unit>
     <Name>Havocs</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Havoc</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -6622,6 +6678,7 @@
   <Unit>
     <Name>Buildings/ChaosSpaceMarines/Headquarters</Name>
     <IsFortification>true</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Headquarters</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -6716,6 +6773,7 @@
   <Unit>
     <Name>Helbrute</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Helbrute</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -6815,6 +6873,7 @@
   <Unit>
     <Name>Heldrake</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Heldrake</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -6909,6 +6968,7 @@
   <Unit>
     <Name>Khorne Berzerkers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/KhorneBerzerker</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -7101,6 +7161,7 @@
   <Unit>
     <Name>Master of Possession</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/MasterOfPossession</Key>
     <Armor>8</Armor>
     <Hitpoints>9</Hitpoints>
@@ -7233,6 +7294,7 @@
   <Unit>
     <Name>Maulerfiend</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Maulerfiend</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -7311,6 +7373,7 @@
   <Unit>
     <Name>Noctilith Crown</Name>
     <IsFortification>true</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/NoctilithCrown</Key>
     <Armor>8</Armor>
     <Hitpoints>0</Hitpoints>
@@ -7354,6 +7417,7 @@
   <Unit>
     <Name>Obliterators</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Obliterator</Key>
     <Armor>10</Armor>
     <Hitpoints>6</Hitpoints>
@@ -7504,6 +7568,7 @@
   <Unit>
     <Name>Venomcrawler</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Venomcrawler</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -7610,6 +7675,7 @@
   <Unit>
     <Name>Warpsmith</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Warpsmith</Key>
     <Armor>10</Armor>
     <Hitpoints>9</Hitpoints>
@@ -7790,6 +7856,7 @@
   <Unit>
     <Name>Warp Talons</Name>
     <IsFortification>false</IsFortification>
+    <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/WarpTalon</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -7852,6 +7919,7 @@
   <Unit>
     <Name>Autarch</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/Autarch</Key>
     <Armor>8</Armor>
     <Hitpoints>6</Hitpoints>
@@ -8010,6 +8078,7 @@
   <Unit>
     <Name>Avatar of Khaine</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/AvatarOfKhaine</Key>
     <Armor>8</Armor>
     <Hitpoints>30</Hitpoints>
@@ -8095,6 +8164,7 @@
   <Unit>
     <Name>Crimson Hunter</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/CrimsonHunter</Key>
     <Armor>6</Armor>
     <Hitpoints>24</Hitpoints>
@@ -8177,6 +8247,7 @@
   <Unit>
     <Name>Dark Reapers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/DarkReaper</Key>
     <Armor>8</Armor>
     <Hitpoints>2</Hitpoints>
@@ -8255,6 +8326,7 @@
   <Unit>
     <Name>Farseer Skyrunner</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/FarseerSkyrunner</Key>
     <Armor>8</Armor>
     <Hitpoints>9</Hitpoints>
@@ -8366,6 +8438,7 @@
   <Unit>
     <Name>Fire Dragons</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/FireDragon</Key>
     <Armor>8</Armor>
     <Hitpoints>2</Hitpoints>
@@ -8430,6 +8503,7 @@
   <Unit>
     <Name>Fire Prism</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/FirePrism</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -8565,6 +8639,7 @@
   <Unit>
     <Name>Guardians</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/Guardian</Key>
     <Armor>4</Armor>
     <Hitpoints>2</Hitpoints>
@@ -8645,6 +8720,7 @@
   <Unit>
     <Name>Buildings/Eldar/Headquarters</Name>
     <IsFortification>true</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/Headquarters</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -8701,6 +8777,7 @@
   <Unit>
     <Name>Hemlock Wraithfighter</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/HemlockWraithfighter</Key>
     <Armor>6</Armor>
     <Hitpoints>24</Hitpoints>
@@ -8761,6 +8838,7 @@
   <Unit>
     <Name>Hornet</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/Hornet</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -8834,6 +8912,7 @@
   <Unit>
     <Name>Howling Banshees</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/HowlingBanshee</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -8929,6 +9008,7 @@
   <Unit>
     <Name>Rangers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/Ranger</Key>
     <Armor>4</Armor>
     <Hitpoints>2</Hitpoints>
@@ -8991,6 +9071,7 @@
   <Unit>
     <Name>Scorpion</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/Scorpion</Key>
     <Armor>8</Armor>
     <Hitpoints>108</Hitpoints>
@@ -9080,6 +9161,7 @@
   <Unit>
     <Name>Shining Spears</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/ShiningSpear</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -9188,6 +9270,7 @@
   <Unit>
     <Name>Spiritseer</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/Spiritseer</Key>
     <Armor>0</Armor>
     <Hitpoints>6</Hitpoints>
@@ -9291,6 +9374,7 @@
   <Unit>
     <Name>Vaul’s Wrath Support Battery</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/VaulsWrathSupportBattery</Key>
     <Armor>6</Armor>
     <Hitpoints>8</Hitpoints>
@@ -9352,6 +9436,7 @@
   <Unit>
     <Name>Warlocks</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/Warlock</Key>
     <Armor>0</Armor>
     <Hitpoints>2</Hitpoints>
@@ -9473,6 +9558,7 @@
   <Unit>
     <Name>War Walkers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/WarWalker</Key>
     <Armor>6</Armor>
     <Hitpoints>16</Hitpoints>
@@ -9567,6 +9653,7 @@
   <Unit>
     <Name>Wave Serpent</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/WaveSerpent</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -9687,6 +9774,7 @@
   <Unit>
     <Name>Webway Gate</Name>
     <IsFortification>true</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/WebwayGate</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -9717,6 +9805,7 @@
   <Unit>
     <Name>Wraithblades</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/Wraithblade</Key>
     <Armor>8</Armor>
     <Hitpoints>6</Hitpoints>
@@ -9778,6 +9867,7 @@
   <Unit>
     <Name>Wraithknight</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Eldar</Faction>
     <Key>Eldar/Wraithknight</Key>
     <Armor>8</Armor>
     <Hitpoints>56</Hitpoints>
@@ -9911,6 +10001,7 @@
   <Unit>
     <Name>Annihilation Barge</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/AnnihilationBarge</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -9995,6 +10086,7 @@
   <Unit>
     <Name>Canoptek Scarabs</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/CanoptekScarab</Key>
     <Armor>2</Armor>
     <Hitpoints>6</Hitpoints>
@@ -10079,6 +10171,7 @@
   <Unit>
     <Name>Canoptek Spyder</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/CanoptekSpyder</Key>
     <Armor>8</Armor>
     <Hitpoints>18</Hitpoints>
@@ -10184,6 +10277,7 @@
   <Unit>
     <Name>Canoptek Wraiths</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/CanoptekWraith</Key>
     <Armor>8</Armor>
     <Hitpoints>8</Hitpoints>
@@ -10251,6 +10345,7 @@
   <Unit>
     <Name>Cryptek</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/Cryptek</Key>
     <Armor>6</Armor>
     <Hitpoints>9</Hitpoints>
@@ -10307,6 +10402,7 @@
   <Unit>
     <Name>Deathmarks</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/Deathmark</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -10362,6 +10458,7 @@
   <Unit>
     <Name>Destroyer Lord</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/DestroyerLord</Key>
     <Armor>8</Armor>
     <Hitpoints>18</Hitpoints>
@@ -10434,6 +10531,7 @@
   <Unit>
     <Name>Doom Scythe</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/DoomScythe</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -10513,6 +10611,7 @@
   <Unit>
     <Name>Doomsday Ark</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/DoomsdayArk</Key>
     <Armor>7</Armor>
     <Hitpoints>32</Hitpoints>
@@ -10618,6 +10717,7 @@
   <Unit>
     <Name>Flayed Ones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/FlayedOne</Key>
     <Armor>6</Armor>
     <Hitpoints>3</Hitpoints>
@@ -10695,6 +10795,7 @@
   <Unit>
     <Name>Gauss Pylon</Name>
     <IsFortification>true</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/GaussPylon</Key>
     <Armor>10</Armor>
     <Hitpoints>0</Hitpoints>
@@ -10748,6 +10849,7 @@
   <Unit>
     <Name>Ghost Ark</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/GhostArk</Key>
     <Armor>7</Armor>
     <Hitpoints>32</Hitpoints>
@@ -10813,6 +10915,7 @@
   <Unit>
     <Name>Buildings/Necrons/Headquarters</Name>
     <IsFortification>true</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/Headquarters</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -10887,6 +10990,7 @@
   <Unit>
     <Name>Heavy Destroyers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/HeavyDestroyer</Key>
     <Armor>8</Armor>
     <Hitpoints>8</Hitpoints>
@@ -10951,6 +11055,7 @@
   <Unit>
     <Name>Immortals</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/Immortal</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -11010,6 +11115,7 @@
   <Unit>
     <Name>Lord</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/Lord</Key>
     <Armor>8</Armor>
     <Hitpoints>12</Hitpoints>
@@ -11094,6 +11200,7 @@
   <Unit>
     <Name>Monolith</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/Monolith</Key>
     <Armor>10</Armor>
     <Hitpoints>64</Hitpoints>
@@ -11179,6 +11286,7 @@
   <Unit>
     <Name>Night Scythe</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/NightScythe</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -11244,6 +11352,7 @@
   <Unit>
     <Name>Obelisk</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/Obelisk</Key>
     <Armor>10</Armor>
     <Hitpoints>96</Hitpoints>
@@ -11308,6 +11417,7 @@
   <Unit>
     <Name>Tesseract Vault</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/TesseractVault</Key>
     <Armor>10</Armor>
     <Hitpoints>144</Hitpoints>
@@ -11424,6 +11534,7 @@
   <Unit>
     <Name>Tomb Blades</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/TombBlade</Key>
     <Armor>6</Armor>
     <Hitpoints>4</Hitpoints>
@@ -11495,6 +11606,7 @@
   <Unit>
     <Name>Transcendent C'tan</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/TranscendentCtan</Key>
     <Armor>6</Armor>
     <Hitpoints>40</Hitpoints>
@@ -11631,6 +11743,7 @@
   <Unit>
     <Name>Triarch Praetorians</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/TriarchPraetorian</Key>
     <Armor>8</Armor>
     <Hitpoints>4</Hitpoints>
@@ -11714,6 +11827,7 @@
   <Unit>
     <Name>Triarch Stalker</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/TriarchStalker</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -11797,6 +11911,7 @@
   <Unit>
     <Name>Necron Warriors</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Necrons</Faction>
     <Key>Necrons/Warrior</Key>
     <Armor>6</Armor>
     <Hitpoints>3</Hitpoints>
@@ -11857,6 +11972,7 @@
   <Unit>
     <Name>Ambulls</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/Ambull</Key>
     <Armor>6</Armor>
     <Hitpoints>6</Hitpoints>
@@ -11929,6 +12045,7 @@
   <Unit>
     <Name>Catachan Devil</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/CatachanDevil</Key>
     <Armor>8</Armor>
     <Hitpoints>12</Hitpoints>
@@ -12005,6 +12122,7 @@
   <Unit>
     <Name>Catachan Devil Lair</Name>
     <IsFortification>true</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/CatachanDevilLair</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -12035,6 +12153,7 @@
   <Unit>
     <Name>Enslavers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/Enslaver</Key>
     <Armor>2</Armor>
     <Hitpoints>12</Hitpoints>
@@ -12106,6 +12225,7 @@
   <Unit>
     <Name>Kastelan Robot</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/KastelanRobot</Key>
     <Armor>8</Armor>
     <Hitpoints>24</Hitpoints>
@@ -12191,6 +12311,7 @@
   <Unit>
     <Name>Kroot Hounds</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/KrootHound</Key>
     <Armor>0</Armor>
     <Hitpoints>2</Hitpoints>
@@ -12264,6 +12385,7 @@
   <Unit>
     <Name>Lord of Skulls</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/LordOfSkulls</Key>
     <Armor>9</Armor>
     <Hitpoints>108</Hitpoints>
@@ -12358,6 +12480,7 @@
   <Unit>
     <Name>Neophyte Hybrids</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/NeophyteHybrid</Key>
     <Armor>4</Armor>
     <Hitpoints>2</Hitpoints>
@@ -12409,6 +12532,7 @@
   <Unit>
     <Name>Poxwalkers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/Poxwalker</Key>
     <Armor>0</Armor>
     <Hitpoints>3</Hitpoints>
@@ -12482,6 +12606,7 @@
   <Unit>
     <Name>Psychneuein</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/Psychneuein</Key>
     <Armor>0</Armor>
     <Hitpoints>3</Hitpoints>
@@ -12553,6 +12678,7 @@
   <Unit>
     <Name>Tech-Priest Betrayer</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/TechpriestBetrayer</Key>
     <Armor>8</Armor>
     <Hitpoints>12</Hitpoints>
@@ -12650,6 +12776,7 @@
   <Unit>
     <Name>Umbra</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/Umbra</Key>
     <Armor>6</Armor>
     <Hitpoints>16</Hitpoints>
@@ -12700,6 +12827,7 @@
   <Unit>
     <Name>Vespid Stingwings</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Neutral</Faction>
     <Key>Neutral/VespidStingwing</Key>
     <Armor>6</Armor>
     <Hitpoints>3</Hitpoints>
@@ -12754,6 +12882,7 @@
   <Unit>
     <Name>Battlewagon</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Battlewagon</Key>
     <Armor>8</Armor>
     <Hitpoints>48</Hitpoints>
@@ -12908,6 +13037,7 @@
   <Unit>
     <Name>Big Mek</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/BigMek</Key>
     <Armor>10</Armor>
     <Hitpoints>6</Hitpoints>
@@ -13045,6 +13175,7 @@
   <Unit>
     <Name>Boyz</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Boy</Key>
     <Armor>2</Armor>
     <Hitpoints>3</Hitpoints>
@@ -13181,6 +13312,7 @@
   <Unit>
     <Name>Burna-Bommer</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/BurnaBommer</Key>
     <Armor>6</Armor>
     <Hitpoints>24</Hitpoints>
@@ -13343,6 +13475,7 @@
   <Unit>
     <Name>Dakkajet</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Dakkajet</Key>
     <Armor>6</Armor>
     <Hitpoints>24</Hitpoints>
@@ -13451,6 +13584,7 @@
   <Unit>
     <Name>Deff Dread</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/DeffDread</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -13555,6 +13689,7 @@
   <Unit>
     <Name>Deffkoptas</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Deffkopta</Key>
     <Armor>6</Armor>
     <Hitpoints>8</Hitpoints>
@@ -13687,6 +13822,7 @@
   <Unit>
     <Name>Flash Gitz</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/FlashGitz</Key>
     <Armor>2</Armor>
     <Hitpoints>6</Hitpoints>
@@ -13789,6 +13925,7 @@
   <Unit>
     <Name>Gargantuan Squiggoth</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/GargantuanSquiggoth</Key>
     <Armor>6</Armor>
     <Hitpoints>96</Hitpoints>
@@ -13987,6 +14124,7 @@
   <Unit>
     <Name>Gorkanaut</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Gorkanaut</Key>
     <Armor>9</Armor>
     <Hitpoints>80</Hitpoints>
@@ -14174,6 +14312,7 @@
   <Unit>
     <Name>Buildings/Orks/Headquarters</Name>
     <IsFortification>true</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Headquarters</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -14265,6 +14404,7 @@
   <Unit>
     <Name>Killa Kans</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/KillaKan</Key>
     <Armor>7</Armor>
     <Hitpoints>16</Hitpoints>
@@ -14364,6 +14504,7 @@
   <Unit>
     <Name>Kill Bursta</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/KillBursta</Key>
     <Armor>9</Armor>
     <Hitpoints>112</Hitpoints>
@@ -14467,6 +14608,7 @@
   <Unit>
     <Name>Meganobz</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Meganob</Key>
     <Armor>10</Armor>
     <Hitpoints>6</Hitpoints>
@@ -14604,6 +14746,7 @@
   <Unit>
     <Name>Megatrakk Scrapjet</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/MegatrakkScrapjet</Key>
     <Armor>6</Armor>
     <Hitpoints>18</Hitpoints>
@@ -14757,6 +14900,7 @@
   <Unit>
     <Name>Meks</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Mek</Key>
     <Armor>2</Armor>
     <Hitpoints>3</Hitpoints>
@@ -14858,6 +15002,7 @@
   <Unit>
     <Name>Mek Gunz</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/MekGun</Key>
     <Armor>6</Armor>
     <Hitpoints>12</Hitpoints>
@@ -14917,6 +15062,7 @@
   <Unit>
     <Name>Painboy</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Painboy</Key>
     <Armor>2</Armor>
     <Hitpoints>9</Hitpoints>
@@ -14991,6 +15137,7 @@
   <Unit>
     <Name>Tankbustas</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Tankbusta</Key>
     <Armor>2</Armor>
     <Hitpoints>3</Hitpoints>
@@ -15125,6 +15272,7 @@
   <Unit>
     <Name>Warbikers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Warbiker</Key>
     <Armor>6</Armor>
     <Hitpoints>4</Hitpoints>
@@ -15232,6 +15380,7 @@
   <Unit>
     <Name>Warboss</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Warboss</Key>
     <Armor>2</Armor>
     <Hitpoints>12</Hitpoints>
@@ -15397,6 +15546,7 @@
   <Unit>
     <Name>Warbuggies</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Warbuggy</Key>
     <Armor>6</Armor>
     <Hitpoints>16</Hitpoints>
@@ -15480,6 +15630,7 @@
   <Unit>
     <Name>Weirdboy</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Orks</Faction>
     <Key>Orks/Weirdboy</Key>
     <Armor>2</Armor>
     <Hitpoints>9</Hitpoints>
@@ -15571,6 +15722,7 @@
   <Unit>
     <Name>Avenger Strike Fighter</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/AvengerStrikeFighter</Key>
     <Armor>7</Armor>
     <Hitpoints>16</Hitpoints>
@@ -15716,6 +15868,7 @@
   <Unit>
     <Name>Battle Sisters</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/BattleSister</Key>
     <Armor>8</Armor>
     <Hitpoints>2</Hitpoints>
@@ -15872,6 +16025,7 @@
   <Unit>
     <Name>Canoness</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Canoness</Key>
     <Armor>8</Armor>
     <Hitpoints>6</Hitpoints>
@@ -16082,6 +16236,7 @@
   <Unit>
     <Name>Castigator</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Castigator</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -16251,6 +16406,7 @@
   <Unit>
     <Name>Celestian Sacresants</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/CelestianSacresant</Key>
     <Armor>10</Armor>
     <Hitpoints>2</Hitpoints>
@@ -16401,6 +16557,7 @@
   <Unit>
     <Name>Cerastus Knight-Lancer</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/CerastusKnightLancer</Key>
     <Armor>8</Armor>
     <Hitpoints>72</Hitpoints>
@@ -16539,6 +16696,7 @@
   <Unit>
     <Name>Dialogus</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Dialogus</Key>
     <Armor>8</Armor>
     <Hitpoints>6</Hitpoints>
@@ -16681,6 +16839,7 @@
   <Unit>
     <Name>Dominions</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Dominion</Key>
     <Armor>8</Armor>
     <Hitpoints>2</Hitpoints>
@@ -16848,6 +17007,7 @@
   <Unit>
     <Name>Buildings/SistersOfBattle/Enclave</Name>
     <IsFortification>true</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Enclave</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -16975,6 +17135,7 @@
   <Unit>
     <Name>Exorcist</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Exorcist</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -17094,6 +17255,7 @@
   <Unit>
     <Name>Buildings/SistersOfBattle/Headquarters</Name>
     <IsFortification>true</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Headquarters</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -17221,6 +17383,7 @@
   <Unit>
     <Name>Hospitallers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Hospitaller</Key>
     <Armor>8</Armor>
     <Hitpoints>2</Hitpoints>
@@ -17352,6 +17515,7 @@
   <Unit>
     <Name>Imagifiers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Imagifier</Key>
     <Armor>8</Armor>
     <Hitpoints>2</Hitpoints>
@@ -17483,6 +17647,7 @@
   <Unit>
     <Name>Immolator</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Immolator</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -17628,6 +17793,7 @@
   <Unit>
     <Name>Lightning Fighter</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/LightningFighter</Key>
     <Armor>7</Armor>
     <Hitpoints>16</Hitpoints>
@@ -17733,6 +17899,7 @@
   <Unit>
     <Name>Mortifier</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Mortifier</Key>
     <Armor>6</Armor>
     <Hitpoints>20</Hitpoints>
@@ -17839,6 +18006,7 @@
   <Unit>
     <Name>Paragon Warsuits</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/ParagonWarsuit</Key>
     <Armor>10</Armor>
     <Hitpoints>16</Hitpoints>
@@ -17999,6 +18167,7 @@
   <Unit>
     <Name>Retributors</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Retributor</Key>
     <Armor>8</Armor>
     <Hitpoints>2</Hitpoints>
@@ -18143,6 +18312,7 @@
   <Unit>
     <Name>Saint Celestine</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/SaintCelestine</Key>
     <Armor>10</Armor>
     <Hitpoints>10</Hitpoints>
@@ -18286,6 +18456,7 @@
   <Unit>
     <Name>Sisters Repentia</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/SisterRepentia</Key>
     <Armor>0</Armor>
     <Hitpoints>2</Hitpoints>
@@ -18434,6 +18605,7 @@
   <Unit>
     <Name>Zephyrim</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Zephyrim</Key>
     <Armor>8</Armor>
     <Hitpoints>2</Hitpoints>
@@ -18626,6 +18798,7 @@
   <Unit>
     <Name>Apothecaries</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Apothecary</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -18754,6 +18927,7 @@
   <Unit>
     <Name>Aquila Macro-Cannon</Name>
     <IsFortification>true</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/AquilaMacroCannon</Key>
     <Armor>11</Armor>
     <Hitpoints>0</Hitpoints>
@@ -18845,6 +19019,7 @@
   <Unit>
     <Name>Assault Space Marines</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/AssaultSpaceMarine</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -19034,6 +19209,7 @@
   <Unit>
     <Name>Captain</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Captain</Key>
     <Armor>10</Armor>
     <Hitpoints>9</Hitpoints>
@@ -19199,6 +19375,7 @@
   <Unit>
     <Name>Chaplain</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Chaplain</Key>
     <Armor>10</Armor>
     <Hitpoints>9</Hitpoints>
@@ -19315,6 +19492,7 @@
   <Unit>
     <Name>Devastator Centurions</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/DevastatorCenturion</Key>
     <Armor>10</Armor>
     <Hitpoints>8</Hitpoints>
@@ -19436,6 +19614,7 @@
   <Unit>
     <Name>Devastator Space Marines</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/DevastatorSpaceMarine</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -19589,6 +19768,7 @@
   <Unit>
     <Name>Dreadnought</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Dreadnought</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -19711,6 +19891,7 @@
   <Unit>
     <Name>Fortress of Redemption</Name>
     <IsFortification>true</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/FortressOfRedemption</Key>
     <Armor>10</Armor>
     <Hitpoints>0</Hitpoints>
@@ -19839,6 +20020,7 @@
   <Unit>
     <Name>Buildings/SpaceMarines/Headquarters</Name>
     <IsFortification>true</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Headquarters</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -19942,6 +20124,7 @@
   <Unit>
     <Name>Hunter</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Hunter</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -20043,6 +20226,7 @@
   <Unit>
     <Name>Land Raider</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/LandRaider</Key>
     <Armor>10</Armor>
     <Hitpoints>64</Hitpoints>
@@ -20196,6 +20380,7 @@
   <Unit>
     <Name>Land Speeders</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/LandSpeeder</Key>
     <Armor>6</Armor>
     <Hitpoints>16</Hitpoints>
@@ -20287,6 +20472,7 @@
   <Unit>
     <Name>Librarian</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Librarian</Key>
     <Armor>8</Armor>
     <Hitpoints>9</Hitpoints>
@@ -20450,6 +20636,7 @@
   <Unit>
     <Name>Predator</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Predator</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -20585,6 +20772,7 @@
   <Unit>
     <Name>Razorback</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Razorback</Key>
     <Armor>7</Armor>
     <Hitpoints>24</Hitpoints>
@@ -20713,6 +20901,7 @@
   <Unit>
     <Name>Scouts</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Scout</Key>
     <Armor>6</Armor>
     <Hitpoints>3</Hitpoints>
@@ -20865,6 +21054,7 @@
   <Unit>
     <Name>Scout Bikers</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/ScoutBiker</Key>
     <Armor>6</Armor>
     <Hitpoints>4</Hitpoints>
@@ -21043,6 +21233,7 @@
   <Unit>
     <Name>Stormraven Gunship</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/StormravenGunship</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -21203,6 +21394,7 @@
   <Unit>
     <Name>Stormtalon Gunship</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/StormtalonGunship</Key>
     <Armor>7</Armor>
     <Hitpoints>16</Hitpoints>
@@ -21299,6 +21491,7 @@
   <Unit>
     <Name>Tactical Space Marines</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/TacticalSpaceMarine</Key>
     <Armor>8</Armor>
     <Hitpoints>3</Hitpoints>
@@ -21458,6 +21651,7 @@
   <Unit>
     <Name>Terminators</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Terminator</Key>
     <Armor>10</Armor>
     <Hitpoints>3</Hitpoints>
@@ -21561,6 +21755,7 @@
   <Unit>
     <Name>Thunderfire Cannon</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/ThunderfireCannon</Key>
     <Armor>8</Armor>
     <Hitpoints>12</Hitpoints>
@@ -21744,6 +21939,7 @@
   <Unit>
     <Name>Vindicator</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Vindicator</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -21843,6 +22039,7 @@
   <Unit>
     <Name>Whirlwind</Name>
     <IsFortification>false</IsFortification>
+    <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Whirlwind</Key>
     <Armor>8</Armor>
     <Hitpoints>24</Hitpoints>
@@ -21961,6 +22158,7 @@
   <Unit>
     <Name>XV88 Broadside Battlesuits</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/BroadsideBattlesuit</Key>
     <Armor>10</Armor>
     <Hitpoints>6</Hitpoints>
@@ -22065,6 +22263,7 @@
   <Unit>
     <Name>Builder Drones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/BuilderDrone</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -22100,6 +22299,7 @@
   <Unit>
     <Name>Cadre Fireblade</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/CadreFireblade</Key>
     <Armor>6</Armor>
     <Hitpoints>6</Hitpoints>
@@ -22178,6 +22378,7 @@
   <Unit>
     <Name>Commander</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/Commander</Key>
     <Armor>8</Armor>
     <Hitpoints>12</Hitpoints>
@@ -22265,6 +22466,7 @@
   <Unit>
     <Name>XV8 Crisis Battlesuits</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/CrisisBattlesuit</Key>
     <Armor>8</Armor>
     <Hitpoints>6</Hitpoints>
@@ -22371,6 +22573,7 @@
   <Unit>
     <Name>TY7 Devilfish</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/Devilfish</Key>
     <Armor>7</Armor>
     <Hitpoints>36</Hitpoints>
@@ -22477,6 +22680,7 @@
   <Unit>
     <Name>Ethereal</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/Ethereal</Key>
     <Armor>0</Armor>
     <Hitpoints>6</Hitpoints>
@@ -22532,6 +22736,7 @@
   <Unit>
     <Name>Fire Warriors</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/FireWarrior</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -22629,6 +22834,7 @@
   <Unit>
     <Name>XV95 Ghostkeel Battlesuit</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/GhostkeelBattlesuit</Key>
     <Armor>8</Armor>
     <Hitpoints>16</Hitpoints>
@@ -22736,6 +22942,7 @@
   <Unit>
     <Name>MV33 Grav-Inhibitor Drones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/GravInhibitorDrone</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -22771,6 +22978,7 @@
   <Unit>
     <Name>MV1 Gun Drones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/GunDrone</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -22831,6 +23039,7 @@
   <Unit>
     <Name>TX7 Hammerhead Gunship</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/HammerheadGunship</Key>
     <Armor>7</Armor>
     <Hitpoints>36</Hitpoints>
@@ -22957,6 +23166,7 @@
   <Unit>
     <Name>Buildings/Tau/Headquarters</Name>
     <IsFortification>true</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/Headquarters</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -23050,6 +23260,7 @@
   <Unit>
     <Name>MV17 Interceptor Drones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/InterceptorDrone</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -23131,6 +23342,7 @@
   <Unit>
     <Name>Krootox Riders</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/KrootoxRider</Key>
     <Armor>2</Armor>
     <Hitpoints>4</Hitpoints>
@@ -23228,6 +23440,7 @@
   <Unit>
     <Name>MV7 Marker Drones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/MarkerDrone</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -23263,6 +23476,7 @@
   <Unit>
     <Name>Pathfinders</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/Pathfinder</Key>
     <Armor>4</Armor>
     <Hitpoints>2</Hitpoints>
@@ -23384,6 +23598,7 @@
   <Unit>
     <Name>TX4 Piranha</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/Piranha</Key>
     <Armor>6</Armor>
     <Hitpoints>16</Hitpoints>
@@ -23490,6 +23705,7 @@
   <Unit>
     <Name>MV31 Pulse Accelerator Drones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/PulseAcceleratorDrone</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -23525,6 +23741,7 @@
   <Unit>
     <Name>AX3 Razorshark Strike Fighter</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/RazorsharkStrikeFighter</Key>
     <Armor>6</Armor>
     <Hitpoints>24</Hitpoints>
@@ -23665,6 +23882,7 @@
   <Unit>
     <Name>MB3 Recon Drones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/ReconDrone</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -23723,6 +23941,7 @@
   <Unit>
     <Name>XV104 Riptide Battlesuit</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/RiptideBattlesuit</Key>
     <Armor>10</Armor>
     <Hitpoints>30</Hitpoints>
@@ -23830,6 +24049,7 @@
   <Unit>
     <Name>XV107 R'Varna Battlesuit</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/RVarnaBattlesuit</Key>
     <Armor>10</Armor>
     <Hitpoints>48</Hitpoints>
@@ -23896,6 +24116,7 @@
   <Unit>
     <Name>MV4 Shield Drones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/ShieldDrone</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -23931,6 +24152,7 @@
   <Unit>
     <Name>MV84 Shielded Missile Drones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/ShieldedMissileDrone</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -23990,6 +24212,7 @@
   <Unit>
     <Name>TX78 Sky Ray Gunship</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/SkyRayGunship</Key>
     <Armor>7</Armor>
     <Hitpoints>36</Hitpoints>
@@ -24121,6 +24344,7 @@
   <Unit>
     <Name>XV25 Stealth Battlesuits</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/StealthBattlesuit</Key>
     <Armor>8</Armor>
     <Hitpoints>2</Hitpoints>
@@ -24188,6 +24412,7 @@
   <Unit>
     <Name>MV5 Stealth Drones</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/StealthDrone</Key>
     <Armor>6</Armor>
     <Hitpoints>2</Hitpoints>
@@ -24223,6 +24448,7 @@
   <Unit>
     <Name>KV128 Stormsurge</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/Stormsurge</Key>
     <Armor>8</Armor>
     <Hitpoints>48</Hitpoints>
@@ -24419,6 +24645,7 @@
   <Unit>
     <Name>AX39 Sun Shark Bomber</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/SunSharkBomber</Key>
     <Armor>6</Armor>
     <Hitpoints>24</Hitpoints>
@@ -24541,6 +24768,7 @@
   <Unit>
     <Name>Tidewall Gunrig</Name>
     <IsFortification>true</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/TidewallGunrig</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -24630,6 +24858,7 @@
   <Unit>
     <Name>Tiger Shark</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tau</Faction>
     <Key>Tau/TigerShark</Key>
     <Armor>8</Armor>
     <Hitpoints>72</Hitpoints>
@@ -24815,6 +25044,7 @@
   <Unit>
     <Name>Biovores</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Biovore</Key>
     <Armor>6</Armor>
     <Hitpoints>9</Hitpoints>
@@ -24898,6 +25128,7 @@
   <Unit>
     <Name>Carnifex</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Carnifex</Key>
     <Armor>8</Armor>
     <Hitpoints>30</Hitpoints>
@@ -25064,6 +25295,7 @@
   <Unit>
     <Name>The Doom</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Doom</Key>
     <Armor>4</Armor>
     <Hitpoints>9</Hitpoints>
@@ -25187,6 +25419,7 @@
   <Unit>
     <Name>Exocrine</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Exocrine</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -25312,6 +25545,7 @@
   <Unit>
     <Name>Gargoyles</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Gargoyle</Key>
     <Armor>2</Armor>
     <Hitpoints>2</Hitpoints>
@@ -25406,6 +25640,7 @@
   <Unit>
     <Name>Haruspex</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Haruspex</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -25531,6 +25766,7 @@
   <Unit>
     <Name>Buildings/Tyranids/Headquarters</Name>
     <IsFortification>true</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Headquarters</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -25603,6 +25839,7 @@
   <Unit>
     <Name>Hive Crone</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/HiveCrone</Key>
     <Armor>8</Armor>
     <Hitpoints>36</Hitpoints>
@@ -25750,6 +25987,7 @@
   <Unit>
     <Name>Hive Guards</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/HiveGuard</Key>
     <Armor>6</Armor>
     <Hitpoints>12</Hitpoints>
@@ -25816,6 +26054,7 @@
   <Unit>
     <Name>Hive Tyrant</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/HiveTyrant</Key>
     <Armor>8</Armor>
     <Hitpoints>30</Hitpoints>
@@ -25965,6 +26204,7 @@
   <Unit>
     <Name>Hormagaunts</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Hormagaunt</Key>
     <Armor>2</Armor>
     <Hitpoints>2</Hitpoints>
@@ -26035,6 +26275,7 @@
   <Unit>
     <Name>Lictors</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Lictor</Key>
     <Armor>4</Armor>
     <Hitpoints>9</Hitpoints>
@@ -26141,6 +26382,7 @@
   <Unit>
     <Name>Malanthrope</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Malanthrope</Key>
     <Armor>4</Armor>
     <Hitpoints>16</Hitpoints>
@@ -26246,6 +26488,7 @@
   <Unit>
     <Name>Raveners</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Ravener</Key>
     <Armor>4</Armor>
     <Hitpoints>9</Hitpoints>
@@ -26346,6 +26589,7 @@
   <Unit>
     <Name>Scythed Hierodule</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/ScythedHierodule</Key>
     <Armor>8</Armor>
     <Hitpoints>72</Hitpoints>
@@ -26498,6 +26742,7 @@
   <Unit>
     <Name>Spore Mines</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/SporeMine</Key>
     <Armor>0</Armor>
     <Hitpoints>1</Hitpoints>
@@ -26559,6 +26804,7 @@
   <Unit>
     <Name>Termagants</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Termagant</Key>
     <Armor>2</Armor>
     <Hitpoints>2</Hitpoints>
@@ -26623,6 +26869,7 @@
   <Unit>
     <Name>Tervigon</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Tervigon</Key>
     <Armor>8</Armor>
     <Hitpoints>42</Hitpoints>
@@ -26752,6 +26999,7 @@
   <Unit>
     <Name>Trygon</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Trygon</Key>
     <Armor>8</Armor>
     <Hitpoints>42</Hitpoints>
@@ -26873,6 +27121,7 @@
   <Unit>
     <Name>Broodhive</Name>
     <IsFortification>true</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Tunnel</Key>
     <Armor>6</Armor>
     <Hitpoints>0</Hitpoints>
@@ -26908,6 +27157,7 @@
   <Unit>
     <Name>Tyranid Prime</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/TyranidPrime</Key>
     <Armor>8</Armor>
     <Hitpoints>16</Hitpoints>
@@ -27028,6 +27278,7 @@
   <Unit>
     <Name>Tyrannocyte</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Tyrannocyte</Key>
     <Armor>6</Armor>
     <Hitpoints>24</Hitpoints>
@@ -27095,6 +27346,7 @@
   <Unit>
     <Name>Tyrannofex</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Tyrannofex</Key>
     <Armor>10</Armor>
     <Hitpoints>42</Hitpoints>
@@ -27213,6 +27465,7 @@
   <Unit>
     <Name>Venomthropes</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Venomthrope</Key>
     <Armor>4</Armor>
     <Hitpoints>6</Hitpoints>
@@ -27298,6 +27551,7 @@
   <Unit>
     <Name>Tyranid Warriors</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Warrior</Key>
     <Armor>6</Armor>
     <Hitpoints>9</Hitpoints>
@@ -27408,6 +27662,7 @@
   <Unit>
     <Name>Zoanthropes</Name>
     <IsFortification>false</IsFortification>
+    <Faction>Tyranids</Faction>
     <Key>Tyranids/Zoanthrope</Key>
     <Armor>4</Armor>
     <Hitpoints>9</Hitpoints>

@@ -17,6 +17,18 @@ namespace GladiusDataExtract.Extract
 	public class Converter
 	{
 
+        public static Dictionary<string,Faction> FactionLookup{get;}
+
+
+        static Converter()
+        {
+			FactionLookup = Enum.GetNames<Faction>()
+				.Zip(Enum.GetValues<Faction>())
+				.Where(x=> x.Second != Faction.Invalid)
+				.ToDictionary(x => x.First, x => x.Second);
+		}
+
+
 		/// <summary>
 		/// Returns the Units from the game's data.
 		/// </summary>
@@ -58,6 +70,8 @@ namespace GladiusDataExtract.Extract
 				unit.Key = dtoUnit.Key;
 				unit.ModelCount = dtoUnit.ModelCount;
 
+				unit.Faction = GetFaction(unit.Key);
+
 				var attributes = new Dictionary<string, decimal>(
 					dtoUnit.Attributes
 						.Select(x => new KeyValuePair<string,decimal>(x.Name, x.Value)));
@@ -92,6 +106,21 @@ namespace GladiusDataExtract.Extract
 
 			return units;
 		}
+
+		private Faction GetFaction(string key)
+		{
+			string factionKey = key.Split("/")[0];
+
+			if (FactionLookup.TryGetValue(factionKey, out Faction faction))
+			{
+				return faction;
+			}
+			else
+			{
+				throw new ArgumentOutOfRangeException($"Unexpected value '{factionKey}' for Faction");
+			}
+		}
+
 
 		private List<Weapon> GetWeapons(du.Unit dtoUnit)
 		{

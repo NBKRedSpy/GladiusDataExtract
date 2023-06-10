@@ -19,6 +19,8 @@ namespace GladiusDataExtract.Entities
 
         public bool IsFortification { get; set; }
 
+        public Faction Faction { get; set; }
+
         /// <summary>
         /// The internal key of the unit.  Ex:  Tyranids/Hormagaunt
         /// </summary>

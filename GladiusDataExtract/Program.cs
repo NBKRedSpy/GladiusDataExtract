@@ -15,28 +15,28 @@ namespace GladiusDataExtract
     {
         static void Main(string[] args)
         {
-			//ExtractUnitInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
-			//    @"c:\work\UnitInfo.txt");
+            //ExtractUnitInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Tyranids",
+            //    @"c:\work\UnitInfo.txt");
 
-			//ExtractWeaponInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons",
-			//    @"c:\work\WeaponInfo.txt");
+            //ExtractWeaponInfoText(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons",
+            //    @"c:\work\WeaponInfo.txt");
 
-			//List<Weapon> weapons = new();
-			//weapons = ExtractWeaponInfo(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons");
+            //List<Weapon> weapons = new();
+            //weapons = ExtractWeaponInfo(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Weapons");
 
 
-			//Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Name);
+            //Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Name);
 
-			//List<Unit> units = ExtractUnitInfo(
-			//    @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units",
-			//    weaponLookup);
+            //List<Unit> units = ExtractUnitInfo(
+            //    @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units",
+            //    weaponLookup);
 
-			//ExportUnitInfo(units, @"C:\work\UnitsJoined.txt");
+            //ExportUnitInfo(units, @"C:\work\UnitsJoined.txt");
 
-			SaveData();
+            SaveData(args[0]);
         }
 
-		private static void SaveData()
+		private static void SaveData(string outputFilePath)
 		{
 			var converter = new GladiusDataExtract.Extract.Converter();
 
@@ -48,18 +48,15 @@ namespace GladiusDataExtract
             var writer = new XmlSerializer(typeof(List<Entities.Unit>));
 
 
-            const string fileName = @"c:\Work\GladiusUnits.xml";
-
-
-			using (var streamWriter = new StreamWriter(fileName))
+			using (var streamWriter = new StreamWriter(outputFilePath))
             {
 
                 writer.Serialize(streamWriter, units);
 			}
 
 
-			var reader = new XmlSerializer(typeof(List<Entities.Unit>));
-            List<Entities.Unit> importedList = (List <Entities.Unit>)reader.Deserialize(new StreamReader(fileName))!;
+			//var reader = new XmlSerializer(typeof(List<Entities.Unit>));
+   //         List<Entities.Unit> importedList = (List <Entities.Unit>)reader.Deserialize(new StreamReader(outputFilePath))!;
             
 
 		}
