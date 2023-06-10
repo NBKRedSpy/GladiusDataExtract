@@ -10,7 +10,7 @@
 
 	<div class="unit-name" id="@htmlId"><a class="unit__name-link" href="#@htmlId">@unit.Name</a></div>
 	<div class="unit__content">
-		<div class="unit__item-content">
+		<div class="unit__item-content unit__icon-line">
 			<span>@{await DisplayIcon("Attributes","PopulationLimit", "Model Count");} @unit.ModelCount </span>
 			<span>@{await DisplayIcon("Attributes","Armor");} @unit.Armor</span>
 			<span>@{await DisplayIcon("Attributes","HitPoints");} @unit.Hitpoints 
@@ -39,10 +39,12 @@
 					<span class="unit__header" >@weapon.Name</span>
 
 					<div class="unit__item-content-separate">
-						<span>@{await DisplayIcon("Attributes","Damage");} @weapon.Damage</span>
-						<span>@{await DisplayIcon("Attributes","Attacks");} @weapon.AttackCount</span>
-						<span>@{await DisplayIcon("Attributes","ArmorPenetration");} @weapon.ArmorPenetration</span>
-						<span>@{await DisplayIcon("Attributes","Accuracy");}@weapon.Accuracy</span>
+						<div class="unit__icon-line">
+							<span>@{await DisplayIcon("Attributes","Damage");} @weapon.Damage</span>
+							<span>@{await DisplayIcon("Attributes","Attacks");} @weapon.AttackCount</span>
+							<span>@{await DisplayIcon("Attributes","ArmorPenetration");} @weapon.ArmorPenetration</span>
+							<span>@{await DisplayIcon("Attributes","Accuracy");}@weapon.Accuracy</span>
+						</div>
 
 						@if (unit.Traits.Count != 0)
 						{

@@ -63,8 +63,19 @@ body {
     filter: invert(100%);
 }
 
-.icon-container{
+.unit__icon-line {
     display: inline-flex;
     justify-content: center;
-
 }
+
+.unit__icon-line > span {
+    padding-right:1em
+}
+
+
+
+/*.icon-container{
+    display: inline-flex;
+    justify-content: center;
+}
+    */
