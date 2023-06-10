@@ -21,14 +21,7 @@
 		<div class="unit__item-content unit__icon-line">
 			<span>@{await DisplayIcon("Attributes","PopulationLimit", "Model Count");} @unit.ModelCount </span>
 			<span>@{await DisplayIcon("Attributes","Armor");} @unit.Armor</span>
-			<span>@{await DisplayIcon("Attributes","HitPoints", "Hit Points");} @unit.Hitpoints 
-				@{
-					if(unit.ModelCount > 1)
-					{
-						@("(" + (unit.ModelCount * unit.Hitpoints).ToString() + ")")
-					}
-				}
-			</span>
+			<span>@{await DisplayIcon("Attributes","HitPoints", "Hit Points");}@Model.HitPointsFormat(unit)</span>
 			<span>@{await DisplayIcon("Attributes","Movement");}@unit.Movement</span>
 
 			@{await ShowResourceIfNotZero("Attributes","BioMass", unit.ProductionResources.BioMass);}
@@ -39,19 +32,15 @@
 
 		</div>
 
-
 		@if (unit.Traits.Count != 0)
 		{
 			<div class="unit__item-content">
 				<div class="unit__header">Traits</div>
 
-				<div class=" unit__icon-line">
+				<div class=" unit__icon-line unit__item-content">
 					@foreach (var trait in unit.Traits)
 					{
-						<span>
-							@{
-								await DisplayIcon("Traits", @trait);
-							}
+						<span>@{await DisplayIcon("Traits", @trait);}
 						</span>
 					}
 				</div>
@@ -68,10 +57,7 @@
 
 					@foreach (var upgrade in unit.Upgrades)
 					{
-						<span>
-							@{
-								await DisplayIcon("Traits", @upgrade.Name);
-							}
+						<span>@{await DisplayIcon("Traits", @upgrade.Name);}
 						</span>
 
 					}
@@ -98,11 +84,11 @@
 						}
 
 						<div class="unit__header">Traits</div>
-						<div >
-						@foreach (var trait in weapon.Traits)
-						{
-							<span>@{await DisplayIcon("Traits",@trait);}</span>
-						}
+						<div class="unit__item-content ">
+							@foreach (var trait in weapon.Traits)
+							{
+								<span>@{await DisplayIcon("Traits",@trait);}</span>
+							}
 						</div>
 						@if (weapon.Requirements.Count > 0)
 						{
@@ -119,7 +105,7 @@
 							*@
 
 							<div class="unit__header">Trait Upgrades</div>
-							<div class="unit__icon-line">
+							<div class="unit__icon-line unit__item-content ">
 								@foreach(var requirement in weapon.Requirements)
 								{
 									<span>@{await DisplayIcon("Traits",@requirement.Name, $"{requirement.Name} -> {requirement.RequiredUpgrade}");}</span>

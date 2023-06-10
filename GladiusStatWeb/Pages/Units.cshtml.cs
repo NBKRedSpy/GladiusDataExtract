@@ -59,5 +59,20 @@ namespace GladiusStatWeb.Pages
 			return sb.ToString();
 		}
 
+		public string HitPointsFormat(Unit unit)
+		{
+			StringBuilder sb = new StringBuilder();
+
+			sb.Append(unit.Hitpoints);
+
+			if (unit.ModelCount > 1)
+			{
+
+				sb.Append($" ({unit.ModelCount * unit.Hitpoints})");
+			}
+
+			return sb.ToString();
+		}
+
 	}
 }
