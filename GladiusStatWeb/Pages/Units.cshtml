@@ -1,17 +1,18 @@
-﻿@page
+﻿@page "{faction?}"
+
 @using GladiusDataExtract.Entities;
 @model GladiusStatWeb.Pages.UnitsModel
-
-
 
 <script>
 	function imageFallback()
 	{
 		this.onerror=null;
 		this.src='@Url.Content("~/img/Missing.png")';
-
 	}
 </script>
+
+@*Todo: Add the factions as the url part. Faction: @Model.Faction*@
+
 @foreach (var unit in Model.Units)
 {
 	string htmlId = unit.Key.Replace("/", "-");

@@ -15,7 +15,7 @@ namespace GladiusStatWeb.Pages
     public class UnitsModel : PageModel
 	{
 
-		public List<Unit> Units { get; init; }
+        public List<Unit> Units { get; init; }
 
 		static UnitsModel()
 		{
@@ -27,9 +27,11 @@ namespace GladiusStatWeb.Pages
             Units = dataService.GladiusUnits;
         }
 
-		public void OnGet()
-        {
+        public string? Faction { get; private set; }
 
+        public void OnGet(string? faction)
+        {
+			Faction = faction;
         }
 
 		public string WeaponDamageFormat(Weapon weapon, Unit unit)

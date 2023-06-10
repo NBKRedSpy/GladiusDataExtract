@@ -1,18 +1,25 @@
-# Issues
-## Termagant
-Attacks are not showing x10
 
-Accuracy is not shown.
+# Backlog Candidates  
+- Fix icons for traits that require an upgrade.
+	The icons are part of the trait data, unlike regular traits.
+	
+# Backlog
+- Filter by faction (Orks, neutral, etc.).  
+	Maybe Something like Units/Orks (besides just a regular filter)
 
+- Add descriptions to tool tips.  For example:  SistersOfBattle/SisterSuperior:
+```xml
+	<entry name="SistersOfBattle/SisterSuperior" value="Sister Superior"/>
+	<entry name="SistersOfBattle/SisterSuperiorDescription" value="Increases the morale of infantry and Paragon Warsuits units."/>
+```
 
-# Todo
+- Add hot map for values? For example, show a colored value for very high and very low values. 
+	Useful for large model counts which have a lot of damage output
 
-- [ ] Consolidate strengthDamage, meleeDamage, rangeDamage to one item.
-- [ ] Add the remaining unit base values to the display
-- [ ] Add the icons for the values to the display (gear for production, bio icon, etc.)
+- Add display for permutation of traits?  Maybe have the option to select which upgrades to include in the weapon stats?
 
+- Add item compare.  Comparing weapons to weapons or unit to unit.
 
-- [ ] Load the trait objects.
 - [ ] Apply traits to weapons.  
     * *Warning* some traits are based on something being unlocked. See [Trait View Options](#trait-view-options)
 	
@@ -22,12 +29,7 @@ Accuracy is not shown.
 
 	I think there are some conditional trait applications as well.
 
-
-# Next Backlog features
-- [ ] Add item compare
-
-# Remaing Backlog
-- [ ] Add display for premutation of traits 
+- [ ] Add the remaining unit base values to the display (currently not displayed).  I think Cargo and moral are examples.
 
 
 ## Trait view options
@@ -40,7 +42,4 @@ Ultimately a javascript filter would be best.
 
 # Features
 * Add item compare
-
-# Done
-- [x] Move the calculation logic to the entities from the UI.
 
