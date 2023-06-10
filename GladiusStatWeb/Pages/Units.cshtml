@@ -37,10 +37,23 @@
 			<div class="unit__item-content">
 				<div class="unit__header">Traits</div>
 
-				<div class=" unit__icon-line unit__item-content">
+				<div class="unit__item-content">
+					<span class="unit__icon-line">
 					@foreach (var trait in unit.Traits)
 					{
 						<span>@{await DisplayIcon("Traits", @trait);}
+						</span>
+					}
+					</span>
+
+					@*--- Traits created by upgrades *@
+					@if(unit.Upgrades.Count > 0){
+						<span class="unit__trait_upgrades unit__icon-line">
+
+						@foreach (var upgrade in unit.Upgrades)
+						{
+							<span>@{await DisplayIcon("Traits", @upgrade.Name);}</span>
+						}
 						</span>
 					}
 				</div>
@@ -48,21 +61,6 @@
 		}
 
 		<div class="unit__item-content">
-
-			@if (unit.Upgrades.Count != 0)
-			{
-				<div class="unit__header">Upgrades</div>
-
-				<div class="unit__item-content unit__icon-line">
-
-					@foreach (var upgrade in unit.Upgrades)
-					{
-						<span>@{await DisplayIcon("Traits", @upgrade.Name);}
-						</span>
-
-					}
-				</div>
-			}
 
 			<div class="unit__header">Weapons</div>
 			<div class="unit__item-content">

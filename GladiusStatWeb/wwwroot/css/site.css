@@ -68,6 +68,12 @@ body {
     justify-content: center;
 }
 
-.unit__icon-line > span {
-    padding-right:1em
+.unit__icon-line > span:not(:last-child){
+    padding-right:1em;
+}
+
+.unit__trait_upgrades {
+    margin-left: 1em;
+    border-bottom: 2px dashed grey;
+    padding-bottom: 4px
 }
