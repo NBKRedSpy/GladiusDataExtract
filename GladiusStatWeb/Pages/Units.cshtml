@@ -42,7 +42,16 @@
 			@{await ShowResourceIfNotZero("Attributes","Food", unit.ProductionResources.Food);}
 			@{await ShowResourceIfNotZero("Attributes","Influence", unit.ProductionResources.Influence);}
 			@{await ShowResourceIfNotZero("Attributes","Ore", unit.ProductionResources.Ore);}
+		</div>
 
+		<div class="unit__item-content">
+			<div class="unit__icon-line">
+				@{await ShowResourceIfNotZero("Attributes","BioMass", unit.UpkeepResources.BioMass);}
+				@{await ShowResourceIfNotZero("Attributes","Energy", unit.UpkeepResources.Energy);}
+				@{await ShowResourceIfNotZero("Attributes","Food", unit.UpkeepResources.Food);}
+				@{await ShowResourceIfNotZero("Attributes","Influence", unit.UpkeepResources.Influence);}
+				@{await ShowResourceIfNotZero("Attributes","Ore", unit.UpkeepResources.Ore);}
+			</div>
 		</div>
 
 		@if (unit.Traits.Count != 0)
