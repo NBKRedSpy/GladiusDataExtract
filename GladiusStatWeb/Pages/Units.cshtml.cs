@@ -8,31 +8,43 @@ using GladiusDataExtract.Entities;
 using GladiusStatWeb.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Routing;
 using MoreLinq;
 
 namespace GladiusStatWeb.Pages
 {
     public class UnitsModel : PageModel
 	{
+        public IEnumerable<Unit>? Units { get; private set; }
 
-        public List<Unit> Units { get; init; }
+        public GladiusDataService GladiusDataService { get; init; }
 
-		static UnitsModel()
-		{
+		public string? Faction { get; private set; }
 
-		}
+        /// <summary>
+        /// The friendly name of the faction
+        /// </summary>
+        public string FactionName { get; private set; } = string.Empty;
 		
 		public UnitsModel(GladiusDataService dataService)
         {
-            Units = dataService.GladiusUnits;
-        }
-
-        public string? Faction { get; private set; }
+			GladiusDataService = dataService;
+		}
 
         public void OnGet(string? faction)
         {
-			Faction = faction;
-        }
+
+			if (Enum.TryParse(faction ?? "", true,out Faction factionEnum))
+			{
+				Units = GladiusDataService.GetUnits(factionEnum);
+				Faction = factionEnum.ToString();
+			}
+			else
+			{
+				Units = GladiusDataService.GetAllUnits();
+				Faction = "";
+			}
+		}
 
 		public string WeaponDamageFormat(Weapon weapon, Unit unit)
 		{

@@ -1,4 +1,4 @@
-﻿@page "{faction?}"
+﻿@page "{Faction?}"
 
 @using GladiusDataExtract.Entities;
 @model GladiusStatWeb.Pages.UnitsModel
@@ -11,9 +11,21 @@
 	}
 </script>
 
-@*Todo: Add the factions as the url part. Faction: @Model.Faction*@
 
-@foreach (var unit in Model.Units)
+
+
+@*Todo: Add the factions as the url part. Faction: @Model.Faction*@
+<a href="~/Units/">All</a>
+
+@foreach(var factionName in  Enum.GetNames(typeof(Faction)).Where(x=> x != "Invalid"))
+{
+	<a href="~/Units/@factionName">@factionName</a>
+
+	
+}
+
+
+@foreach (var unit in Model.Units!)
 {
 	string htmlId = unit.Key.Replace("/", "-");
 

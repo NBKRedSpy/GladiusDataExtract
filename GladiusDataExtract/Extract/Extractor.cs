@@ -24,7 +24,7 @@ namespace GladiusDataExtract.Extract
 		/// <param name="dataFolder">The data folder for the game.
 		/// Ex:  ./Warhammer 40000 Gladius - Relics of War/Data</param>
 		/// <exception cref="NotImplementedException"></exception>
-		internal List<Unit> ExtractData(string localizationFolder, string dataFolder)
+		internal List<Unit> ExtractData(string localizationFolder, string dataFolder, out Dictionary<string, string> factionLocallization )
 		{
 			//todo:  change to configure in settings or env.
 
@@ -40,6 +40,8 @@ namespace GladiusDataExtract.Extract
 
 			weapons = extractor.ExtractWeaponInfo(Path.Combine(dataFolder, @"World\Weapons"), weaponLocalizationText);
 
+            factionLocallization = languageExtract.GetTextStrings(
+				Path.Combine(dataFolder, @"Core\Languages\English\Factions.xml"));
 
 			Dictionary<string, string> unitLocalizationText = languageExtract.GetTextStrings(
                 Path.Combine(dataFolder, @"Core\Languages\English\Units.xml"));
@@ -89,7 +91,6 @@ namespace GladiusDataExtract.Extract
 
                     //Get the key, which is the relative path with forward slash separators 
                     string unitKey = GetKey(folderName, file);
-
                     
 
                     //Model count

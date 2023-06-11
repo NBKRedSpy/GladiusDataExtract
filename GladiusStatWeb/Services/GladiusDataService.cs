@@ -3,6 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Xml;
 using System.Xml.Serialization;
 using GladiusDataExtract.Entities;
+using GladiusStatWeb.Pages;
 
 namespace GladiusStatWeb.Services
 {
@@ -11,14 +12,43 @@ namespace GladiusStatWeb.Services
 
 
 		
-		public List<Unit> GladiusUnits { get; init; }
+		/// <summary>
+		/// All of the units
+		/// </summary>
+		private List<Unit> GladiusUnits { get; init; }
+
+		/// <summary>
+		/// The data grouped by factions
+		/// </summary>
+		private List<IGrouping<Faction,Unit>> GladiusFactionUnits { get; init; }
 
         public GladiusDataService()
         {
-
-			//GladiusUnits = LoadFromSourceXml();
 			GladiusUnits = LoadFromXml("Data/GladiusUnits.xml");
 
+			GladiusFactionUnits = GladiusUnits
+				.GroupBy(x => x.Faction)
+				.ToList();
+		}
+
+		/// <summary>
+		/// All the units for a specific faction.
+		/// </summary>
+		/// <param name="faction"></param>
+		/// <returns></returns>
+		public IEnumerable<Unit> GetUnits(Faction faction)
+		{
+			return GladiusFactionUnits.Where(x => x.Key == faction).SelectMany(x => x);
+		}
+
+		/// <summary>
+		/// All units, regardless of factions.
+		/// </summary>
+		/// <param name="faction"></param>
+		/// <returns></returns>
+		public IEnumerable<Unit> GetAllUnits()
+		{
+			return GladiusUnits;
 		}
 
 		/// <summary>
@@ -34,9 +64,13 @@ namespace GladiusStatWeb.Services
 			{
 				return (List<Unit>)serializer.Deserialize(reader)!;
 			}
-				
 		}
 
+
+		/// <summary>
+		/// Only used for debugging.  Parses the game's original files instead of using the pre-processed GladiusUnis data.
+		/// </summary>
+		/// <returns></returns>
 		private List<Unit> LoadFromSourceXml()
         {
 			var converter = new GladiusDataExtract.Extract.Converter();

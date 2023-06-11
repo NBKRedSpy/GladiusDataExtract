@@ -38,8 +38,9 @@ namespace GladiusDataExtract.Extract
 		/// <exception cref="NotImplementedException"></exception>
 		public List<Unit> ConvertData(string localizationFolder, string dataFolder)
 		{
-			Extractor extractor = new Extractor();	
-			List<du.Unit> units = extractor.ExtractData(localizationFolder, dataFolder);
+			Extractor extractor = new Extractor();
+			Dictionary<string, string> factionLocallization;
+			List<du.Unit> units = extractor.ExtractData(localizationFolder, dataFolder, out factionLocallization);
 
 			return ConvertUnits(units);
 		}

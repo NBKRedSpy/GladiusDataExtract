@@ -2,19 +2,18 @@
   "profiles": {
     "GladiusStatWeb": {
       "commandName": "Project",
-      "commandLineArgs": "$(SolutionDir)GladiusStatWeb\\Data\\GladiusUnits.xml\r\n",
       "launchBrowser": true,
-      "launchUrl": "Units",
+      "launchUrl": "SubFolder/Units/Orks",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7147;http://localhost:5014"
+      "applicationUrl": "https://localhost:5014/"
     },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "./",
+      "launchUrl": "./Units",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -24,7 +23,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:27382",
+      "applicationUrl": "http://localhost:27382/SubFolder",
       "sslPort": 44380
     }
   }
