@@ -72,13 +72,12 @@ namespace GladiusDataExtract.Extract
 
 
 
-            //Debug
-            //Units\AstraMilitarum\Guardsman.xml
-            //foreach (string file in Directory.EnumerateFiles(folderName, "*.xml", SearchOption.AllDirectories))
-            foreach (string file in new[] { @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\AstraMilitarum\Guardsman.xml"})
-            {
+			//Debug
+			//            foreach (string file in new[] { @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\AstraMilitarum\Guardsman.xml"})
+			foreach (string file in Directory.EnumerateFiles(folderName, "*.xml", SearchOption.AllDirectories))
+			{
 
-                try
+				try
                 {
 					//D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Neutral\Artefacts\VaulSentry.xml
 					if (file.Contains(@"\Artefacts\"))
@@ -162,14 +161,14 @@ namespace GladiusDataExtract.Extract
 					var actionRequirements = actionRequirementNodes.Cast<XmlNode>()
 						.Select(x => new
 						{
-							weaponName = x.Attributes!["weaponSlotName"]!.Value,
+							weaponKey = x.Attributes!["weaponSlotName"]!.Value,
 							upgrade = x.Attributes!["requiredUpgrade"]!.Value
 						}
 					);
 
                     //Match the requirement to the weapon.
-                    var actionWeaponJoinList = unit.Weapons.Join(actionRequirements, x => x.Weapon.Name,
-                        x => x.weaponName, (unitWeapon, actionRequirement) => new { unitWeapon, actionRequirement.upgrade });
+                    var actionWeaponJoinList = unit.Weapons.Join(actionRequirements, x => x.Weapon.Key,
+                        x => x.weaponKey, (unitWeapon, actionRequirement) => new { unitWeapon, actionRequirement.upgrade });
 
                     foreach (var actionWeaponJoin in actionWeaponJoinList)
                     {
