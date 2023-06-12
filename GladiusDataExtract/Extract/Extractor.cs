@@ -78,137 +78,98 @@ namespace GladiusDataExtract.Extract
 			{
 
 				try
-                {
+				{
 					//D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\Neutral\Artefacts\VaulSentry.xml
 					if (file.Contains(@"\Artefacts\"))
-                    {
-                        //not units
-                        continue;
-                    }
+					{
+						//not units
+						continue;
+					}
 					XmlDocument xmlDocument = new XmlDocument();
 					xmlDocument.Load(file);
 
 					string keyName = GetKey(folderName, file);
 
 
-                    //Weapons don't have sub folders.
-                    string name = weaponNameLookup[keyName];
+					//Weapons don't have sub folders.
+					string name = weaponNameLookup[keyName];
 
 
-                    //Get the key, which is the relative path with forward slash separators 
-                    string unitKey = GetKey(folderName, file);
-                    
+					//Get the key, which is the relative path with forward slash separators 
+					string unitKey = GetKey(folderName, file);
 
-                    //Model count
-                    XmlAttribute? xmlSize = xmlDocument.SelectSingleNode("unit/group")?.Attributes!["size"];
 
-                    int modelCount = xmlSize is null ? 1 : int.Parse(xmlSize.Value);
-                    Unit unit = new(name, unitKey, modelCount, new(), new(), new());
+					//Model count
+					XmlAttribute? xmlSize = xmlDocument.SelectSingleNode("unit/group")?.Attributes!["size"];
 
-                    //--Effects
-                    XmlNodeList effectNodes = xmlDocument.SelectNodes("unit/modifiers/modifier/effects/*")!;
+					int modelCount = xmlSize is null ? 1 : int.Parse(xmlSize.Value);
+					Unit unit = new(name, unitKey, modelCount, new(), new(), new());
 
-                    List<UnitAttribute> attributes = unit.Attributes;
+					//--Effects
+					XmlNodeList effectNodes = xmlDocument.SelectNodes("unit/modifiers/modifier/effects/*")!;
+
+					List<UnitAttribute> attributes = unit.Attributes;
 
 					//todo:  Add cargo info. // <cargoSlots base="6"/> <!-- %cargoSlots base capacity=20 -->
 
 					foreach (XmlNode xmlEffect in effectNodes)
-                    {
-                        XmlAttributeCollection effectXmlAttributes = xmlEffect.Attributes!;
+					{
+						XmlAttributeCollection effectXmlAttributes = xmlEffect.Attributes!;
 
-                        if (effectXmlAttributes.Count > 1)
-                        {
-                            throw new InvalidDataException($"Attribute {xmlEffect.Name} has more than one attribute");
-                        }
-
-                        string? xmlAttributeValue;
-
-
-                        //Should only be base or max
-                        if ((xmlAttributeValue = effectXmlAttributes["base"]?.Value) is null)
-                        {
-                            //Will be max
-                            xmlAttributeValue = effectXmlAttributes["max"]?.Value;
-                        }
-
-                        attributes.Add(new UnitAttribute(xmlEffect.Name, decimal.Parse(xmlAttributeValue!)));
-                    }
-
-
-                    //--Weapons
-                    XmlNodeList weaponNodes = xmlDocument.SelectNodes("unit/weapons/weapon")!;
-
-                    foreach (XmlNode weaponNode in weaponNodes)
-                    {
-                        string requiredUpgrade = weaponNode.Attributes!["requiredUpgrade"]?.Value ?? "";
-
-                        unit.Weapons.Add(new UnitWeapon(weaponLookup[weaponNode.Attributes!["name"]!.Value],
-                            requiredUpgrade));
-                    }
-
-
-                    //-- Additional unit requirements for the unit that are stored in the actions.
-                    //  Oddly there are also requirements on a unit's actions.
-                    //  I'm guessing that since they are actions and they are hidden without the upgrade, 
-                    //  the devs chose not to put it on the weapon.
-
-                    //Get all of the actions that 
-
-                    //debug 
-                    //XmlNodeList actionRequirementNodes = xmlDocument.SelectNodes("unit/actions/./weapon[@requiredUpgrade and @weaponSlotName]")!;
-                    XmlNodeList actionRequirementNodes = xmlDocument.SelectNodes("unit/actions/*[@requiredUpgrade and @weaponSlotName]")!;
-
-					var actionRequirements = actionRequirementNodes.Cast<XmlNode>()
-						.Select(x => new
+						if (effectXmlAttributes.Count > 1)
 						{
-							weaponKey = x.Attributes!["weaponSlotName"]!.Value,
-							upgrade = x.Attributes!["requiredUpgrade"]!.Value
+							throw new InvalidDataException($"Attribute {xmlEffect.Name} has more than one attribute");
 						}
-					);
 
-                    //Match the requirement to the weapon.
-                    var actionWeaponJoinList = unit.Weapons.Join(actionRequirements, x => x.Weapon.Key,
-                        x => x.weaponKey, (unitWeapon, actionRequirement) => new { unitWeapon, actionRequirement.upgrade });
+						string? xmlAttributeValue;
 
-                    foreach (var actionWeaponJoin in actionWeaponJoinList)
-                    {
-                        if(actionWeaponJoin.unitWeapon.RequiredUpgrade == "")
-                        {
-							actionWeaponJoin.unitWeapon.RequiredUpgrade = actionWeaponJoin.upgrade;
+
+						//Should only be base or max
+						if ((xmlAttributeValue = effectXmlAttributes["base"]?.Value) is null)
+						{
+							//Will be max
+							xmlAttributeValue = effectXmlAttributes["max"]?.Value;
 						}
-                        else
-                        {
-                            //Validation
-							if (actionWeaponJoin.unitWeapon.RequiredUpgrade != actionWeaponJoin.upgrade)
-							{
-								throw new InvalidDataException($"Weapon '{actionWeaponJoin.unitWeapon.Weapon.Name} already has a required upgrade");
-							}
 
-						}
+						attributes.Add(new UnitAttribute(xmlEffect.Name, decimal.Parse(xmlAttributeValue!)));
 					}
 
 
-                    //--Traits
-					List < Trait> traits = new();
+					//--Weapons
+					XmlNodeList weaponNodes = xmlDocument.SelectNodes("unit/weapons/weapon")!;
 
-                    //--Traits
-                    XmlNodeList traitNodes = xmlDocument.SelectNodes("unit/traits/trait")!;
+					foreach (XmlNode weaponNode in weaponNodes)
+					{
+						string requiredUpgrade = weaponNode.Attributes!["requiredUpgrade"]?.Value ?? "";
 
-                    foreach (XmlNode traitNode in traitNodes)
-                    {
-                        string? requiredUpgrade = traitNode.Attributes?["requiredUpgrade"]?.Value;
+						unit.Weapons.Add(new UnitWeapon(weaponLookup[weaponNode.Attributes!["name"]!.Value],
+							requiredUpgrade));
+					}
 
-                        string trait = traitNode.Attributes!["name"]!.Value;
-
-                        traits.Add(new(trait, requiredUpgrade));
-                    }
-
-                    unit.Traits.AddRange(traits.OrderBy(x => x.RequiredUpgrade).ThenBy(x => x.Name));
+					GetSecondaryRequirements(xmlDocument, unit);
 
 
-                    units.Add(unit);
-                }
-                catch (Exception ex)
+					//--Traits
+					List<Trait> traits = new();
+
+					//--Traits
+					XmlNodeList traitNodes = xmlDocument.SelectNodes("unit/traits/trait")!;
+
+					foreach (XmlNode traitNode in traitNodes)
+					{
+						string? requiredUpgrade = traitNode.Attributes?["requiredUpgrade"]?.Value;
+
+						string trait = traitNode.Attributes!["name"]!.Value;
+
+						traits.Add(new(trait, requiredUpgrade));
+					}
+
+					unit.Traits.AddRange(traits.OrderBy(x => x.RequiredUpgrade).ThenBy(x => x.Name));
+
+
+					units.Add(unit);
+				}
+				catch (Exception ex)
                 {
                     throw new ApplicationException($"Error parsing {file}: {ex.Message}", ex);
                 }
@@ -217,6 +178,53 @@ namespace GladiusDataExtract.Extract
             return units;
 
         }
+
+		/// <summary>
+		/// Additional unit requirements for the unit that are stored in the actions.
+		///  Oddly there are also requirements on a unit's actions.
+		///  I'm guessing that since they are actions and they are hidden without the upgrade, 
+		///  the devs chose not to put it on the weapon.
+		/// </summary>
+		/// <param name="xmlDocument"></param>
+		/// <param name="unit"></param>
+		/// <exception cref="InvalidDataException"></exception>
+		private static void GetSecondaryRequirements(XmlDocument xmlDocument, Unit unit)
+		{
+
+			//All actions that have both a reuqired upgrade and a weapon key
+			XmlNodeList actionRequirementNodes = xmlDocument.SelectNodes("unit/actions/*[@requiredUpgrade and @weaponSlotName]")!;
+
+			var actionRequirements = actionRequirementNodes.Cast<XmlNode>()
+				.Select(x => new
+				{
+					weaponKey = x.Attributes!["weaponSlotName"]!.Value,
+					upgrade = x.Attributes!["requiredUpgrade"]!.Value
+				}
+			);
+
+			//unit weapon to upgrade.
+			var actionWeaponJoinList = unit.Weapons.Join(actionRequirements, x => x.Weapon.Key,
+				x => x.weaponKey, (unitWeapon, actionRequirement) => new { unitWeapon, actionRequirement.upgrade });
+
+
+			//Validate and set
+			foreach (var actionWeaponJoin in actionWeaponJoinList)
+			{
+				if (actionWeaponJoin.unitWeapon.RequiredUpgrade == "")
+				{
+					actionWeaponJoin.unitWeapon.RequiredUpgrade = actionWeaponJoin.upgrade;
+				}
+				else
+				{
+					//Validation
+					if (actionWeaponJoin.unitWeapon.RequiredUpgrade != actionWeaponJoin.upgrade)
+					{
+						throw new InvalidDataException($"Weapon '{actionWeaponJoin.unitWeapon.Weapon.Name} already has a required upgrade");
+					}
+
+				}
+			}
+		}
 
 		internal List<Weapon> ExtractWeaponInfo(string folderName, Dictionary<string, string> weaponLocalizationText)
         {
