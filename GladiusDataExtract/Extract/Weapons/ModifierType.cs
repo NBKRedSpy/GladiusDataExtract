@@ -42,7 +42,7 @@ namespace GladiusDataExtract.Extract.Weapons
                     //	over time.
                     return actionOperand;
                 case "mul":
-                    //todo:  There is a condition of -.05, so assuming adding.  Not sure if unit base value or adjusted
+                    //todo:  There is a condition of -.05 and 0, so assuming adding.  Not sure if unit base value or adjusted
                     //  for multiple operations.  Ex:  add, then multiply for accuracy.
                     return (actionOperand * attValue) + attValue;
                 case "min":

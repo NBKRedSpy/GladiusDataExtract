@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,10 +68,26 @@ namespace GladiusDataExtract.Extract.Weapons
                 modifierAppliedWeaponAttributes.Add(attributeSum);  
             }
 
-            //try to detect range.
-            isRanged = Effects.Any(x => x.Name.StartsWith("ranged"));
+             if (Traits.Any(x => x == "Assault"))
+            {
+                isRanged = true;
+            }
+             else if (Traits.Any(x => x == "Melee"))
+            {
+                isRanged = false;
+            }
+            else
+            {
+                //Some items don't have either assault or melee.  Take a guess.
+				Traits.ForEach(x => Debug.WriteLine($"{Name} {x}"));
 
-            if (isRanged) 
+				//try to detect range.
+				isRanged = Effects.Any(x => x.Name.StartsWith("ranged"));
+
+			}
+
+
+			if (isRanged) 
 			{
 				//Assume range - the weapon doesn't seem to have a range specific trait.
 				AddMissingAttribute(modifierAppliedWeaponAttributes, unit, "rangedArmorPenetration");
