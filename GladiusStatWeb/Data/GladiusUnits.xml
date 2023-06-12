@@ -358,7 +358,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/AdeptusMechanicus/Headquarters</Name>
+    <Name>&lt;string name='Buildings/AdeptusMechanicus/Headquarters'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>AdeptusMechanicus</Faction>
     <Key>AdeptusMechanicus/Headquarters</Key>
@@ -2813,7 +2813,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/AstraMilitarum/Headquarters</Name>
+    <Name>&lt;string name='Buildings/AstraMilitarum/Headquarters'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>AstraMilitarum</Faction>
     <Key>AstraMilitarum/Headquarters</Key>
@@ -6676,7 +6676,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/ChaosSpaceMarines/Headquarters</Name>
+    <Name>&lt;string name='Buildings/ChaosSpaceMarines/Headquarters'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>ChaosSpaceMarines</Faction>
     <Key>ChaosSpaceMarines/Headquarters</Key>
@@ -8718,7 +8718,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/Eldar/Headquarters</Name>
+    <Name>&lt;string name='Buildings/Eldar/Headquarters'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>Eldar</Faction>
     <Key>Eldar/Headquarters</Key>
@@ -10913,7 +10913,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/Necrons/Headquarters</Name>
+    <Name>&lt;string name='Buildings/Necrons/Headquarters'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>Necrons</Faction>
     <Key>Necrons/Headquarters</Key>
@@ -14310,7 +14310,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/Orks/Headquarters</Name>
+    <Name>&lt;string name='Buildings/Orks/Headquarters'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>Orks</Faction>
     <Key>Orks/Headquarters</Key>
@@ -17005,7 +17005,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/SistersOfBattle/Enclave</Name>
+    <Name>&lt;string name='Buildings/SistersOfBattle/Enclave'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Enclave</Key>
@@ -17253,7 +17253,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/SistersOfBattle/Headquarters</Name>
+    <Name>&lt;string name='Buildings/SistersOfBattle/Headquarters'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>SistersOfBattle</Faction>
     <Key>SistersOfBattle/Headquarters</Key>
@@ -20018,7 +20018,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/SpaceMarines/Headquarters</Name>
+    <Name>&lt;string name='Buildings/SpaceMarines/Headquarters'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>SpaceMarines</Faction>
     <Key>SpaceMarines/Headquarters</Key>
@@ -23164,7 +23164,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/Tau/Headquarters</Name>
+    <Name>&lt;string name='Buildings/Tau/Headquarters'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>Tau</Faction>
     <Key>Tau/Headquarters</Key>
@@ -25764,7 +25764,7 @@
     </Weapons>
   </Unit>
   <Unit>
-    <Name>Buildings/Tyranids/Headquarters</Name>
+    <Name>&lt;string name='Buildings/Tyranids/Headquarters'/&gt;</Name>
     <IsFortification>true</IsFortification>
     <Faction>Tyranids</Faction>
     <Key>Tyranids/Headquarters</Key>

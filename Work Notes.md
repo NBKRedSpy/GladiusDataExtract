@@ -1,3 +1,9 @@
+# Flesh hooks.
+
+I think "assault" trait means ranged.
+
+
+
 # Value key/value to properties.
 
 Put the remainder is a key/value pair?

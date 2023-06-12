@@ -102,6 +102,13 @@
 						<div class="unit__icon-line">
 							<span>@{await DisplayIcon("Attributes","Damage");} @Model.WeaponDamageFormat(weapon, unit)</span>
 							<span>@{await DisplayIcon("Attributes","Attacks");} @Model.AttackFormat(weapon, unit)</span>
+							@if (@weapon.Range > 1)
+							{
+								<span>@{
+										await DisplayIcon("Attributes", "Range");
+									}@weapon.Range</span>
+							}
+
 							<span>@{await DisplayIcon("Attributes","ArmorPenetration");} @weapon.ArmorPenetration</span>
 							<span>@{await DisplayIcon("Attributes","Accuracy");}@weapon.Accuracy</span>
 						</div>
