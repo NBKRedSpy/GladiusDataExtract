@@ -25,8 +25,8 @@ namespace GladiusStatWeb.Services
         public GladiusDataService()
         {
 			//GladiusUnits = LoadFromXml("Data/GladiusUnits.xml");
+
 			//DEBUG:
-			
 			GladiusUnits = LoadFromSourceXml();
 
 			GladiusFactionUnits = GladiusUnits

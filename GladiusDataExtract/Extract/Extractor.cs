@@ -7,6 +7,8 @@ using GladiusDataExtract.Extract.Units;
 using System.Xml;
 using GladiusDataExtract.Extract.Weapons;
 using System.CodeDom.Compiler;
+using MoreLinq;
+using System.IO;
 
 namespace GladiusDataExtract.Extract
 {
@@ -68,7 +70,12 @@ namespace GladiusDataExtract.Extract
             string basePath = Path.TrimEndingDirectorySeparator(Path.GetFullPath(folderName)) + "\\";
 
 
-            foreach (string file in Directory.EnumerateFiles(folderName, "*.xml", SearchOption.AllDirectories))
+
+
+            //Debug
+            //Units\AstraMilitarum\Guardsman.xml
+            //foreach (string file in Directory.EnumerateFiles(folderName, "*.xml", SearchOption.AllDirectories))
+            foreach (string file in new[] { @"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Units\AstraMilitarum\Guardsman.xml"})
             {
 
                 try
@@ -141,7 +148,49 @@ namespace GladiusDataExtract.Extract
                     }
 
 
-                    List<Trait> traits = new();
+                    //-- Additional unit requirements for the unit that are stored in the actions.
+                    //  Oddly there are also requirements on a unit's actions.
+                    //  I'm guessing that since they are actions and they are hidden without the upgrade, 
+                    //  the devs chose not to put it on the weapon.
+
+                    //Get all of the actions that 
+
+                    //debug 
+                    //XmlNodeList actionRequirementNodes = xmlDocument.SelectNodes("unit/actions/./weapon[@requiredUpgrade and @weaponSlotName]")!;
+                    XmlNodeList actionRequirementNodes = xmlDocument.SelectNodes("unit/actions/*[@requiredUpgrade and @weaponSlotName]")!;
+
+					var actionRequirements = actionRequirementNodes.Cast<XmlNode>()
+						.Select(x => new
+						{
+							weaponName = x.Attributes!["weaponSlotName"]!.Value,
+							upgrade = x.Attributes!["requiredUpgrade"]!.Value
+						}
+					);
+
+                    //Match the requirement to the weapon.
+                    var actionWeaponJoinList = unit.Weapons.Join(actionRequirements, x => x.Weapon.Name,
+                        x => x.weaponName, (unitWeapon, actionRequirement) => new { unitWeapon, actionRequirement.upgrade });
+
+                    foreach (var actionWeaponJoin in actionWeaponJoinList)
+                    {
+                        if(actionWeaponJoin.unitWeapon.RequiredUpgrade == "")
+                        {
+							actionWeaponJoin.unitWeapon.RequiredUpgrade = actionWeaponJoin.upgrade;
+						}
+                        else
+                        {
+                            //Validation
+							if (actionWeaponJoin.unitWeapon.RequiredUpgrade != actionWeaponJoin.upgrade)
+							{
+								throw new InvalidDataException($"Weapon '{actionWeaponJoin.unitWeapon.Weapon.Name} already has a required upgrade");
+							}
+
+						}
+					}
+
+
+                    //--Traits
+					List < Trait> traits = new();
 
                     //--Traits
                     XmlNodeList traitNodes = xmlDocument.SelectNodes("unit/traits/trait")!;

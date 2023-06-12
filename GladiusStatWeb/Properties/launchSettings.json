@@ -3,7 +3,7 @@
     "GladiusStatWeb": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "SubFolder/Units/#Tyranids-Lictor",
+      "launchUrl": "SubFolder/Units/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
