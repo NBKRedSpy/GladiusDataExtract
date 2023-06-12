@@ -169,6 +169,11 @@ namespace GladiusDataExtract.Extract
 					if (weapon.ArmorPenetration == 0) weapon.ArmorPenetration = 1;	//Seems to default to 1.
 
 					weapon.Damage = unitWeaponStats["rangedDamage"];
+
+					if(weapon.Damage == 0)
+					{
+						weapon.Damage = dtoUnit.Attributes.Single(x => x.Name == "strengthDamage").Value;
+					}
 				}
 				else
 				{

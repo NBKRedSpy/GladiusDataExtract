@@ -78,9 +78,6 @@ namespace GladiusDataExtract.Extract.Weapons
             }
             else
             {
-                //Some items don't have either assault or melee.  Take a guess.
-				Traits.ForEach(x => Debug.WriteLine($"{Name} {x}"));
-
 				//try to detect range.
 				isRanged = Effects.Any(x => x.Name.StartsWith("ranged"));
 
