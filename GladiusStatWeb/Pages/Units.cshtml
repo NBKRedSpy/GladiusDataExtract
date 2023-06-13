@@ -52,9 +52,7 @@
 				@{await ShowResourceIfNotZero("Attributes","Food", unit.UpkeepResources.Food);}
 				@{await ShowResourceIfNotZero("Attributes","Influence", unit.UpkeepResources.Influence);}
 				@{await ShowResourceIfNotZero("Attributes","Ore", unit.UpkeepResources.Ore);}
-				@{
-					await ShowResourceIfNotZero("Attributes", "Requisitions", unit.UpkeepResources.Requisitions);
-				}
+				@{await ShowResourceIfNotZero("Attributes", "Requisitions", unit.UpkeepResources.Requisitions);}
 			</div>
 		</div>
 
