@@ -24,10 +24,10 @@ namespace GladiusStatWeb.Services
 
         public GladiusDataService()
         {
-			GladiusUnits = LoadFromXml("Data/GladiusUnits.xml");
+			//GladiusUnits = LoadFromXml("Data/GladiusUnits.xml");
 
 			//DEBUG:
-			//GladiusUnits = LoadFromSourceXml();
+			GladiusUnits = LoadFromSourceXml();
 
 			GladiusFactionUnits = GladiusUnits
 				.GroupBy(x => x.Faction)

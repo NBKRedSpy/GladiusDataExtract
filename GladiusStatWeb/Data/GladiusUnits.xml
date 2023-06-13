@@ -16,7 +16,8 @@
       <Energy>60.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -24,6 +25,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/DoctrinaImperatives</string>
@@ -116,7 +118,8 @@
       <Energy>30.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -124,6 +127,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/DoctrinaImperatives</string>
@@ -198,6 +202,7 @@
       <Food>20.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -205,6 +210,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/CanticlesOfTheOmnissiah</string>
@@ -313,6 +319,7 @@
       <Food>20.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -320,6 +327,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/CanticlesOfTheOmnissiah</string>
@@ -374,6 +382,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -381,6 +390,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -448,14 +458,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.5</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/Bionics</string>
@@ -512,7 +524,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -520,6 +533,7 @@
       <Food>3.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/Bionics</string>
@@ -593,7 +607,8 @@
       <Energy>0</Energy>
       <Food>40.0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -601,6 +616,7 @@
       <Food>4.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/Bionics</string>
@@ -677,14 +693,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>240.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>12.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/IonShield</string>
@@ -891,14 +909,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>80.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/DoctrinaImperatives</string>
@@ -1014,7 +1034,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -1022,6 +1043,7 @@
       <Food>3.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/DoctrinaImperatives</string>
@@ -1096,7 +1118,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -1104,6 +1127,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/DoctrinaImperatives</string>
@@ -1196,7 +1220,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -1204,6 +1229,7 @@
       <Food>3.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/DoctrinaImperatives</string>
@@ -1293,7 +1319,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>80.0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -1301,6 +1328,7 @@
       <Food>2.0</Food>
       <Influence>4.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/DoctrinaImperatives</string>
@@ -1371,7 +1399,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -1379,6 +1408,7 @@
       <Food>3.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/Bionics</string>
@@ -1440,7 +1470,8 @@
       <Energy>0</Energy>
       <Food>15.0</Food>
       <Influence>0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -1448,6 +1479,7 @@
       <Food>1.5</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/Bionics</string>
@@ -1506,14 +1538,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>120.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>6.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/DoctrinaImperatives</string>
@@ -1605,14 +1639,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/DoctrinaImperatives</string>
@@ -1689,6 +1725,7 @@
       <Food>40.0</Food>
       <Influence>160.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -1696,6 +1733,7 @@
       <Food>4.0</Food>
       <Influence>8.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/CanticlesOfTheOmnissiah</string>
@@ -1825,6 +1863,7 @@
       <Food>30.0</Food>
       <Influence>120.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -1832,6 +1871,7 @@
       <Food>3.0</Food>
       <Influence>6.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/CanticlesOfTheOmnissiah</string>
@@ -1922,14 +1962,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>320.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>16.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -2171,14 +2213,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>OpenTopped</string>
@@ -2307,7 +2351,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -2315,6 +2360,7 @@
       <Food>3.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Stubborn</string>
@@ -2406,14 +2452,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Amphibious</string>
@@ -2574,14 +2622,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Tank</string>
@@ -2705,7 +2755,8 @@
       <Energy>0</Energy>
       <Food>10.0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -2713,6 +2764,7 @@
       <Food>1.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits />
     <Upgrades>
@@ -2829,6 +2881,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -2836,6 +2889,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -2936,7 +2990,8 @@
       <Energy>0</Energy>
       <Food>15.0</Food>
       <Influence>0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -2944,6 +2999,7 @@
       <Food>1.5</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -3077,14 +3133,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>OpenTopped</string>
@@ -3215,6 +3273,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -3222,6 +3281,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -3275,14 +3335,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>80.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Tank</string>
@@ -3444,7 +3506,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>80.0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -3452,6 +3515,7 @@
       <Food>2.0</Food>
       <Influence>4.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -3606,7 +3670,8 @@
       <Energy>80.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>80.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -3614,6 +3679,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -3756,6 +3822,7 @@
       <Food>15.0</Food>
       <Influence>60.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -3763,6 +3830,7 @@
       <Food>0</Food>
       <Influence>3.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -3930,7 +3998,8 @@
       <Energy>0</Energy>
       <Food>15.0</Food>
       <Influence>0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -3938,6 +4007,7 @@
       <Food>1.5</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AstraMilitarum/ShootSharpAndScarper</string>
@@ -3993,14 +4063,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>160.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>8.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Tank</string>
@@ -4199,14 +4271,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -4310,14 +4384,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>120.0</Influence>
-      <Ore>80.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>6.0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -4508,14 +4584,16 @@
       <Energy>15.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.5</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits />
     <Upgrades>
@@ -4664,7 +4742,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -4672,6 +4751,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -4789,7 +4869,8 @@
       <Energy>40.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -4797,6 +4878,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -4913,7 +4995,8 @@
       <Energy>30.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -4921,6 +5004,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -5036,6 +5120,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -5043,6 +5128,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -5067,6 +5153,7 @@
       <Food>15.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -5074,6 +5161,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Psyker</string>
@@ -5148,7 +5236,8 @@
       <Energy>0</Energy>
       <Food>10.0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -5156,6 +5245,7 @@
       <Food>1.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/ChampionOfChaos</string>
@@ -5251,14 +5341,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>160.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>8.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AssaultVehicle</string>
@@ -5404,7 +5496,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>120.0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -5412,6 +5505,7 @@
       <Food>3.0</Food>
       <Influence>6.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/ChampionOfChaos</string>
@@ -5577,14 +5671,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.5</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Tank</string>
@@ -5701,7 +5797,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -5709,6 +5806,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/ChampionOfChaos</string>
@@ -5862,6 +5960,7 @@
       <Food>20.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -5869,6 +5968,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/MutatedBeyondReason</string>
@@ -5943,6 +6043,7 @@
       <Food>30.0</Food>
       <Influence>90.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -5950,6 +6051,7 @@
       <Food>0</Food>
       <Influence>4.5</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/VeteransOfTheLongWar</string>
@@ -6067,7 +6169,8 @@
       <Energy>0</Energy>
       <Food>15.0</Food>
       <Influence>0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -6075,6 +6178,7 @@
       <Food>1.5</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/ChampionOfChaos</string>
@@ -6143,14 +6247,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>160.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>8.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Daemon</string>
@@ -6313,14 +6419,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>120.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>6.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Daemon</string>
@@ -6374,14 +6482,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>320.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>16.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/MultiLeggedTerror</string>
@@ -6532,7 +6642,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -6540,6 +6651,7 @@
       <Food>3.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/ChampionOfChaos</string>
@@ -6692,6 +6804,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -6699,6 +6812,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -6786,14 +6900,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/Crazed</string>
@@ -6886,7 +7002,8 @@
       <Energy>60.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -6894,6 +7011,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Daemon</string>
@@ -6981,7 +7099,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -6989,6 +7108,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/BloodForTheBloodGod</string>
@@ -7175,6 +7295,7 @@
       <Food>30.0</Food>
       <Influence>120.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -7182,6 +7303,7 @@
       <Food>0</Food>
       <Influence>6.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/ChampionOfChaos</string>
@@ -7307,14 +7429,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>80.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/SiegeCrawler</string>
@@ -7387,6 +7511,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -7394,6 +7519,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -7430,7 +7556,8 @@
       <Energy>0</Energy>
       <Food>60.0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -7438,6 +7565,7 @@
       <Food>6.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -7581,14 +7709,16 @@
       <Energy>40.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/DevourerOfSouls</string>
@@ -7688,14 +7818,16 @@
       <Energy>30.0</Energy>
       <Food>0</Food>
       <Influence>120.0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>6.0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>ChaosSpaceMarines/ChampionOfChaos</string>
@@ -7869,7 +8001,8 @@
       <Energy>0</Energy>
       <Food>40.0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -7877,6 +8010,7 @@
       <Food>4.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -7932,7 +8066,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>120.0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -7940,6 +8075,7 @@
       <Food>3.0</Food>
       <Influence>6.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -8091,7 +8227,8 @@
       <Energy>0</Energy>
       <Food>60.0</Food>
       <Influence>180.0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -8099,6 +8236,7 @@
       <Food>6.0</Food>
       <Influence>9.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Daemon</string>
@@ -8177,7 +8315,8 @@
       <Energy>40.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -8185,6 +8324,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/Skyhunter</string>
@@ -8260,7 +8400,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -8268,6 +8409,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -8340,6 +8482,7 @@
       <Food>30.0</Food>
       <Influence>120.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -8347,6 +8490,7 @@
       <Food>0</Food>
       <Influence>6.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -8451,7 +8595,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -8459,6 +8604,7 @@
       <Food>3.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -8516,14 +8662,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>80.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/SpiritPreservation</string>
@@ -8652,7 +8800,8 @@
       <Energy>0</Energy>
       <Food>15.0</Food>
       <Influence>0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -8660,6 +8809,7 @@
       <Food>1.5</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -8734,6 +8884,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -8741,6 +8892,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/SpiritPreservation</string>
@@ -8790,7 +8942,8 @@
       <Energy>60.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -8798,6 +8951,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/SpiritPreservation</string>
@@ -8851,14 +9005,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/SpiritPreservation</string>
@@ -8925,7 +9081,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -8933,6 +9090,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -9021,7 +9179,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -9029,6 +9188,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -9084,14 +9244,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>320.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>16.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/SpiritPreservation</string>
@@ -9174,14 +9336,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AerobaticGrace</string>
@@ -9284,6 +9448,7 @@
       <Food>15.0</Food>
       <Influence>60.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -9291,6 +9456,7 @@
       <Food>0</Food>
       <Influence>3.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -9387,14 +9553,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -9450,6 +9618,7 @@
       <Food>30.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -9457,6 +9626,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -9571,14 +9741,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>160.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>8.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -9666,14 +9838,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>80.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/SerpentShield</string>
@@ -9788,6 +9962,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -9795,6 +9970,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -9818,14 +9994,16 @@
       <Energy>40.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -9880,14 +10058,16 @@
       <Energy>80.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>80.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>8.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Eldar/AncientDoom</string>
@@ -10015,13 +10195,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Necrons/LivingMetal</string>
@@ -10100,13 +10282,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -10185,13 +10369,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.5</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -10291,13 +10477,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -10359,13 +10547,15 @@
       <Food>0</Food>
       <Influence>80.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>4.0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -10416,13 +10606,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Necrons/ReanimationProtocols</string>
@@ -10472,13 +10664,15 @@
       <Food>0</Food>
       <Influence>120.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>6.0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -10545,13 +10739,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -10625,13 +10821,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Necrons/LivingMetal</string>
@@ -10731,13 +10929,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.5</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Infiltrate</string>
@@ -10809,6 +11009,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -10816,6 +11017,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -10863,13 +11065,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AssaultVehicle</string>
@@ -10929,6 +11133,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -10936,6 +11141,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -11004,13 +11210,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -11069,13 +11277,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Necrons/ReanimationProtocols</string>
@@ -11129,13 +11339,15 @@
       <Food>0</Food>
       <Influence>80.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>4.0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -11214,13 +11426,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>8.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Necrons/EternityGate</string>
@@ -11300,13 +11514,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -11366,13 +11582,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>12.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -11431,13 +11649,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>16.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -11548,13 +11768,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Jetbike</string>
@@ -11620,13 +11842,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>6.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -11757,13 +11981,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -11841,13 +12067,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -11925,13 +12153,15 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.5</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Necrons/ReanimationProtocols</string>
@@ -11986,6 +12216,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -11993,6 +12224,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Regeneration</string>
@@ -12059,6 +12291,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12066,6 +12299,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fleet</string>
@@ -12136,6 +12370,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12143,6 +12378,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -12167,6 +12403,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12174,6 +12411,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>PsychicLash</string>
@@ -12238,7 +12476,8 @@
       <Energy>30.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12246,6 +12485,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AdeptusMechanicus/CanticlesOfTheOmnissiah</string>
@@ -12325,6 +12565,7 @@
       <Food>20.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12332,6 +12573,7 @@
       <Food>1.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fleet</string>
@@ -12399,6 +12641,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12406,6 +12649,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Daemon</string>
@@ -12493,7 +12737,8 @@
       <Energy>0</Energy>
       <Food>10.0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12501,6 +12746,7 @@
       <Food>1.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>CultAmbush</string>
@@ -12546,6 +12792,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12553,6 +12800,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>CurseOfTheWalkingPox</string>
@@ -12620,6 +12868,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12627,6 +12876,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -12692,6 +12942,7 @@
       <Food>160.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12699,6 +12950,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>FeelNoPain</string>
@@ -12790,6 +13042,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12797,6 +13050,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AversionToLight</string>
@@ -12840,7 +13094,8 @@
       <Energy>0</Energy>
       <Food>10.0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -12848,6 +13103,7 @@
       <Food>1.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -12895,14 +13151,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>3.0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AssaultVehicle</string>
@@ -13050,7 +13308,8 @@
       <Energy>20.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -13058,6 +13317,7 @@
       <Food>0</Food>
       <Influence>2.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -13188,7 +13448,8 @@
       <Energy>0</Energy>
       <Food>10.0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -13196,6 +13457,7 @@
       <Food>1.0</Food>
       <Influence>1.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>FuriousCharge</string>
@@ -13325,7 +13587,8 @@
       <Energy>30.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -13333,6 +13596,7 @@
       <Food>0</Food>
       <Influence>3.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -13488,7 +13752,8 @@
       <Energy>30.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -13496,6 +13761,7 @@
       <Food>0</Food>
       <Influence>3.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -13597,14 +13863,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>3.0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Orks/CreateOrkoidFungusOnDeath</string>
@@ -13702,14 +13970,16 @@
       <Energy>20.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>2.0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>HitAndRun</string>
@@ -13835,7 +14105,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -13843,6 +14114,7 @@
       <Food>2.0</Food>
       <Influence>2.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MobRule</string>
@@ -13938,7 +14210,8 @@
       <Energy>0</Energy>
       <Food>120.0</Food>
       <Influence>0</Influence>
-      <Ore>120.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -13946,6 +14219,7 @@
       <Food>12.0</Food>
       <Influence>12.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AssaultVehicle</string>
@@ -14137,14 +14411,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>160.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>8.0</Influence>
-      <Ore>8.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Orks/CreateOrkoidFungusOnDeath</string>
@@ -14326,6 +14602,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -14333,6 +14610,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -14417,14 +14695,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>2.0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Orks/CreateOrkoidFungusOnDeath</string>
@@ -14517,14 +14797,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>160.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>8.0</Influence>
-      <Ore>8.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AssaultVehicle</string>
@@ -14621,7 +14903,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -14629,6 +14912,7 @@
       <Food>3.0</Food>
       <Influence>3.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -14759,14 +15043,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>2.0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Orks/CreateOrkoidFungusOnDeath</string>
@@ -14913,14 +15199,16 @@
       <Energy>0</Energy>
       <Food>15.0</Food>
       <Influence>0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>1.5</Influence>
-      <Ore>1.5</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MobRule</string>
@@ -15015,14 +15303,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>2.0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Orks/CreateOrkoidFungusOnDeath</string>
@@ -15075,7 +15365,8 @@
       <Energy>0</Energy>
       <Food>10.0</Food>
       <Influence>40.0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -15083,6 +15374,7 @@
       <Food>1.0</Food>
       <Influence>2.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>FuriousCharge</string>
@@ -15150,7 +15442,8 @@
       <Energy>0</Energy>
       <Food>15.0</Food>
       <Influence>0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -15158,6 +15451,7 @@
       <Food>1.5</Food>
       <Influence>1.5</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MobRule</string>
@@ -15285,14 +15579,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>1.5</Influence>
-      <Ore>1.5</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bike</string>
@@ -15393,7 +15689,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>80.0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -15401,6 +15698,7 @@
       <Food>2.0</Food>
       <Influence>4.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>FuriousCharge</string>
@@ -15559,14 +15857,16 @@
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>1.5</Influence>
-      <Ore>1.5</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>OpenTopped</string>
@@ -15644,6 +15944,7 @@
       <Food>15.0</Food>
       <Influence>60.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -15651,6 +15952,7 @@
       <Food>0</Food>
       <Influence>3.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>FuriousCharge</string>
@@ -15736,6 +16038,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -15743,6 +16046,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -15882,6 +16186,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -15889,6 +16194,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>SistersOfBattle/MartyrSpirit</string>
@@ -16039,6 +16345,7 @@
       <Food>0</Food>
       <Influence>80.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -16046,6 +16353,7 @@
       <Food>0</Food>
       <Influence>4.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -16250,6 +16558,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -16257,6 +16566,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>SistersOfBattle/MartyrSpirit</string>
@@ -16420,6 +16730,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -16427,6 +16738,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>SistersOfBattle/MartyrSpirit</string>
@@ -16571,6 +16883,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -16578,6 +16891,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -16710,6 +17024,7 @@
       <Food>0</Food>
       <Influence>40.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -16717,6 +17032,7 @@
       <Food>0</Food>
       <Influence>2.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -16853,6 +17169,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -16860,6 +17177,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>SistersOfBattle/MartyrSpirit</string>
@@ -17021,6 +17339,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -17028,6 +17347,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -17149,6 +17469,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -17156,6 +17477,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>SistersOfBattle/MartyrSpirit</string>
@@ -17269,6 +17591,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -17276,6 +17599,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -17397,6 +17721,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -17404,6 +17729,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>FeelNoPain</string>
@@ -17529,6 +17855,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -17536,6 +17863,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>SistersOfBattle/MartyrSpirit</string>
@@ -17661,6 +17989,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -17668,6 +17997,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>SistersOfBattle/MartyrSpirit</string>
@@ -17807,6 +18137,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -17814,6 +18145,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -17913,6 +18245,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -17920,6 +18253,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>SistersOfBattle/AnguishOfTheUnredeemed</string>
@@ -18020,6 +18354,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -18027,6 +18362,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>SistersOfBattle/MartyrSpirit</string>
@@ -18181,6 +18517,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -18188,6 +18525,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>SistersOfBattle/MartyrSpirit</string>
@@ -18326,6 +18664,7 @@
       <Food>0</Food>
       <Influence>240.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -18333,6 +18672,7 @@
       <Food>0</Food>
       <Influence>12.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -18470,6 +18810,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -18477,6 +18818,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -18619,6 +18961,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -18626,6 +18969,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -18812,6 +19156,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -18819,6 +19164,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -18941,6 +19287,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -18948,6 +19295,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -19033,6 +19381,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -19040,6 +19389,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -19223,6 +19573,7 @@
       <Food>0</Food>
       <Influence>80.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -19230,6 +19581,7 @@
       <Food>0</Food>
       <Influence>4.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -19389,6 +19741,7 @@
       <Food>0</Food>
       <Influence>120.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -19396,6 +19749,7 @@
       <Food>0</Food>
       <Influence>6.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -19506,6 +19860,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -19513,6 +19868,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -19628,6 +19984,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -19635,6 +19992,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -19782,6 +20140,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -19789,6 +20148,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -19905,6 +20265,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -19912,6 +20273,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -20034,6 +20396,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -20041,6 +20404,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -20138,6 +20502,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -20145,6 +20510,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -20240,6 +20606,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -20247,6 +20614,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -20394,6 +20762,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -20401,6 +20770,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -20486,6 +20856,7 @@
       <Food>0</Food>
       <Influence>80.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -20493,6 +20864,7 @@
       <Food>0</Food>
       <Influence>4.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -20650,6 +21022,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -20657,6 +21030,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -20786,6 +21160,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -20793,6 +21168,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -20915,6 +21291,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -20922,6 +21299,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -21068,6 +21446,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -21075,6 +21454,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -21247,6 +21627,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -21254,6 +21635,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -21408,6 +21790,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -21415,6 +21798,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -21505,6 +21889,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -21512,6 +21897,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -21665,6 +22051,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -21672,6 +22059,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -21769,6 +22157,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -21776,6 +22165,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -21953,6 +22343,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -21960,6 +22351,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -22053,6 +22445,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -22060,6 +22453,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AndTheyShallKnowNoFear</string>
@@ -22171,7 +22565,8 @@
       <Energy>0</Energy>
       <Food>40.0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -22179,6 +22574,7 @@
       <Food>4.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Tau/SupportingFire</string>
@@ -22276,14 +22672,16 @@
       <Energy>20.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>2.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -22312,7 +22710,8 @@
       <Energy>0</Energy>
       <Food>15.0</Food>
       <Influence>60.0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -22320,6 +22719,7 @@
       <Food>1.5</Food>
       <Influence>3.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -22391,7 +22791,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>120.0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -22399,6 +22800,7 @@
       <Food>3.0</Food>
       <Influence>6.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -22479,7 +22881,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -22487,6 +22890,7 @@
       <Food>3.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -22586,14 +22990,16 @@
       <Energy>30.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>3.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Skimmer</string>
@@ -22694,6 +23100,7 @@
       <Food>15.0</Food>
       <Influence>60.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -22701,6 +23108,7 @@
       <Food>0</Food>
       <Influence>3.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -22749,7 +23157,8 @@
       <Energy>0</Energy>
       <Food>15.0</Food>
       <Influence>0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -22757,6 +23166,7 @@
       <Food>1.5</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Tau/SupportingFire</string>
@@ -22847,14 +23257,16 @@
       <Energy>40.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -22955,14 +23367,16 @@
       <Energy>10.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -22991,14 +23405,16 @@
       <Energy>10.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -23052,14 +23468,16 @@
       <Energy>40.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Skimmer</string>
@@ -23180,6 +23598,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -23187,6 +23606,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -23273,14 +23693,16 @@
       <Energy>10.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -23355,7 +23777,8 @@
       <Energy>0</Energy>
       <Food>20.0</Food>
       <Influence>0</Influence>
-      <Ore>20.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -23363,6 +23786,7 @@
       <Food>2.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -23453,14 +23877,16 @@
       <Energy>10.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -23489,7 +23915,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -23497,6 +23924,7 @@
       <Food>3.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Tau/SupportingFire</string>
@@ -23611,14 +24039,16 @@
       <Energy>15.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>15.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.5</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>OpenTopped</string>
@@ -23718,14 +24148,16 @@
       <Energy>10.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -23754,7 +24186,8 @@
       <Energy>30.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -23762,6 +24195,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -23895,14 +24329,16 @@
       <Energy>10.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -23954,14 +24390,16 @@
       <Energy>60.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>60.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>6.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -24062,14 +24500,16 @@
       <Energy>80.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>80.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>8.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MonstrousCreature</string>
@@ -24129,14 +24569,16 @@
       <Energy>10.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -24165,14 +24607,16 @@
       <Energy>10.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -24225,14 +24669,16 @@
       <Energy>40.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>4.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Skimmer</string>
@@ -24357,7 +24803,8 @@
       <Energy>0</Energy>
       <Food>30.0</Food>
       <Influence>0</Influence>
-      <Ore>30.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -24365,6 +24812,7 @@
       <Food>3.0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -24425,14 +24873,16 @@
       <Energy>10.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>10.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>1.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>JetPack</string>
@@ -24461,14 +24911,16 @@
       <Energy>80.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>80.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
       <Energy>0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>8.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -24658,7 +25110,8 @@
       <Energy>40.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>40.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -24666,6 +25119,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -24782,6 +25236,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -24789,6 +25244,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>AssaultVehicle</string>
@@ -24871,7 +25327,8 @@
       <Energy>160.0</Energy>
       <Food>0</Food>
       <Influence>0</Influence>
-      <Ore>160.0</Ore>
+      <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -24879,6 +25336,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -25058,6 +25516,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>3.0</BioMass>
@@ -25065,6 +25524,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Tyranids/InstinctiveBehaviour</string>
@@ -25142,6 +25602,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>4.0</BioMass>
@@ -25149,6 +25610,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -25309,6 +25771,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>3.0</BioMass>
@@ -25316,6 +25779,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Psyker</string>
@@ -25433,6 +25897,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>6.0</BioMass>
@@ -25440,6 +25905,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -25559,6 +26025,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>1.5</BioMass>
@@ -25566,6 +26033,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Bulky</string>
@@ -25654,6 +26122,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>4.0</BioMass>
@@ -25661,6 +26130,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -25780,6 +26250,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -25787,6 +26258,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -25853,6 +26325,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>6.0</BioMass>
@@ -25860,6 +26333,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -26001,6 +26475,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>3.0</BioMass>
@@ -26008,6 +26483,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Tyranids/InstinctiveBehaviour</string>
@@ -26068,6 +26544,7 @@
       <Food>0</Food>
       <Influence>180.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>6.0</BioMass>
@@ -26075,6 +26552,7 @@
       <Food>0</Food>
       <Influence>9.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Flyer</string>
@@ -26218,6 +26696,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>1.0</BioMass>
@@ -26225,6 +26704,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fleet</string>
@@ -26289,6 +26769,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>6.0</BioMass>
@@ -26296,6 +26777,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fleet</string>
@@ -26396,6 +26878,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>2.0</BioMass>
@@ -26403,6 +26886,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -26502,6 +26986,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>3.0</BioMass>
@@ -26509,6 +26994,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -26603,6 +27089,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>16.0</BioMass>
@@ -26610,6 +27097,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -26756,6 +27244,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0.75</BioMass>
@@ -26763,6 +27252,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -26818,6 +27308,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>1.0</BioMass>
@@ -26825,6 +27316,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -26883,6 +27375,7 @@
       <Food>0</Food>
       <Influence>120.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>4.0</BioMass>
@@ -26890,6 +27383,7 @@
       <Food>0</Food>
       <Influence>6.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -27013,6 +27507,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>6.0</BioMass>
@@ -27020,6 +27515,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -27135,6 +27631,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>0</BioMass>
@@ -27142,6 +27639,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fortification</string>
@@ -27171,6 +27669,7 @@
       <Food>0</Food>
       <Influence>120.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>3.0</BioMass>
@@ -27178,6 +27677,7 @@
       <Food>0</Food>
       <Influence>6.0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Hero</string>
@@ -27292,6 +27792,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>2.0</BioMass>
@@ -27299,6 +27800,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -27360,6 +27862,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>6.0</BioMass>
@@ -27367,6 +27870,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>Fearless</string>
@@ -27479,6 +27983,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>2.0</BioMass>
@@ -27486,6 +27991,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>
@@ -27565,6 +28071,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>3.0</BioMass>
@@ -27572,6 +28079,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>VeryBulky</string>
@@ -27676,6 +28184,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </ProductionResources>
     <UpkeepResources>
       <BioMass>4.0</BioMass>
@@ -27683,6 +28192,7 @@
       <Food>0</Food>
       <Influence>0</Influence>
       <Ore>0</Ore>
+      <Requisition>0</Requisition>
     </UpkeepResources>
     <Traits>
       <string>MoveThroughCover</string>

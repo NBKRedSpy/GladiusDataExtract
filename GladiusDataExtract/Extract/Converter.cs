@@ -215,6 +215,7 @@ namespace GladiusDataExtract.Extract
 			resources.Food = attributes.GetValueOrDefault("food" + suffix);
 			resources.Influence = attributes.GetValueOrDefault("influence" + suffix);
 			resources.Ore = attributes.GetValueOrDefault("ore" + suffix);
+			resources.Requisitions = attributes.GetValueOrDefault("requisitions" + suffix);
 
 			return resources;
 		}

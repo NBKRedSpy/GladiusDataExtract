@@ -42,6 +42,7 @@
 			@{await ShowResourceIfNotZero("Attributes","Food", unit.ProductionResources.Food);}
 			@{await ShowResourceIfNotZero("Attributes","Influence", unit.ProductionResources.Influence);}
 			@{await ShowResourceIfNotZero("Attributes","Ore", unit.ProductionResources.Ore);}
+			@{await ShowResourceIfNotZero("Attributes","Requisitions", unit.ProductionResources.Requisitions);}
 		</div>
 
 		<div class="unit__item-content">
@@ -51,6 +52,9 @@
 				@{await ShowResourceIfNotZero("Attributes","Food", unit.UpkeepResources.Food);}
 				@{await ShowResourceIfNotZero("Attributes","Influence", unit.UpkeepResources.Influence);}
 				@{await ShowResourceIfNotZero("Attributes","Ore", unit.UpkeepResources.Ore);}
+				@{
+					await ShowResourceIfNotZero("Attributes", "Requisitions", unit.UpkeepResources.Requisitions);
+				}
 			</div>
 		</div>
 

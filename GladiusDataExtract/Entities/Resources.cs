@@ -17,5 +17,7 @@ namespace GladiusDataExtract.Entities
 		public decimal Influence { get; set; } = 0;
 		public decimal Ore { get; set; } = 0;
 
+		public decimal Requisitions { get; set; } = 0;	
+
 	}
 }
