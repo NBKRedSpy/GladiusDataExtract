@@ -2133,7 +2133,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -2269,7 +2269,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -2367,7 +2367,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -2536,7 +2536,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -2667,7 +2667,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -2761,7 +2761,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -2790,7 +2790,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -3010,7 +3010,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -3039,7 +3039,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -3176,7 +3176,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -3406,7 +3406,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -3539,7 +3539,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -3568,7 +3568,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -3841,7 +3841,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -4161,7 +4161,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -4272,7 +4272,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -4442,7 +4442,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -4597,7 +4597,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -4626,7 +4626,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -4722,7 +4722,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -4751,7 +4751,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>AstraMilitarum/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -5485,7 +5485,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -5514,7 +5514,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -5542,7 +5542,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>12</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -5769,7 +5769,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -5798,7 +5798,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -5826,7 +5826,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -6599,7 +6599,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -6628,7 +6628,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -6656,7 +6656,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -7082,7 +7082,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -7111,7 +7111,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -7139,7 +7139,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -7240,7 +7240,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -7269,7 +7269,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -7607,7 +7607,7 @@
       <Weapon>
         <Name>Excruciator Cannon</Name>
         <Key>ExcruciatorCannon</Key>
-        <Damage>0</Damage>
+        <Damage>3</Damage>
         <AttackCount>2</AttackCount>
         <ArmorPenetration>4</ArmorPenetration>
         <Accuracy>6</Accuracy>
@@ -7802,7 +7802,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -7831,7 +7831,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>ChaosSpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -8060,7 +8060,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>12</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Eldar/PlasmaGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -8702,7 +8702,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Eldar/PlasmaGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -9542,7 +9542,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Eldar/CleansingFlame</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Flame</string>
@@ -11522,7 +11522,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>3</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Necrons/SeismicAssault</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Strikedown</string>
@@ -11731,7 +11731,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>2</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Necrons/SeismicAssault</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Strikedown</string>
@@ -13149,7 +13149,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>4</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Orks/Stikkbomb</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -13286,7 +13286,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>4</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Orks/Stikkbomb</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -13797,7 +13797,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>4</Accuracy>
         <Range>0</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Orks/Bigbomm</RequiredUpgrade>
         <Traits>
           <string>Bomb</string>
           <string>LargeBlast</string>
@@ -13899,7 +13899,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>4</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Orks/Stikkbomb</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -14720,7 +14720,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>4</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Orks/Stikkbomb</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -14976,7 +14976,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>4</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Orks/Stikkbomb</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -15217,7 +15217,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>4</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Orks/Stikkbomb</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -15246,7 +15246,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Orks/TankbustaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -15520,7 +15520,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>4</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Orks/Stikkbomb</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -15946,7 +15946,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -15975,7 +15975,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -16003,7 +16003,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -16157,7 +16157,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -16182,7 +16182,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -16211,7 +16211,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -16503,7 +16503,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -16532,7 +16532,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -16760,7 +16760,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -16785,7 +16785,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -16814,7 +16814,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -16928,7 +16928,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -16957,7 +16957,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -16985,7 +16985,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -17461,7 +17461,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -17490,7 +17490,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -17593,7 +17593,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -17622,7 +17622,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -18113,7 +18113,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -18142,7 +18142,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -18233,7 +18233,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -18262,7 +18262,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -18290,7 +18290,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -18402,7 +18402,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>12</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -18431,7 +18431,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>12</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -18526,7 +18526,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -18555,7 +18555,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -18583,7 +18583,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -18719,7 +18719,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -18748,7 +18748,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -18776,7 +18776,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SistersOfBattle/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -18873,7 +18873,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -18902,7 +18902,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -19130,7 +19130,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -19159,7 +19159,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -19187,7 +19187,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -19321,7 +19321,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -19350,7 +19350,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -19689,7 +19689,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -19718,7 +19718,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -19746,7 +19746,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -20201,7 +20201,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -20355,7 +20355,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -20582,7 +20582,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -20611,7 +20611,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -20747,7 +20747,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -20876,7 +20876,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -20975,7 +20975,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -21004,7 +21004,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -21032,7 +21032,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -21154,7 +21154,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -21183,7 +21183,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -21211,7 +21211,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -21572,7 +21572,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -21601,7 +21601,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -21629,7 +21629,7 @@
         <ArmorPenetration>8</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/MeltaBomb</RequiredUpgrade>
         <Traits>
           <string>Armourbane</string>
           <string>Bomb</string>
@@ -21885,7 +21885,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/FragGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -21914,7 +21914,7 @@
         <ArmorPenetration>2</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/KrakGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Grenade</string>
@@ -22014,7 +22014,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -22133,7 +22133,7 @@
         <ArmorPenetration>6</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>12</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>SpaceMarines/HunterKillerMissile</RequiredUpgrade>
         <Traits>
           <string>Barrage</string>
           <string>HeavyWeapon</string>
@@ -22246,7 +22246,7 @@
         <ArmorPenetration>4</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>4</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Tau/SeekerMissile</RequiredUpgrade>
         <Traits>
           <string>HeavyWeapon</string>
           <string>SeekerMissile</string>
@@ -22359,7 +22359,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>10</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Tau/PhotonGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -22663,7 +22663,7 @@
         <ArmorPenetration>4</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>4</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Tau/SeekerMissile</RequiredUpgrade>
         <Traits>
           <string>HeavyWeapon</string>
           <string>SeekerMissile</string>
@@ -22795,7 +22795,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Tau/PhotonGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -22817,7 +22817,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Tau/EMPGrenade</RequiredUpgrade>
         <Traits>
           <string>Grenade</string>
           <string>Haywire</string>
@@ -23149,7 +23149,7 @@
         <ArmorPenetration>4</ArmorPenetration>
         <Accuracy>8</Accuracy>
         <Range>4</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Tau/SeekerMissile</RequiredUpgrade>
         <Traits>
           <string>HeavyWeapon</string>
           <string>SeekerMissile</string>
@@ -23559,7 +23559,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Tau/PhotonGrenade</RequiredUpgrade>
         <Traits>
           <string>Assault</string>
           <string>Blast</string>
@@ -23581,7 +23581,7 @@
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>1</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Tau/EMPGrenade</RequiredUpgrade>
         <Traits>
           <string>Grenade</string>
           <string>Haywire</string>
@@ -23688,7 +23688,7 @@
         <ArmorPenetration>4</ArmorPenetration>
         <Accuracy>6</Accuracy>
         <Range>4</Range>
-        <RequiredUpgrade />
+        <RequiredUpgrade>Tau/SeekerMissile</RequiredUpgrade>
         <Traits>
           <string>HeavyWeapon</string>
           <string>SeekerMissile</string>
@@ -26360,7 +26360,7 @@
       <Weapon>
         <Name>Flesh Hooks</Name>
         <Key>FleshHooks</Key>
-        <Damage>0</Damage>
+        <Damage>3</Damage>
         <AttackCount>2</AttackCount>
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>6</Accuracy>
@@ -27236,7 +27236,7 @@
       <Weapon>
         <Name>Flesh Hooks</Name>
         <Key>FleshHooks</Key>
-        <Damage>0</Damage>
+        <Damage>2</Damage>
         <AttackCount>2</AttackCount>
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>8</Accuracy>
@@ -27640,7 +27640,7 @@
       <Weapon>
         <Name>Flesh Hooks</Name>
         <Key>FleshHooks</Key>
-        <Damage>0</Damage>
+        <Damage>1.5</Damage>
         <AttackCount>2</AttackCount>
         <ArmorPenetration>1</ArmorPenetration>
         <Accuracy>6</Accuracy>

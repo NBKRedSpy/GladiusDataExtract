@@ -31,7 +31,7 @@ namespace GladiusDataExtract.Extract
 
 			//Find the incorrect value format. <entry name="AstraMilitarum/Headquarters" value="<string name='Buildings/AstraMilitarum/Headquarters'/>"/>
             //  There may be multiple elements in the list.
-			Regex regEx = new Regex("^(\\s+<entry name=\".+\" value=\")(.+)(\"/>)$", RegexOptions.Multiline);
+			Regex regEx = new Regex("^(\\s+<entry name=\".+\" value=\")(.+)(\"/>)\\s*$", RegexOptions.Multiline);
 
             var matcher = (Match m) =>
             {

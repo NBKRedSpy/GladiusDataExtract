@@ -40,6 +40,9 @@ namespace GladiusDataExtract.Extract
 
 			List<Weapon> weapons = new();
 
+			Dictionary<string, string> traitsText = languageExtract.GetTextStrings(
+				Path.Combine(dataFolder, @"Core\Languages\English\Traits.xml"));
+
 			weapons = extractor.ExtractWeaponInfo(Path.Combine(dataFolder, @"World\Weapons"), weaponLocalizationText);
 
             factionLocallization = languageExtract.GetTextStrings(
