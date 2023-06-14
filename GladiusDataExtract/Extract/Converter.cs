@@ -61,8 +61,7 @@ namespace GladiusDataExtract.Extract
 			foreach (du.Unit dtoUnit in dtoUnits)
 			//foreach (du.Unit dtoUnit in dtoUnits.Where(x=> x.Key == "SpaceMarines/Scout"))
 			{
-
-				if(dtoUnit.Traits.Any(x=> x.Name == "Artefact"))
+				if (dtoUnit.Traits.Any(x=> x.Key == "Artefact" || x.Key =="Headquarters"))
 				{
 					continue;
 				}
