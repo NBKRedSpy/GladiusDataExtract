@@ -9,6 +9,7 @@ using GladiusDataExtract.Extract.Weapons;
 using System.CodeDom.Compiler;
 using MoreLinq;
 using System.IO;
+using System.Diagnostics;
 
 namespace GladiusDataExtract.Extract
 {
@@ -43,6 +44,8 @@ namespace GladiusDataExtract.Extract
 			Dictionary<string, string> traitsText = languageExtract.GetTextStrings(
 				Path.Combine(dataFolder, @"Core\Languages\English\Traits.xml"));
 
+			Dictionary<string, Trait> traitsTraits = GetTraits(Path.Combine(dataFolder, @"World\Traits"), traitsText);
+
 			weapons = extractor.ExtractWeaponInfo(Path.Combine(dataFolder, @"World\Weapons"), weaponLocalizationText);
 
             factionLocallization = languageExtract.GetTextStrings(
@@ -57,6 +60,80 @@ namespace GladiusDataExtract.Extract
 				weaponLookup, unitLocalizationText);
 
             return gladiusUnits;
+
+		}
+
+		private Dictionary<string, Trait> GetTraits(string dataFolder, Dictionary<string, string> traitsText)
+		{
+			//Get the folder name with a trailing slash
+
+			//Used to trim the start of the path to get the item's key.
+			string basePath = Path.TrimEndingDirectorySeparator(Path.GetFullPath(dataFolder)) + "\\";
+
+			Dictionary<string, Trait> traits = new Dictionary<string, Trait>();
+
+			foreach (string file in Directory.EnumerateFiles(basePath, "*.xml", SearchOption.AllDirectories))
+			{
+
+
+
+				try
+				{
+					//OrkoidFungusFood is commented out.
+					if (file.Contains(@"\Artefacts\") || file.Contains(@"\Items\") || file.Contains(@"OrkoidFungusFood"))
+					{
+						//Ignore some traits.
+						continue;
+					}
+
+
+					string xml = File.ReadAllText(file);
+
+					//Fix some of the bad XML manually.
+
+					xml = xml.Replace(@"<trait alwaysVisible=""1""category=""Buff"">", @"<trait alwaysVisible=""1"" category=""Buff"">");
+
+					XmlDocument xmlDocument = new XmlDocument();
+					xmlDocument.LoadXml(xml);
+
+					//debug
+					//try
+					//{
+					//	xmlDocument.Load(file);
+					//}
+					//catch(XmlException ex) when (ex.Message == "Root element is missing.")
+					//{
+					//	//Some files are commented out minus the leading XML.  Skip
+					//	continue;
+					//}
+
+					Trait trait = new Trait();
+
+					trait.Key = GetKey(basePath, file);
+
+					XmlNode traitNode = xmlDocument.SelectSingleNode("trait")!;
+
+					//Some items do not have an icon. Mostly buildings.
+					trait.Icon = traitNode.Attributes!["icon"]?.Value ?? "";
+					trait.Name = traitsText[trait.Key];
+					trait.Description = traitsText.GetValueOrDefault(trait.Key + "Description", "");
+					trait.Effects = ParseEffects(xmlDocument, "/trait/modifiers/modifier/effects/*");
+
+					//Not parsing required upgrades since they are actually part of modifier effects.
+					//	that would require modeling the modifer and their effects.
+					///	XPath: trait/modifiers/modifier/effects/production
+					//	<modifier visible="0" requiredUpgrade="Orks/CreatePermanentOrkoidFungusOnDeath">
+
+					trait.RequiredUpgrade = "";
+
+					traits.Add(trait.Key, trait);
+				}
+				catch (Exception ex)
+				{
+					throw new ApplicationException($"Error parsing {file}: {ex.Message}", ex);
+				}
+			}
+			return traits;
 
 		}
 
@@ -164,7 +241,7 @@ namespace GladiusDataExtract.Extract
 
 						string trait = traitNode.Attributes!["name"]!.Value;
 
-						traits.Add(new(trait, requiredUpgrade));
+						traits.Add(new Trait() { Key = trait, RequiredUpgrade = requiredUpgrade });
 					}
 
 					unit.Traits.AddRange(traits.OrderBy(x => x.RequiredUpgrade).ThenBy(x => x.Name));
@@ -236,80 +313,97 @@ namespace GladiusDataExtract.Extract
             StringBuilder sb = new StringBuilder();
 
             foreach (string file in Directory.EnumerateFiles(folderName, "*.xml"))
-            {
+			{
 
 
-                XmlDocument xmlDocument = new XmlDocument();
-                xmlDocument.Load(file);
+				XmlDocument xmlDocument = new XmlDocument();
+				xmlDocument.Load(file);
 
 
-                //Range
-                int targetRange = 0;
-                var targetNode = xmlDocument.SelectSingleNode("weapon/target[@rangeMax]");
+				//Range
+				int targetRange = 0;
+				var targetNode = xmlDocument.SelectSingleNode("weapon/target[@rangeMax]");
 
-                if (targetNode != null)
-                {
-                    targetRange = int.Parse(targetNode.Attributes!["rangeMax"]!.Value);
-                }
+				if (targetNode != null)
+				{
+					targetRange = int.Parse(targetNode.Attributes!["rangeMax"]!.Value);
+				}
 
 				string keyName = GetKey(folderName, file);
 				Weapon weapon = new(weaponLocalizationText[keyName], keyName, targetRange, new(), new(), new());
 
 
 				//----Effects
-				XmlNodeList effectNodes = xmlDocument.SelectNodes("weapon/modifiers/modifier/effects/*")!;
-                List<Effect> effects = weapon.Effects;  //Ex: meleeArmorPenetration
 
-                foreach (XmlNode effectNode in effectNodes)
-                {
-                    Effect effect = new(effectNode.Name, new());  //Ex: attacks
+				weapon.Effects.AddRange(ParseEffects(xmlDocument, "weapon/modifiers/modifier/effects/*"));
 
+				//----Requirements
+				XmlNodeList requireNodes = xmlDocument.SelectNodes(@"/weapon/traits/trait[@requiredUpgrade]")!;
 
-                    List<ModifierType> modifiers = effect.Modifiers;
+				foreach (XmlNode requirementNode in requireNodes)
+				{
+					List<Requirement> requirements = weapon.Requirements;
 
-                    foreach (XmlAttribute attribute in effectNode.Attributes!)
-                    {
-                        modifiers.Add(new(attribute.Name, decimal.Parse(attribute.Value)));
-                    }
+					string requirementName = requirementNode.Attributes!["name"]!.Value;
+					string requiredUpgrade = requirementNode.Attributes["requiredUpgrade"]!.Value;
 
-                    weapon.Effects.Add(effect);
-                }
+					requirements.Add(new(requirementName, requiredUpgrade));
 
-                //----Requirements
-                XmlNodeList requireNodes = xmlDocument.SelectNodes(@"/weapon/traits/trait[@requiredUpgrade]")!;
+				}
 
-                foreach (XmlNode requirementNode in requireNodes)
-                {
-                    List<Requirement> requirements = weapon.Requirements;
+				//----Traits
+				XmlNodeList traitNodes = xmlDocument.SelectNodes(@"/weapon/traits/trait[not(@requiredUpgrade)]")!;
 
-                    string requirementName = requirementNode.Attributes!["name"]!.Value;
-                    string requiredUpgrade = requirementNode.Attributes["requiredUpgrade"]!.Value;
+				if (traitNodes.Count > 0)
+				{
 
-                    requirements.Add(new(requirementName, requiredUpgrade));
+					foreach (XmlNode traitNode in traitNodes)
+					{
+						weapon.Traits.Add(traitNode.Attributes!["name"]!.Value);
+					}
 
-                }
+				}
 
-                //----Traits
-                XmlNodeList traitNodes = xmlDocument.SelectNodes(@"/weapon/traits/trait[not(@requiredUpgrade)]")!;
+				weapons.Add(weapon);
 
-                if (traitNodes.Count > 0)
-                {
+			}
 
-                    foreach (XmlNode traitNode in traitNodes)
-                    {
-                        weapon.Traits.Add(traitNode.Attributes!["name"]!.Value);
-                    }
-
-                }
-
-                weapons.Add(weapon);
-
-            }
-
-            return weapons;
+			return weapons;
         }
 
-        private string GetKey(string rootPath, string filePath)
+		private static List<Effect> ParseEffects(XmlDocument xmlDocument, string xmlPath)
+		{
+			XmlNodeList effectNodes = xmlDocument.SelectNodes(xmlPath)!;
+
+			List<Effect> effects = new List<Effect>();
+
+			//Note: This intentionally does not parse Trait effect's conditions.
+			//	may be added later.
+			foreach (XmlNode effectNode in effectNodes)
+			{
+				//HACK: Ignore addTrait for now.  
+				//Example:  <addTrait duration="1" name="SistersOfBattle/UsedActOfFaith"/>
+				if (effectNode.Name == "addTrait")
+				{
+					continue;
+				}
+
+				Effect effect = new(effectNode.Name, new());  //Ex: attacks
+
+				List<ModifierType> modifiers = effect.Modifiers;
+
+				foreach (XmlAttribute attribute in effectNode.Attributes!)
+				{
+					modifiers.Add(new(attribute.Name, decimal.Parse(attribute.Value)));
+				}
+
+				effects.Add(effect);
+			}
+
+			return effects;
+		}
+
+		private string GetKey(string rootPath, string filePath)
         {
             string key = Path.GetRelativePath(rootPath, filePath)
                 .Replace("\\", "/")

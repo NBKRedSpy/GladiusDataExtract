@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Markup;
 using System.Xml;
 using System.Xml.Serialization;
+using GladiusDataExtract.Extract;
 using GladiusDataExtract.Extract.Units;
 using GladiusDataExtract.Extract.Weapons;
 

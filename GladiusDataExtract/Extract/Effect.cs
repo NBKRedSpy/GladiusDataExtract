@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GladiusDataExtract.Extract.Weapons;
 
-namespace GladiusDataExtract.Extract.Weapons
+namespace GladiusDataExtract.Extract
 {
-	/// <summary>
-	/// The effect of a weapon.  Ex:  attacks
-	/// </summary>
-	/// <param name="Name"></param>
-	/// <param name="Modifiers"></param>
-	internal record Effect(string Name, List<ModifierType> Modifiers)
+    /// <summary>
+    /// The effect of a weapon.  Ex:  attacks
+    /// </summary>
+    /// <param name="Name"></param>
+    /// <param name="Modifiers"></param>
+    internal record Effect(string Name, List<ModifierType> Modifiers)
     {
         /// <summary>
         /// Runs all the modifiers for this effect.

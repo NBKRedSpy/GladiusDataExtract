@@ -11,18 +11,12 @@ namespace GladiusDataExtract.Extract.Units
 	/// <summary>
 	/// Ex:  Armor: 6
 	/// </summary>
-	/// <param name="Name"></param>
-	/// <param name="Value"></param>
+	/// <param name="Name">The key for the attribute.  Ex:  meleeDamage</param>
+	/// <param name="Value">The value for the attribute.  Ex: 1.5</param>
 	internal record UnitAttribute(string Name, decimal Value);
 
 
 
-	/// <summary>
-	/// A trait of the unit.
-	/// </summary>
-	/// <param name="Name"></param>
-	/// <param name="RequiredUpgrade">If not null, this is a trait that occurs after an upgrade.</param>
-	internal record Trait(string Name, string? RequiredUpgrade);
 
 
     /// <summary>
