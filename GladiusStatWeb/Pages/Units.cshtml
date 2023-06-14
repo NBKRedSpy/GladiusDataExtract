@@ -178,6 +178,8 @@
 	/// <returns></returns>
 	async Task DisplayIcon(string imgSubFolder, string iconName, string text = "")
 	{
+
+
 		string displayText = text == "" ? iconName : text;
 
 		<span>
@@ -188,8 +190,12 @@
 
 @section Scripts {
 <script type="text/javascript">
-	//Init the bootstrap tooltips
-	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+		document.addEventListener('DOMContentLoaded', function () {
+			//Init the bootstrap tooltips
+			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+		}, false);
+
 </script>
 }
