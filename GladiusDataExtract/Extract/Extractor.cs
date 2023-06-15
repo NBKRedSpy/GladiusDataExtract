@@ -34,32 +34,52 @@ namespace GladiusDataExtract.Extract
 
 			var extractor = new Extractor();
 
-			LanguageExtract languageExtract = new LanguageExtract();
+			//Languages
+			Dictionary<string, string> weaponLocalizationText, traitsText, unitLocalizationText, upgradesLocalizationText;
+			ExtractLanguages(localizationFolder, dataFolder, out factionLocallization, out weaponLocalizationText, out traitsText, out unitLocalizationText, 
+				out upgradesLocalizationText);
 
-            Dictionary<string, string> weaponLocalizationText = languageExtract.GetTextStrings(
-                Path.Combine(localizationFolder, "Weapons.xml"));
+
+			//---Unit components
+
+			Dictionary<string, Trait> traitsLookup = GetTraits(Path.Combine(dataFolder, @"World\Traits"), traitsText);
 
 			List<Weapon> weapons = new();
-
-			Dictionary<string, string> traitsText = languageExtract.GetTextStrings(
-				Path.Combine(dataFolder, @"Core\Languages\English\Traits.xml"));
-
-			Dictionary<string, Trait> traitsTraits = GetTraits(Path.Combine(dataFolder, @"World\Traits"), traitsText);
-
 			weapons = extractor.ExtractWeaponInfo(Path.Combine(dataFolder, @"World\Weapons"), weaponLocalizationText);
-
-            factionLocallization = languageExtract.GetTextStrings(
-				Path.Combine(dataFolder, @"Core\Languages\English\Factions.xml"));
-
-			Dictionary<string, string> unitLocalizationText = languageExtract.GetTextStrings(
-                Path.Combine(dataFolder, @"Core\Languages\English\Units.xml"));
 
 			Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Key);
 
 			List<Unit> gladiusUnits = extractor.ExtractUnitInfo(Path.Combine(dataFolder, @"World\Units"),
 				weaponLookup, unitLocalizationText);
 
-            return gladiusUnits;
+			return gladiusUnits;
+
+		}
+
+		private static void ExtractLanguages(string localizationFolder, string dataFolder, 
+			out Dictionary<string, string> factionLocallization, 
+			out Dictionary<string, string> weaponLocalizationText, 
+			out Dictionary<string, string> traitsText, 
+			out Dictionary<string, string> unitLocalizationText,
+			out Dictionary<string, string> upgradesLocalizationText)
+		{
+			LanguageExtract languageExtract = new LanguageExtract();
+
+			weaponLocalizationText = languageExtract.GetTextStrings(
+				Path.Combine(localizationFolder, "Weapons.xml"));
+
+			traitsText = languageExtract.GetTextStrings(
+				Path.Combine(dataFolder, @"Core\Languages\English\Traits.xml"));
+
+			factionLocallization = languageExtract.GetTextStrings(
+				Path.Combine(dataFolder, @"Core\Languages\English\Factions.xml"));
+
+			unitLocalizationText = languageExtract.GetTextStrings(
+				Path.Combine(dataFolder, @"Core\Languages\English\Units.xml"));
+
+			upgradesLocalizationText = languageExtract.GetTextStrings(
+				Path.Combine(dataFolder, @"Core\Languages\English\Upgrades.xml"));
+
 
 		}
 
