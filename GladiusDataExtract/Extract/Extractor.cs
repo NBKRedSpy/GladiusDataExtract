@@ -241,7 +241,14 @@ namespace GladiusDataExtract.Extract
 
 						string trait = traitNode.Attributes!["name"]!.Value;
 
-						traits.Add(new Trait() { Key = trait, RequiredUpgrade = requiredUpgrade });
+						traits.Add(new Trait() 
+						{ 
+							Key = trait, 
+							Name = trait,
+							Icon = trait,
+							RequiredUpgrade = requiredUpgrade 
+						}
+						);
 					}
 
 					unit.Traits.AddRange(traits.OrderBy(x => x.RequiredUpgrade).ThenBy(x => x.Name));
