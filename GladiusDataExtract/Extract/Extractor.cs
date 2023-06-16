@@ -516,6 +516,10 @@ namespace GladiusDataExtract.Extract
 				//----Requirements
 				XmlNodeList requireNodes = xmlDocument.SelectNodes(@"/weapon/traits/trait[@requiredUpgrade]")!;
 
+				//TODO:  upgrades must require a trait and the required upgrade as a pair.
+				//Should just change traits instead of having "requirements"
+
+
 				foreach (XmlNode requirementNode in requireNodes)
 				{
 					List<e.Upgrade> requirements = weapon.Requirements;
