@@ -36,11 +36,11 @@ namespace GladiusDataExtract.Extract
 		/// <param name="dataFolder">The data folder for the game.
 		/// Ex:  [steam dir]/Warhammer 40000 Gladius - Relics of War/Data</param>
 		/// <exception cref="NotImplementedException"></exception>
-		public List<Unit> ConvertData(string localizationFolder, string dataFolder)
+		public List<Unit> ConvertData(string dataFolder)
 		{
 			Extractor extractor = new Extractor();
 			Dictionary<string, string> factionLocallization;
-			List<du.Unit> units = extractor.ExtractData(localizationFolder, dataFolder, out factionLocallization);
+			List<du.Unit> units = extractor.ExtractData( dataFolder, out factionLocallization);
 
 			return ConvertUnits(units);
 		}
@@ -61,7 +61,7 @@ namespace GladiusDataExtract.Extract
 			foreach (du.Unit dtoUnit in dtoUnits)
 			//foreach (du.Unit dtoUnit in dtoUnits.Where(x=> x.Key == "SpaceMarines/Scout"))
 			{
-				if (dtoUnit.Traits.Any(x=> x.Key == "Artefact" || x.Key =="Headquarters"))
+				if (dtoUnit.Traits.Any(x => x.Key == "Artefact" || x.Key == "Headquarters"))
 				{
 					continue;
 				}
@@ -76,15 +76,15 @@ namespace GladiusDataExtract.Extract
 
 				var attributes = new Dictionary<string, decimal>(
 					dtoUnit.Attributes
-						.Select(x => new KeyValuePair<string,decimal>(x.Name, x.Value)));
+						.Select(x => new KeyValuePair<string, decimal>(x.Name, x.Value)));
 
 				unit.Armor = (int)attributes["armor"];
 
 				unit.Morale = (int)attributes["moraleMax"];
 
-				unit.IsFortification = dtoUnit.Traits.Any(x=> x.Name =="Fortification");
+				unit.IsFortification = dtoUnit.Traits.Any(x => x.Name == "Fortification");
 
-				if(!unit.IsFortification)
+				if (!unit.IsFortification)
 				{
 					unit.ProductionCost = (int)attributes["productionCost"];
 					unit.ProductionResources = ConvertResources(attributes, "Cost");
@@ -94,19 +94,45 @@ namespace GladiusDataExtract.Extract
 
 				unit.Movement = (int)attributes["movementMax"];
 
-				unit.Traits = dtoUnit.Traits.Where(x => x.RequiredUpgrade is null)
-					.Select(x => x.Name).ToList();
+				unit.Traits = TraitToEntityTrait(dtoUnit.Traits);
 
-				unit.Upgrades = dtoUnit.Traits.Where(x => x.RequiredUpgrade is not null)
-					.Select(x => new Requirement(x.Name, x.RequiredUpgrade!)).ToList();
+
+				//{
+				//	//Key = d.Key,
+				//	//Description = d.Description,
+				//	//Name = d.Name,
+				//}).ToList();
+
+				//unit.Traits = dtoUnit.Traits.Where(x => x.RequiredUpgrade is null)
+				//	.Select(x => x.Name).ToList();
+
+
+
+				//unit.Traits.Add(x=> )
+				//Change "upgrades" to trait with required upgrade.
+				//unit.Upgrades = dtoUnit.Traits.Where(x => x.RequiredUpgrade is not null)
+				//	.Select(x => new (x.Name, x.RequiredUpgrade!)).ToList();
 
 				unit.Weapons = GetWeapons(dtoUnit);
 
 				units.Add(unit);
-				
+
 			}
 
 			return units;
+		}
+
+		private static List<Entities.Trait> TraitToEntityTrait(List<Extract.Trait> dtoTrait)
+		{
+			return dtoTrait.Select(x => new Entities.Trait()
+			{
+				Description = x.Description,
+				Name = x.Name,
+				Key = x.Key,
+				Icon = x.Icon,
+				RequiredUpgrade = x.RequiredUpgrade,
+
+			}).ToList();
 		}
 
 		private Faction GetFaction(string key)
@@ -195,9 +221,16 @@ namespace GladiusDataExtract.Extract
 					weapon.ArmorPenetration = unitWeaponStats.GetValueOrDefault("meleeArmorPenetration");
 				}
 
-				weapon.Traits = dtoWeapon.Traits;
-				weapon.Requirements = dtoWeapon.Requirements.Select(x => new Requirement(x.Name, x.Requires))
-					.ToList();
+				weapon.Traits = TraitToEntityTrait(dtoWeapon.Traits);
+
+				weapon.UpgradeRequirements = dtoWeapon.Requirements.Select(x =>
+					new Upgrade()
+					{ 
+						Icon = x.Icon,
+						Key = x.Key,
+						Description = x.Description,
+						Name = x.Name,
+					}).ToList();
 
 				weapons.Add(weapon);
 			}

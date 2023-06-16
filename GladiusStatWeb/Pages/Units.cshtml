@@ -25,10 +25,12 @@
 }
 
 
+@*@foreach (var unit in Model.Units!.Where(x => x.Name == "Lictors"))*@
 @foreach (var unit in Model.Units!)
 {
 	string htmlId = unit.Key.Replace("/", "-");
 
+	<!-- --------------------------------- Unit:  @unit.Name    -->
 	<div class="unit-name" id="@htmlId"><a class="unit__name-link" href="#@htmlId">@unit.Name</a></div>
 	<div class="unit__content">
 		<div class="unit__item-content unit__icon-line">
@@ -63,23 +65,18 @@
 
 				<div class="unit__item-content">
 					<span class="unit__icon-line">
-					@foreach (var trait in unit.Traits)
-					{
-						<span>@{await DisplayIcon("Traits", @trait);}
-						</span>
-					}
-					</span>
-
-					@*--- Traits created by upgrades *@
-					@if(unit.Upgrades.Count > 0){
-						<span class="unit__trait_upgrades unit__icon-line">
-
-						@foreach (var upgrade in unit.Upgrades)
+						@foreach (var trait in unit.Traits.Where(x=> x.RequiredUpgrade is null))
 						{
-							<span>@{await DisplayIcon("Traits", @upgrade.Name);}</span>
+							<span>@{await DisplayIcon("", trait.Icon, trait.Name);}</span>
 						}
-						</span>
-					}
+
+						@foreach (var trait in unit.Traits.Where(x => x.RequiredUpgrade is not null))
+						{
+							<span class="unit__trait_upgrades">
+								@{await DisplayIcon("", trait.Icon, trait.Name);}
+							</span>
+						}
+					</span>
 				</div>
 			</div>
 		}
@@ -88,14 +85,16 @@
 
 			<div class="unit__header">Weapons</div>
 			<div class="unit__item-content">
+				@*Debug*@
+				@*@foreach (Weapon weapon in unit.Weapons.Where(x => x.Name == "Flesh Hooks"))*@
 				@foreach (Weapon weapon in unit.Weapons)
 				{
 					<span class="unit__header" >@weapon.Name
 					
-					@if (weapon.RequiredUpgrade != "")
+					@if (weapon.RequiredUpgrade is not null)
 					{
 						<span class="unit__icon-line unit__trait_upgrades">
-							<span>@{await DisplayIcon("Traits", weapon.RequiredUpgrade);}</span>
+							<span>@{await DisplayIcon("", weapon.RequiredUpgrade.Icon, weapon.RequiredUpgrade.Name);}</span>
 						</span>
 					}
 					</span>
@@ -121,30 +120,16 @@
 							<span class="unit__icon-line">
 								@foreach (var trait in weapon.Traits)
 								{
-									<span>@{await DisplayIcon("Traits",@trait);}</span>
+									<span>@{await DisplayIcon("",trait.Icon, trait.Name);}</span>
 								}
 							</span>
 
-							@if (weapon.Requirements.Count > 0)
+							@if (weapon.UpgradeRequirements.Count > 0)
 							{
-
-								@*todo: The trait upgrades requires parsing the traits.  There is sometimes an icon attrbiute with the name of the icon to show.
-					For ex:  "Traits\AdeptusMechanicus\MeleeWeaponBonus.xml" has <trait icon="Traits/WeaponBonus">
-
-					Traits descriptions:
-					Data\Core\Languages\English\Traits.xml
-
-					<entry name="AdeptusMechanicus/AssaultWeaponBonus" value="Dogma Metalica"/>
-					<entry name="AdeptusMechanicus/AssaultWeaponBonusDescription" value="Increases the armour penetration."/>
-
-					*@
-
 								<span class="unit__icon-line unit__trait_upgrades">
-									@foreach (var requirement in weapon.Requirements)
+									@foreach (var requirement in weapon.UpgradeRequirements)
 									{
-										<span>@{
-												await DisplayIcon("Traits", @requirement.Name, $"{requirement.Name} -> {requirement.RequiredUpgrade}");
-											}</span>
+										<span>@{await DisplayIcon("", @requirement.Icon, requirement.Name);}</span>
 									}
 								</span>
 							}
@@ -183,9 +168,10 @@
 		//Finish Here -  icon and text are both null for AdeptusMechanicus/ArchaeopterStratoraptor
 		//	breaks tooltips.
 		string displayText = text == "" ? iconName : text;
+		string icon = imgSubFolder == "" ? $"img/{iconName}.png" : $"img/{imgSubFolder}/{iconName}.png";
 
 		<span>
-			<img onerror="imageFallback.call(this);" class="icon" data-bs-toggle="tooltip" data-bs-title="@displayText" src="~/img/@imgSubFolder/@(iconName).png">
+			<img onerror="imageFallback.call(this);" class="icon" data-bs-toggle="tooltip" data-bs-title="@displayText" src="~/@icon">
 		</span>
 	}
 }

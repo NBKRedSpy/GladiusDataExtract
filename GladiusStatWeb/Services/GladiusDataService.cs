@@ -78,9 +78,7 @@ namespace GladiusStatWeb.Services
         {
 			var converter = new GladiusDataExtract.Extract.Converter();
 
-			return converter.ConvertData(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\Core\Languages\English\",
-				@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data"
-				);
+			return converter.ConvertData(@"D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data");
 
 		}
 	}

@@ -6,28 +6,55 @@ using System.Threading.Tasks;
 using GladiusDataExtract.Extract.Units;
 using System.Xml;
 using GladiusDataExtract.Extract.Weapons;
-using System.CodeDom.Compiler;
+using e = GladiusDataExtract.Entities;
 using MoreLinq;
 using System.IO;
-using System.Diagnostics;
+using System.Text.RegularExpressions;
+using System.Reflection.Metadata;
+using System.Xml.Linq;
 
 namespace GladiusDataExtract.Extract
 {
 
-    /// <summary>
-    /// Handles extracting the data from the XML files into DTO's.
-    /// </summary>
-    public class Extractor
-    {
+	/// <summary>
+	/// Handles extracting the data from the XML files into DTO's.
+	/// </summary>
+	public class Extractor
+	{
 
-		/// <summary>
-		/// Returns the DTO units from the data.
-		/// </summary>
-		/// <param name="localizationFolder">The folder to use for the localization text.  Ex:  "./Warhammer 40000 Gladius - Relics of War/Data/Core/Languages/English/"</param>
-		/// <param name="dataFolder">The data folder for the game.
-		/// Ex:  ./Warhammer 40000 Gladius - Relics of War/Data</param>
-		/// <exception cref="NotImplementedException"></exception>
-		internal List<Unit> ExtractData(string localizationFolder, string dataFolder, out Dictionary<string, string> factionLocallization )
+		private static IReadOnlySet<string> DataFolderNames { get; }
+
+
+        static Extractor()
+        {
+			
+			DataFolderNames = new HashSet<string>
+			{
+				"Actions",
+				"Attributes",
+				"Buildings",
+				"Factions",
+				"Features",
+				"Items",
+				"Notifications",
+				"Overlay",
+				"Quests",
+				"Traits",
+				"Units",
+				"Upgrades",
+				"Weapons",
+			};
+		}
+
+        /// <summary>
+        /// Returns the DTO units from the data.
+        /// </summary>
+        /// <param name="localizationFolder">The folder to use for the localization text.  Ex:  "./Warhammer 40000 Gladius - Relics of War/Data/Core/Languages/English/"</param>
+        /// <param name="dataFolder">The data folder for the game.
+        /// Ex:  ./Warhammer 40000 Gladius - Relics of War/Data</param>
+        /// <exception cref="NotImplementedException"></exception>
+        internal List<Unit> ExtractData(string dataFolder, 
+			out Dictionary<string, string> factionLocallization )
 		{
 			//todo:  change to configure in settings or env.
 
@@ -36,27 +63,93 @@ namespace GladiusDataExtract.Extract
 
 			//Languages
 			Dictionary<string, string> weaponLocalizationText, traitsText, unitLocalizationText, upgradesLocalizationText;
-			ExtractLanguages(localizationFolder, dataFolder, out factionLocallization, out weaponLocalizationText, out traitsText, out unitLocalizationText, 
-				out upgradesLocalizationText);
+			ExtractLanguages(dataFolder, out factionLocallization, out weaponLocalizationText, out traitsText, 
+				out unitLocalizationText, out upgradesLocalizationText);
 
 
 			//---Unit components
 
 			Dictionary<string, Trait> traitsLookup = GetTraits(Path.Combine(dataFolder, @"World\Traits"), traitsText);
 
+			Dictionary<string, e.Upgrade> upgradeLookup = GetUpgrades(Path.Combine(dataFolder, @"World\Upgrades"), upgradesLocalizationText);
+
 			List<Weapon> weapons = new();
-			weapons = extractor.ExtractWeaponInfo(Path.Combine(dataFolder, @"World\Weapons"), weaponLocalizationText);
+			weapons = extractor.ExtractWeaponInfo(Path.Combine(dataFolder, @"World\Weapons"), weaponLocalizationText, 
+				upgradeLookup, traitsLookup);
 
 			Dictionary<string, Weapon> weaponLookup = weapons.ToDictionary(x => x.Key);
 
 			List<Unit> gladiusUnits = extractor.ExtractUnitInfo(Path.Combine(dataFolder, @"World\Units"),
-				weaponLookup, unitLocalizationText);
+				weaponLookup, unitLocalizationText, upgradeLookup, traitsLookup);
 
 			return gladiusUnits;
 
 		}
 
-		private static void ExtractLanguages(string localizationFolder, string dataFolder, 
+		private Dictionary<string, e.Upgrade> GetUpgrades(string dataFolder, Dictionary<string, string> upgradesLocalizationText)
+		{
+			//Get the folder name with a trailing slash
+
+			//Used to trim the start of the path to get the item's key.
+			string basePath = Path.TrimEndingDirectorySeparator(Path.GetFullPath(dataFolder)) + "\\";
+
+			Dictionary<string, e.Upgrade> upgrades = new Dictionary<string, e.Upgrade>();
+			Regex iconRegEx = new Regex(@"icon="".+?""");
+			///There are two icons in some files.
+			foreach (string file in Directory.EnumerateFiles(basePath, "*.xml", SearchOption.AllDirectories))
+			{
+				try
+				{
+
+					string xml = File.ReadAllText(file);
+
+					//--Fix multiple icons in some XML
+					var iconMatches = iconRegEx.Matches(xml);
+
+					if(iconMatches.Count > 1)
+					{
+						//For now, remove the first match.
+						xml = xml.Replace(iconMatches[0].Value, "");
+					}
+
+
+					XmlDocument xmlDocument = new XmlDocument();
+					xmlDocument.LoadXml(xml);
+
+					e.Upgrade upgrade = new e.Upgrade();
+
+					upgrade.Key = GetKey(basePath, file);
+
+					//Todo:  two icons.... D:\Games\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Data\World\Upgrades\Tau\RipykaVa.xml
+
+					var upgradeNode = xmlDocument.SelectSingleNode("upgrade[@icon]");
+
+					upgrade.Icon = GetPathedIcon(upgradeNode?.Attributes?["icon"]?.Value, "Upgrades", upgrade.Key);
+
+					SetLocalizedStrings(upgrade, upgradesLocalizationText);
+
+					upgrades.Add(upgrade.Key, upgrade);
+
+				}
+				catch (Exception ex)
+				{
+					throw new ApplicationException($"Error parsing {file}: {ex.Message}", ex);
+				}
+			}
+
+			return upgrades;
+		}
+
+		private void SetLocalizedStrings(e.ILocalizedStrings target, Dictionary<string, string> localizationLookup)
+		{
+			target.Name = localizationLookup.GetValueOrDefault(target.Key, "");
+			target.Description = localizationLookup.GetValueOrDefault(target.Key + "Description" , "");
+
+			if (target.Name == "") target.Name = target.Key;
+
+		}
+
+		private static void ExtractLanguages(string dataFolder, 
 			out Dictionary<string, string> factionLocallization, 
 			out Dictionary<string, string> weaponLocalizationText, 
 			out Dictionary<string, string> traitsText, 
@@ -65,11 +158,12 @@ namespace GladiusDataExtract.Extract
 		{
 			LanguageExtract languageExtract = new LanguageExtract();
 
-			weaponLocalizationText = languageExtract.GetTextStrings(
-				Path.Combine(localizationFolder, "Weapons.xml"));
 
 			traitsText = languageExtract.GetTextStrings(
 				Path.Combine(dataFolder, @"Core\Languages\English\Traits.xml"));
+
+			weaponLocalizationText = languageExtract.GetTextStrings(
+				Path.Combine(dataFolder, @"Core\Languages\English\Weapons.xml"));
 
 			factionLocallization = languageExtract.GetTextStrings(
 				Path.Combine(dataFolder, @"Core\Languages\English\Factions.xml"));
@@ -116,17 +210,6 @@ namespace GladiusDataExtract.Extract
 					XmlDocument xmlDocument = new XmlDocument();
 					xmlDocument.LoadXml(xml);
 
-					//debug
-					//try
-					//{
-					//	xmlDocument.Load(file);
-					//}
-					//catch(XmlException ex) when (ex.Message == "Root element is missing.")
-					//{
-					//	//Some files are commented out minus the leading XML.  Skip
-					//	continue;
-					//}
-
 					Trait trait = new Trait();
 
 					trait.Key = GetKey(basePath, file);
@@ -134,9 +217,25 @@ namespace GladiusDataExtract.Extract
 					XmlNode traitNode = xmlDocument.SelectSingleNode("trait")!;
 
 					//Some items do not have an icon. Mostly buildings.
-					trait.Icon = traitNode.Attributes!["icon"]?.Value ?? "";
-					trait.Name = traitsText[trait.Key];
-					trait.Description = traitsText.GetValueOrDefault(trait.Key + "Description", "");
+					//Not sure why, but the icon for "InstinctiveBehavior" isn't mapped.
+					//		It appears to be "Traits\Tyranids\InstinctiveBehaviourLurk.png"
+
+					switch (trait.Key)
+					{
+						case @"Traits/Tyranids/InstinctiveBehaviour":
+							trait.Icon = @"Traits/Tyranids/InstinctiveBehaviourLurk";
+							break;
+						case @"Suicider":
+							//Can't find an icon.  I don't have DLC4 so currently can't see what it looks like.
+							trait.Icon = "Missing";
+							break;
+
+					default:
+							trait.Icon = GetPathedIcon(traitNode.Attributes!["icon"]?.Value, "Traits", trait.Key);
+							break;
+					}
+
+					SetLocalizedStrings(trait, traitsText);
 					trait.Effects = ParseEffects(xmlDocument, "/trait/modifiers/modifier/effects/*");
 
 					//Not parsing required upgrades since they are actually part of modifier effects.
@@ -144,7 +243,7 @@ namespace GladiusDataExtract.Extract
 					///	XPath: trait/modifiers/modifier/effects/production
 					//	<modifier visible="0" requiredUpgrade="Orks/CreatePermanentOrkoidFungusOnDeath">
 
-					trait.RequiredUpgrade = "";
+					trait.RequiredUpgrade = null;
 
 					traits.Add(trait.Key, trait);
 				}
@@ -157,7 +256,52 @@ namespace GladiusDataExtract.Extract
 
 		}
 
-		internal List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup, Dictionary<string, string> weaponNameLookup)
+
+		/// <summary>
+		/// Returns a consistent path to an icon.
+		/// For example, an icon may or may not have a folder prefix ("Tyranids/Biomorph")
+		/// Required since the data is inconsistent.
+		/// </summary>
+		/// <param name="iconPath">The icon path as set from the extractor.</param>
+		/// <param name="defaultFolder">The root folder to use if the path does not contain a root folder or no icon data</param>
+		/// <param name="itemKey">The trait's key.  Used as the default icon name if icon is not set.</param>
+		/// <returns></returns>
+		private string GetPathedIcon(string? iconPath, string defaultFolder, string itemKey)
+		{
+			if(!string.IsNullOrEmpty(iconPath))
+			{
+				//Sometimes the folders are not set and assumes the context's folder (Weapon or Action, etc.)
+				string[] paths = iconPath.Split("/");
+
+				if(paths.Length == 1)
+				{
+					//Assume the root folder is not set.
+					return String.Join("/", defaultFolder, iconPath);
+				}
+				else
+				{
+					if (DataFolderNames.Contains(paths[0]))
+					{
+						//Already has a "root" folder path
+						return iconPath;
+					}
+					else
+					{
+						//Add path
+						return String.Join("/", defaultFolder, itemKey);
+					}
+				}
+			}
+			else
+			{
+				//path is not set.
+				return String.Join("/", defaultFolder, itemKey);
+			}
+		}
+
+		internal List<Unit> ExtractUnitInfo(string folderName, Dictionary<string, Weapon> weaponLookup, 
+			Dictionary<string, string> weaponNameLookup, Dictionary<string, e.Upgrade> upgradeLookup, 
+			Dictionary<string, Trait> traitLookup)
         {
 
             List<Unit> units = new();
@@ -240,13 +384,17 @@ namespace GladiusDataExtract.Extract
 
 					foreach (XmlNode weaponNode in weaponNodes)
 					{
-						string requiredUpgrade = weaponNode.Attributes!["requiredUpgrade"]?.Value ?? "";
+						string requiredUpgradeKey = weaponNode.Attributes!["requiredUpgrade"]?.Value ?? "";
+
+						e.Upgrade? requiredUpgrade = null;
+
+						if (requiredUpgradeKey != "") requiredUpgrade = upgradeLookup[requiredUpgradeKey];
 
 						unit.Weapons.Add(new UnitWeapon(weaponLookup[weaponNode.Attributes!["name"]!.Value],
 							requiredUpgrade));
 					}
 
-					GetSecondaryRequirements(xmlDocument, unit);
+					GetSecondaryRequirements(xmlDocument, unit, upgradeLookup);
 
 
 					//--Traits
@@ -261,17 +409,12 @@ namespace GladiusDataExtract.Extract
 
 						string trait = traitNode.Attributes!["name"]!.Value;
 
-						traits.Add(new Trait() 
-						{ 
-							Key = trait, 
-							Name = trait,
-							Icon = trait,
-							RequiredUpgrade = requiredUpgrade 
-						}
-						);
+
+
+						traits.Add(traitLookup[trait]);
 					}
 
-					unit.Traits.AddRange(traits.OrderBy(x => x.RequiredUpgrade).ThenBy(x => x.Name));
+					unit.Traits.AddRange(traits.OrderBy(x => x.Name).ThenBy(x => x.RequiredUpgrade?.Name));
 
 
 					units.Add(unit);
@@ -295,10 +438,10 @@ namespace GladiusDataExtract.Extract
 		/// <param name="xmlDocument"></param>
 		/// <param name="unit"></param>
 		/// <exception cref="InvalidDataException"></exception>
-		private static void GetSecondaryRequirements(XmlDocument xmlDocument, Unit unit)
+		private static void GetSecondaryRequirements(XmlDocument xmlDocument, Unit unit, Dictionary<string, e.Upgrade> upgradeLookup)
 		{
 
-			//All actions that have both a reuqired upgrade and a weapon key
+			//All actions that have both a required upgrade and a weapon key
 			XmlNodeList actionRequirementNodes = xmlDocument.SelectNodes("unit/actions/*[@requiredUpgrade and @weaponSlotName]")!;
 
 			var actionRequirements = actionRequirementNodes.Cast<XmlNode>()
@@ -309,31 +452,37 @@ namespace GladiusDataExtract.Extract
 				}
 			);
 
-			//unit weapon to upgrade.
-			var actionWeaponJoinList = unit.Weapons.Join(actionRequirements, x => x.Weapon.Key,
-				x => x.weaponKey, (unitWeapon, actionRequirement) => new { unitWeapon, actionRequirement.upgrade });
+			//The requirements that come from the weapon's actions.
+			//	Should be only if the weapon's upgrade isn't already set.
+			var actionWeaponJoinList = unit.Weapons
+				.Join(actionRequirements, 
+					x => x.Weapon.Key,
+					x => x.weaponKey, 
+					(unitWeapon, actionRequirement) => new { unitWeapon, upgradeKey = actionRequirement.upgrade });
 
 
 			//Validate and set
 			foreach (var actionWeaponJoin in actionWeaponJoinList)
 			{
-				if (actionWeaponJoin.unitWeapon.RequiredUpgrade == "")
+				if (actionWeaponJoin.unitWeapon.RequiredUpgrade is null)
 				{
-					actionWeaponJoin.unitWeapon.RequiredUpgrade = actionWeaponJoin.upgrade;
+					//Only set if it is not already set.  It seems that only the unit's requirement for the upgrade
+					//	is set or the action's upgrade is set.
+					actionWeaponJoin.unitWeapon.RequiredUpgrade = upgradeLookup[actionWeaponJoin.upgradeKey];
 				}
 				else
 				{
-					//Validation
-					if (actionWeaponJoin.unitWeapon.RequiredUpgrade != actionWeaponJoin.upgrade)
+					//Data validation.  If it is set, check if it is not the same.
+					if (actionWeaponJoin.unitWeapon.RequiredUpgrade!.Key != actionWeaponJoin.upgradeKey)
 					{
-						throw new InvalidDataException($"Weapon '{actionWeaponJoin.unitWeapon.Weapon.Name} already has a required upgrade");
+						throw new InvalidDataException($"Adding weapon upgrade requirements from actions.  '{actionWeaponJoin.unitWeapon.Weapon.Name} has an action adn weapon required upgrade and they are of different types.");
 					}
-
 				}
 			}
 		}
 
-		internal List<Weapon> ExtractWeaponInfo(string folderName, Dictionary<string, string> weaponLocalizationText)
+		internal List<Weapon> ExtractWeaponInfo(string folderName, Dictionary<string, string> weaponLocalizationText, 
+			Dictionary<string, e.Upgrade> upgradeLookup, Dictionary<string, Trait> traitsLookup)
         {
             List<Weapon> weapons = new();
 
@@ -369,12 +518,12 @@ namespace GladiusDataExtract.Extract
 
 				foreach (XmlNode requirementNode in requireNodes)
 				{
-					List<Requirement> requirements = weapon.Requirements;
+					List<e.Upgrade> requirements = weapon.Requirements;
 
 					string requirementName = requirementNode.Attributes!["name"]!.Value;
 					string requiredUpgrade = requirementNode.Attributes["requiredUpgrade"]!.Value;
 
-					requirements.Add(new(requirementName, requiredUpgrade));
+					requirements.Add(upgradeLookup[requiredUpgrade]);
 
 				}
 
@@ -386,7 +535,7 @@ namespace GladiusDataExtract.Extract
 
 					foreach (XmlNode traitNode in traitNodes)
 					{
-						weapon.Traits.Add(traitNode.Attributes!["name"]!.Value);
+						weapon.Traits.Add(traitsLookup[traitNode.Attributes!["name"]!.Value]);
 					}
 
 				}

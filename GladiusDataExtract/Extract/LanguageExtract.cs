@@ -24,29 +24,46 @@ namespace GladiusDataExtract.Extract
 
             string xml = File.ReadAllText(path);
 
-			//Some lines are not formatted correctly.  Sometimes in flavor text or not, but it seems to always follow
-			//this format:
-			//<entry name="AstraMilitarum/Headquarters" value="<string name='Buildings/AstraMilitarum/Headquarters'/>"/>
-			//A hack is to replace the start and end of the bad text.
-
-			//Find the incorrect value format. <entry name="AstraMilitarum/Headquarters" value="<string name='Buildings/AstraMilitarum/Headquarters'/>"/>
-            //  There may be multiple elements in the list.
-			Regex regEx = new Regex("^(\\s+<entry name=\".+\" value=\")(.+)(\"/>)\\s*$", RegexOptions.Multiline);
+            //Some lines are not formatted correctly.  Sometimes in flavor text or not, but it seems to always follow
+            //this format:
+            //<entry name="AstraMilitarum/Headquarters" value="<string name='Buildings/AstraMilitarum/Headquarters'/>"/>
+			Regex regEx = new Regex(@"^(\s+<entry name="".+"" value="")(<string name='(.+)'/>)(""/>)\s*$", RegexOptions.Multiline);
 
             var matcher = (Match m) =>
             {
                 StringBuilder builder = new StringBuilder();
-                builder.Append(m.Groups[1]);
+                builder.Append(m.Groups[1]);    //entry name start
 
-
-                builder.Append(HtmlEncoder.Default.Encode(m.Groups[2].Value));
-				builder.Append(m.Groups[3]);
+                builder.Append(m.Groups[3].Value);  
+				builder.Append(m.Groups[4]);
 
                 return builder.ToString();
 
             };
 
-            xml = regEx.Replace(xml, new MatchEvaluator(matcher));
+			xml = regEx.Replace(xml, new MatchEvaluator(matcher));
+
+            //Some value strings have invalid characters.  
+            // Example - Has &:  <entry name="HitAndRun" value="Hit & Run"/>
+            Regex valueRegex = new Regex(@"^(\s*<entry name="".+"" value="")(.+)(""/>)\s*$", RegexOptions.Multiline);
+
+			var valueMatcher = (Match m) =>
+			{
+				StringBuilder builder = new StringBuilder();
+				builder.Append(m.Groups[1]);    //entry name start
+
+                builder.Append(HtmlEncoder.Default.Encode(m.Groups[2].Value));
+				builder.Append(m.Groups[3]);
+
+				return builder.ToString();
+			};
+
+
+			xml = valueRegex.Replace(xml, new MatchEvaluator(valueMatcher));
+
+
+            //Debug, may not be needed.
+//			xml = xml.Replace("<br/>", HtmlEncoder.Default.Encode("<br/>"));  //Some entries have an HTML line break.  Preserve for rendering.
 
             XmlDocument xmlDocument = new XmlDocument();
 

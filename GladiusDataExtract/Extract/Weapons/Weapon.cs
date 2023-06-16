@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GladiusDataExtract.Extract.Units;
+using en = GladiusDataExtract.Entities;
 using MoreLinq;
 
 namespace GladiusDataExtract.Extract.Weapons
@@ -16,8 +17,8 @@ namespace GladiusDataExtract.Extract.Weapons
     /// <param name="Effects"></param>
     /// <param name="Requirements"></param>
     /// <param name="Traits">The traits for the weapon.  For example, Melee or IgnoresCover</param>
-    internal record Weapon(string Name, string Key, int weaponRange, List<Effect> Effects, List<Requirement> Requirements,
-        List<string> Traits)
+    internal record Weapon(string Name, string Key, int weaponRange, List<Effect> Effects, List<en.Upgrade> Requirements,
+        List<Trait> Traits)
     {
         private static Dictionary<string, int> WeaponAttributeDisplayOrder = new() {
             {"rangedDamage", 1},
@@ -68,11 +69,11 @@ namespace GladiusDataExtract.Extract.Weapons
                 modifierAppliedWeaponAttributes.Add(attributeSum);  
             }
 
-             if (Traits.Any(x => x == "Assault"))
+             if (Traits.Any(x => x.Key == "Assault"))
             {
                 isRanged = true;
             }
-             else if (Traits.Any(x => x == "Melee"))
+             else if (Traits.Any(x => x.Key == "Melee"))
             {
                 isRanged = false;
             }

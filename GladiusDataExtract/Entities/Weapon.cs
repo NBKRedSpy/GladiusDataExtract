@@ -30,7 +30,7 @@ namespace GladiusDataExtract.Entities
 		/// <summary>
 		/// Only used for a unit's weapon, not base weapon data.
 		/// </summary>
-		public string RequiredUpgrade { get; set;  } = "";
+		public Upgrade? RequiredUpgrade { get; set;  }
 
 		public int GetAccuracyChance(int accuracy)
 		{
@@ -38,7 +38,7 @@ namespace GladiusDataExtract.Entities
 		}
 
 
-		public List<string> Traits { get; set; } = new();
-		public List<Requirement> Requirements { get; set; } = new();
+		public List<Trait> Traits { get; set; } = new();
+		public List<Upgrade> UpgradeRequirements { get; set; } = new();
 	}
 }
